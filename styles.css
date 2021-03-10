@@ -1,9 +1,8 @@
 body {
 	background-image: url("floral.jpg");
 	color: black;
-	opacity: 100%;
 	overflow: hidden;
-	min-width: 670px
+	min-width: 35%;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -13,12 +12,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .header {
-	position: fixed;	
-	min-width: 670px;
+	position: absolute;	
+	min-width: 35%;
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 115px;
+	height: 14%;
 	background-color: white;
 	text-align: center;
 	box-shadow: 0px 4px 12px black;
@@ -26,7 +25,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .seeThru {
 	position: relative;
-	top: -52px;
+	top: -48%;
 	background-image: url("floral.jpg");
 	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
 	font-weight: 800;
@@ -48,8 +47,8 @@ input[type=number]::-webkit-outer-spin-button {
 	text-transform: uppercase;
 	font-weight: bold;
 	position: relative;
-	right: 228px;
-	top: 11px;
+	right: 14.9%;
+	top: 10.18%;
 	animation-name: theDrop;
 	animation-duration: 2.5s;
 	-webkit-font-smoothing: antialiased;
@@ -424,11 +423,11 @@ input[type=number]::-webkit-outer-spin-button {
 }	
 
 @keyframes mjDrop {
-	0%		{top: -52px;}
-	90%		{top: -52px;}
-	94%		{top: -51px;}
-	97%		{top: -47px;}
-	100%	{top: -52px;}
+	0%		{top: -48%;}
+	90%		{top: -48%;}
+	94%		{top: -47%;}
+	97%		{top: -43%;}
+	100%	{top: -48%;}
 }
 
 @keyframes theDrop {
@@ -496,7 +495,7 @@ input[type=number]::-webkit-outer-spin-button {
 	text-shadow: -6px 6px 3px black;
 	font-size: 28px;
 	font-weight: bold;
-	color: #59A6F2;
+	color: #EDE467;
 	padding-bottom: 25px;
 	display: none;
 	position: relative;
@@ -506,7 +505,7 @@ input[type=number]::-webkit-outer-spin-button {
 .wrongAnswer {
 	text-align: left;
 	position: relative;
-	color: #DF5632;
+	color: #E0423D;
 	font-family: helvetica, arial, sans-serif;
 	text-shadow: -6px 6px 3px black;
 	font-size: 23px;
@@ -651,7 +650,6 @@ input[type=number]::-webkit-outer-spin-button {
 	background-size: 470px 660px;
 	height: 25px;
 	width: 80px;
-	z-index: 2;
 }
 
 .tinyTimerBorder {
@@ -720,7 +718,7 @@ input[type=number]::-webkit-outer-spin-button {
 	text-shadow: -6px 6px 3px black;
 	font-size: 28px;
 	font-weight: bold;
-	color: #59A6F2;
+	color: #EDE467;
 }
 
 .countTop {
@@ -761,7 +759,7 @@ input[type=number]::-webkit-outer-spin-button {
 	padding-bottom: 10px;
 	font-family: helvetica, arial, sans-serif;
 	overflow: hidden;
-	height: 400px;
+	height: 360 px;
 	width: 170px;
 	color: white;
 	text-shadow: -6px 6px 3px black;
@@ -866,7 +864,7 @@ input[type=number]::-webkit-outer-spin-button {
 	text-shadow: -6px 6px 3px black;
 	font-size: 28px;
 	font-weight: bold;
-	color: #59A6F2;
+	color: #EDE467;
 	display: none;
 	padding-top: 22px;
 	text-align: center;
