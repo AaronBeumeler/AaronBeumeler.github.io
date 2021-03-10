@@ -14,7 +14,6 @@
 	<audio id="winner"><source src="winner.mp3" type="audio/mpeg"></audio>
 	<audio id="shake1"><source src="shake1.mp3" type="audio/mpeg"></audio>
 	<audio id="tubaFall"><source src="tubaFall.mp3" type="audio/mpeg"></audio>
-	<audio id="almost"><source src="almost.mp3" type="audio/mpeg"></audio>
 </head>
 <div class="absoluteCenter">
 	<div class="discover">What will you discover?</div>
@@ -151,7 +150,6 @@ var bongoRoll = document.getElementById("bongoRoll");
 var winner = document.getElementById("winner");
 var shake1 = document.getElementById("shake1");
 var tubaFall = document.getElementById("tubaFall");
-var almost = document.getElementById("almost");
 
 var oneMin;
 var min;
@@ -200,11 +198,8 @@ input.addEventListener("keyup", function(event) {
 
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 32) {
-	if (roundMusic.paused) {
-		roundMusic.play();
-	} else {
-		roundMusic.pause();
-	}
+   event.preventDefault();
+   stopRoundMusic();
   }
 });
 
@@ -240,7 +235,6 @@ function playMenuMusic() {
 
 function delayMenuMusic() {
 	menuMusic.currentTime = 0;
-	menuMusic.loop = true;
 	setTimeout(function() {
 		menuMusic.play();
 	}, 3000);
@@ -253,10 +247,6 @@ function playWinnerMusic() {
 	winner.currentTime = 0;
 }
 
-function playAlmost() {
-	almost.play();
-}
-
 function playBongoRoll() {
 	bongoRoll.currentTime = 0;
 	bongoRoll.play();
@@ -266,9 +256,10 @@ function stopMenuMusic() {
 	menuMusic.pause();
 }
 
-function playRoundMusic() {	
+function playRoundMusic() {
+	
 	setTimeout(function() {
-		roundMusic.loop = true;
+		menuMusic.loop = true;
 		roundMusic.play();
 	}, 850);
 }
@@ -418,7 +409,6 @@ function createProb() {
 
 //Response to correct or incorrect answer.
 function check() {
-	document.getElementById("clock").style.color = "white";
 	correct = (slotVal * bNum);
 	guess = document.getElementById("guess").value;
 	result = document.getElementById("result").innerHTML;
@@ -466,14 +456,9 @@ function check() {
 		if (count == 20) {
 			delayMenuMusic();
 			playWinnerMusic();
-		} else if ((count < 20) && (count > 14)) {
-			delayMenuMusic();
-			playAlmost();
-			document.getElementById("clock").innerHTML = "Almost!";
 		} else {
 			delayMenuMusic();
 			playTubaFall();
-			document.getElementById("clock").innerHTML = "Try Again";
 		}
     }
 	if (count >= 1) {
@@ -544,13 +529,8 @@ function check() {
 //Need to correct Anser Time equation.
 function showStats() {
 	var x = document.getElementById("stats");
-	if (isNaN(finishTime) == true) {
-		document.getElementById("stats").innerHTML = "Factor: " + numberInput + "'s<br><br>" + "Correct: " + ((count / 20) * 100) + "%" + "<br><br>" + "Finish Time:<br>" + 
-			"Time Out" + "<br><br>" + "Missed:<br>" + wrong + "<br><br>" + "Total Gems:<br>" + gemTotal + "<br><br>" + "Rounds Played:<br>" + roundsPlayed;
-	} else {
 	document.getElementById("stats").innerHTML = "Factor: " + numberInput + "'s<br><br>" + "Correct: " + ((count / 20) * 100) + "%" + "<br><br>" + "Finish Time:<br>" + 
 			(startTime - finishTime) + " seconds" + "<br><br>" + "Missed:<br>" + wrong + "<br><br>" + "Total Gems:<br>" + gemTotal + "<br><br>" + "Rounds Played:<br>" + roundsPlayed;
-	}
 	x.style.display = "block";
 }
 
@@ -626,11 +606,11 @@ function resetGems() {
 
 
 //COUNTDOWN
+
 document.getElementById("clock").innerHTML = "0:00";
 
 function timeStop() {
 	clearTimeout();
-	document.getElementById("clock").style.color = "white";
 	document.getElementById("clock").innerHTML = "Game Over";
 }
 
@@ -644,7 +624,7 @@ function countdown() {
 			playBongoRoll();
 			playMenuMusic();
 			clearInterval(timer);
-			document.getElementById("clock").innerHTML = "Time Out";
+			document.getElementById("clock").innerHTML = "Time's Up";
 			hideCenterCluster();
 			showReset();
 			showStatsHead();
@@ -669,11 +649,6 @@ function countdown() {
 			}
 			document.getElementById("clock").innerHTML = newTime;
 		}
-		if ((timeLeft <= 10) && (timeLeft > 0)) {
-			document.getElementById("clock").style.color = "#E0423D";
-		} else {
-			document.getElementById("clock").style.color = "white";
-		}
 		timeLeft -= 1;
 	}, 1000);
 	document.getElementById("guess").focus();
@@ -684,21 +659,18 @@ function countdown() {
 function timeOne() {
 	startTime = 60;
 	timeLeft = 59;
-	document.getElementById("clock").style.color = "white";
 	document.getElementById("clock").innerHTML = "1:00";
 }
 
 function timeTwo() {
 	startTime = 120;
 	timeLeft = 119;
-	document.getElementById("clock").style.color = "white";
 	document.getElementById("clock").innerHTML = "2:00";
 }
 
 function timeThree() {
 	startTime = 180;
 	timeLeft = 179;
-	document.getElementById("clock").style.color = "white";
 	document.getElementById("clock").innerHTML = "3:00";
 }
 
