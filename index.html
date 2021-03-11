@@ -14,6 +14,7 @@
 	<audio id="winner"><source src="winner.mp3" type="audio/mpeg"></audio>
 	<audio id="shake1"><source src="shake1.mp3" type="audio/mpeg"></audio>
 	<audio id="tubaFall"><source src="tubaFall.mp3" type="audio/mpeg"></audio>
+	<audio id="almost"><source src="almost.mp3" type="audio/mpeg"></audio>
 </head>
 <div class="absoluteCenter">
 	<div class="discover">What will you discover?</div>
@@ -131,7 +132,7 @@
 <script>
 
 var numberInput = document.getElementById("numberInput").innerHTML = "";
-var bNum = Math.floor(Math.random() * 13);
+var bNum = Math.round(Math.random() * 13);
 var bottomHold = document.getElementById("random").innerHTML = "";
 var input = document.getElementById("guess");
 var correct, guess, result, count = 0, totalCount = 0, wrong = 0;
@@ -150,6 +151,7 @@ var bongoRoll = document.getElementById("bongoRoll");
 var winner = document.getElementById("winner");
 var shake1 = document.getElementById("shake1");
 var tubaFall = document.getElementById("tubaFall");
+var almost = document.getElementById("almost");
 
 var oneMin;
 var min;
@@ -197,9 +199,9 @@ input.addEventListener("keyup", function(event) {
 });
 
 input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 32) {
-   event.preventDefault();
-   stopRoundMusic();
+	if (event.keyCode === 32) {
+		event.preventDefault();
+		toggleRoundMusic();
   }
 });
 
@@ -245,6 +247,10 @@ function playWinnerMusic() {
 		winner.play();
 	}, 500);
 	winner.currentTime = 0;
+}
+
+function toggleRoundMusic() {
+	return roundMusic.paused ? roundMusic.play() : roundMusic.pause();
 }
 
 function playBongoRoll() {
@@ -296,6 +302,10 @@ function playShake1() {
 
 function playTubaFall() {
 	tubaFall.play();
+}
+
+function playAlmost() {
+	almost.play();
 }
 
 function updateList() {
@@ -445,18 +455,22 @@ function check() {
     if (totalCount == 20) {
 		stopRoundMusic();
 		clearTimeout(timer);
-		document.getElementById("count").innerHTML = count;
+		count = document.getElementById("count").innerHTML;
 		document.getElementById("guess").focus();
-		document.getElementById("clock").innerHTML = "Great Job!";
 		hideCenterCluster();
 		showReset();
 		finishTime = timeLeft;
 		showStats();
 		showStatsHead();
 		if (count == 20) {
+			document.getElementById("clock").innerHTML = "Great Job!";
 			delayMenuMusic();
 			playWinnerMusic();
+		} else if ((count < 20) && (count >= 15)) {
+			document.getElementById("clock").innerHTML = "Almost!";
+			playAlmost();
 		} else {
+			document.getElementById("clock").innerHTML = "Try Again";
 			delayMenuMusic();
 			playTubaFall();
 		}
@@ -529,8 +543,13 @@ function check() {
 //Need to correct Anser Time equation.
 function showStats() {
 	var x = document.getElementById("stats");
-	document.getElementById("stats").innerHTML = "Factor: " + numberInput + "'s<br><br>" + "Correct: " + ((count / 20) * 100) + "%" + "<br><br>" + "Finish Time:<br>" + 
-			(startTime - finishTime) + " seconds" + "<br><br>" + "Missed:<br>" + wrong + "<br><br>" + "Total Gems:<br>" + gemTotal + "<br><br>" + "Rounds Played:<br>" + roundsPlayed;
+	if (timeLeft == 0) {
+		document.getElementById("stats").innerHTML = "Factor: " + numberInput + "'s<br><br>" + "Correct: " + ((count / 20) * 100) + "%" + "<br><br>" + "Finish Time:<br>" + 
+		"Incomplete" + "<br><br>" + "Missed:<br>" + wrong + "<br><br>" + "Total Gems:<br>" + gemTotal + "<br><br>" + "Rounds Played:<br>" + roundsPlayed;
+	} else {
+		document.getElementById("stats").innerHTML = "Factor: " + numberInput + "'s<br><br>" + "Correct: " + ((count / 20) * 100) + "%" + "<br><br>" + "Finish Time:<br>" + 
+		(startTime - finishTime) + " seconds" + "<br><br>" + "Missed:<br>" + wrong + "<br><br>" + "Total Gems:<br>" + gemTotal + "<br><br>" + "Rounds Played:<br>" + roundsPlayed;
+	}
 	x.style.display = "block";
 }
 
@@ -624,6 +643,7 @@ function countdown() {
 			playBongoRoll();
 			playMenuMusic();
 			clearInterval(timer);
+			document.getElementById("clock").style.color = "white";
 			document.getElementById("clock").innerHTML = "Time's Up";
 			hideCenterCluster();
 			showReset();
@@ -633,7 +653,11 @@ function countdown() {
 			if (timeLeft < 60) {
 				sec = timeLeft;
 				newTime = "0:" + sec;
+				if (timeLeft == 10) {
+					document.getElementById("clock").style.color = "#E0423D";
+				}
 				if (sec < 10) {
+					document.getElementById("clock").style.color = "#E0423D";
 					newTime = "0:0" + sec;
 				}
 			} else {
