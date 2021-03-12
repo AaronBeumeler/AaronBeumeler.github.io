@@ -152,6 +152,7 @@ var winner = document.getElementById("winner");
 var shake1 = document.getElementById("shake1");
 var tubaFall = document.getElementById("tubaFall");
 var almost = document.getElementById("almost");
+var clock = document.getElementById("clock");
 
 var oneMin;
 var min;
@@ -237,6 +238,7 @@ function playMenuMusic() {
 
 function delayMenuMusic() {
 	menuMusic.currentTime = 0;
+	menuMusic.loop = true;
 	setTimeout(function() {
 		menuMusic.play();
 	}, 3000);
@@ -263,9 +265,8 @@ function stopMenuMusic() {
 }
 
 function playRoundMusic() {
-	
+	roundMusic.loop = true;
 	setTimeout(function() {
-		menuMusic.loop = true;
 		roundMusic.play();
 	}, 850);
 }
@@ -463,13 +464,16 @@ function check() {
 		showStats();
 		showStatsHead();
 		if (count == 20) {
+			document.getElementById("clock").style.color = "white";
 			document.getElementById("clock").innerHTML = "Great Job!";
 			delayMenuMusic();
 			playWinnerMusic();
 		} else if ((count < 20) && (count >= 15)) {
+			document.getElementById("clock").style.color = "white";
 			document.getElementById("clock").innerHTML = "Almost!";
 			playAlmost();
 		} else {
+			document.getElementById("clock").style.color = "white";
 			document.getElementById("clock").innerHTML = "Try Again";
 			delayMenuMusic();
 			playTubaFall();
@@ -626,11 +630,11 @@ function resetGems() {
 
 //COUNTDOWN
 
-document.getElementById("clock").innerHTML = "0:00";
+clock.innerHTML = "0:00";
 
 function timeStop() {
 	clearTimeout();
-	document.getElementById("clock").innerHTML = "Game Over";
+	clock.innerHTML = "Game Over";
 }
 
 function countdown() {
@@ -643,8 +647,8 @@ function countdown() {
 			playBongoRoll();
 			playMenuMusic();
 			clearInterval(timer);
-			document.getElementById("clock").style.color = "white";
-			document.getElementById("clock").innerHTML = "Time's Up";
+			clock.style.color = "white";
+			clock.innerHTML = "Time's Up";
 			hideCenterCluster();
 			showReset();
 			showStatsHead();
@@ -654,10 +658,10 @@ function countdown() {
 				sec = timeLeft;
 				newTime = "0:" + sec;
 				if (timeLeft == 10) {
-					document.getElementById("clock").style.color = "#E0423D";
+					clock.style.color = "#E0423D";
 				}
 				if (sec < 10) {
-					document.getElementById("clock").style.color = "#E0423D";
+					clock.style.color = "#E0423D";
 					newTime = "0:0" + sec;
 				}
 			} else {
@@ -671,7 +675,7 @@ function countdown() {
 					newTime = newMin + ":00";
 				}
 			}
-			document.getElementById("clock").innerHTML = newTime;
+			clock.innerHTML = newTime;
 		}
 		timeLeft -= 1;
 	}, 1000);
@@ -683,19 +687,19 @@ function countdown() {
 function timeOne() {
 	startTime = 60;
 	timeLeft = 59;
-	document.getElementById("clock").innerHTML = "1:00";
+	clock.innerHTML = "1:00";
 }
 
 function timeTwo() {
 	startTime = 120;
 	timeLeft = 119;
-	document.getElementById("clock").innerHTML = "2:00";
+	clock.innerHTML = "2:00";
 }
 
 function timeThree() {
 	startTime = 180;
 	timeLeft = 179;
-	document.getElementById("clock").innerHTML = "3:00";
+	clock.innerHTML = "3:00";
 }
 
 function quickClear() {

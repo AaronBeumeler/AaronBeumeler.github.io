@@ -652,6 +652,11 @@ input[type=number]::-webkit-outer-spin-button {
 	width: 80px;
 }
 
+.clock {
+	animation-name: ;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+
 .tinyTimerBorder {
 	position: absolute;
 	margin-left: 50%;
