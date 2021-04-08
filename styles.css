@@ -29,7 +29,7 @@ input[type=number]::-webkit-outer-spin-button {
 	background-image: url("floral.jpg");
 	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
 	font-weight: 800;
-	font-size: 36px;
+	font-size: 3.3333%;
 	text-transform: uppercase;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -42,7 +42,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .the {
 	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
-	font-size: 26px;
+	font-size: 2.407%;
 	overflow: hidden;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -65,10 +65,10 @@ input[type=number]::-webkit-outer-spin-button {
 	align-items: center;
 	position: absolute;
 	opacity: 0%;
-	top: 275px;
+	top: 24%;
 	font-family: helvetica, arial, sans-serif;
 	font-weight: 800;
-	font-size: 85px;
+	font-size: 7.87%;
 	text-transform: uppercase;
 	color: #C2488B;
 	-webkit-font-smoothing: antialiased;
@@ -84,9 +84,9 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 371px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 34.352%;
 	transform: rotate(-8deg);
 	animation-name: gemDrop;
 	animation-duration: .5s;
@@ -96,10 +96,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 369px;
-	left: 38px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 34.167%;
+	left: 1.979%;
 	transform: rotate(-24deg);
 	animation-name: gemDrop;
 	animation-duration: .5s;
@@ -109,10 +109,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 370px;
-	left: 81px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 34.259%;
+	left: 4.219%;
 	animation-name: gemDrop;
 	animation-duration: .5s;
 }
@@ -121,10 +121,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 370px;
-	left: 125px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 34.259%;
+	left: 6.510%;
 	animation-name: gemDrop;
 	animation-duration: .5s;
 }
@@ -133,10 +133,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 335px;
-	left: 110px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 31.019%;
+	left: 5.729%;
 	animation-name: gemDrop1a;
 	animation-duration: .5s;
 }
@@ -145,10 +145,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 331px;
-	left: 17px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 30.648%;
+	left: 0.8854%;
 	transform: rotate(-5deg);
 	animation-name: gemDrop1;
 	animation-duration: .5s;
@@ -158,10 +158,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 333px;
-	left: 55px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 30.833%;
+	left: 2.865%;
 	transform: rotate(25deg);
 	animation-name: gemDrop1;
 	animation-duration: .5s;
@@ -171,10 +171,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 292px;
-	left: 2px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 27.037%;
+	left: 0.104%;
 	transform: rotate(10deg);
 	animation-name: gemDrop2;
 	animation-duration: .5s;
@@ -184,10 +184,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 292px;
-	left: 35px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 27.037%;
+	left: 1.823%;
 	transform: rotate(-80deg);
 	animation-name: gemDrop2;
 	animation-duration: .5s;
@@ -197,10 +197,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 302px;
-	left: 82px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 27.963%;
+	left: 4.271%;
 	transform: rotate(-80deg);
 	animation-name: gemDrop2a;
 	animation-duration: .5s;
@@ -210,10 +210,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 295px;
-	left: 125px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 27.315%;
+	left: 6.51%;
 	transform: rotate(-80deg);
 	animation-name: gemDrop2;
 	animation-duration: .5s;
@@ -223,10 +223,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 258px;
-	left: 55px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 23.889%;
+	left: 2.865%;
 	transform: rotate(-80deg);
 	animation-name: gemDrop3;
 	animation-duration: .5s;
@@ -236,10 +236,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 260px;
-	left: 96px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 24.074%;
+	left: 5%;
 	transform: rotate(-80deg);
 	animation-name: gemDrop3b;
 	animation-duration: .5s;
@@ -249,10 +249,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 240px;
-	left: 130px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 22.2222%;
+	left: 6.771%;
 	transform: rotate(-35deg);
 	animation-name: gemDrop3a;
 	animation-duration: .5s;
@@ -262,10 +262,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 252px;
-	left: 5px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 23.333%;
+	left: .2604%;
 	transform: rotate(25deg);
 	animation-name: gemDrop3c;
 	animation-duration: .4s;
@@ -275,10 +275,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 221px;
-	left: 78px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 20.463%;
+	left: 4.063%;
 	transform: rotate(50deg);
 	animation-name: gemDrop5;
 	animation-duration: .4s;
@@ -288,10 +288,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 216px;
-	left: 28px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 20%;
+	left: 1.4583%;
 	transform: rotate(53deg);
 	animation-name: gemDrop5;
 	animation-duration: .4s;
@@ -301,10 +301,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 196px;
-	left: -7px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 18.148%;
+	left: -.3646%;
 	transform: rotate(145deg);
 	animation-name: gemDrop6a;
 	animation-duration: .4s;
@@ -314,10 +314,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 199px;
-	left: 115px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 18.426%;
+	left: 5.9896%;
 	transform: rotate(-35deg);
 	animation-name: gemDrop6;
 	animation-duration: .4s;
@@ -327,10 +327,10 @@ input[type=number]::-webkit-outer-spin-button {
 	display: none;
 	z-index: 1;
 	position: absolute;
-	height: 50px;
-	width: 50px;
-	top: 180px;
-	left: 59px;
+	height: 4.6296%;
+	width: 4.6296%;
+	top: 16.6667%;
+	left: 3.0729%;
 	transform: rotate(5deg);
 	animation-name: gemDrop7;
 	animation-duration: .4s;
@@ -493,13 +493,13 @@ input[type=number]::-webkit-outer-spin-button {
 .answerMain {
 	font-family: helvetica, arial, sans-serif;
 	text-shadow: -6px 6px 3px black;
-	font-size: 28px;
+	font-size: 2.5926%;
 	font-weight: bold;
 	color: #EDE467;
-	padding-bottom: 25px;
+	padding-bottom: 2.3148%;
 	display: none;
 	position: relative;
-	margin-top: 20px;
+	margin-top: 1.8519%;
 }
 
 .wrongAnswer {
@@ -508,9 +508,9 @@ input[type=number]::-webkit-outer-spin-button {
 	color: #E0423D;
 	font-family: helvetica, arial, sans-serif;
 	text-shadow: -6px 6px 3px black;
-	font-size: 23px;
+	font-size: 2.1296%;
 	font-weight: bold;
-	padding-left: 16px;
+	padding-left: .83333%;
 }
 
 .confirmMain {
@@ -519,19 +519,19 @@ input[type=number]::-webkit-outer-spin-button {
 	color: #82DA50;
 	font-family: helvetica, arial, sans-serif;
 	text-shadow: -6px 6px 3px black;
-	font-size: 20px;
-	font-size: 23px;
+	font-size: 1.8519%;
+	font-size: 2.1296%;
 	font-weight: bold;
-	padding-left: 16px;
+	padding-left: .8333%;
 }
 
 .confirmHead {
 	position: relative;
-	margin-top: 20px;
+	margin-top: 1.8519%;
 	color: #59A6F2;
 	font-family: helvetica, arial, sans-serif;
 	text-shadow: -6px 6px 3px black;
-	font-size: 24px;
+	font-size: 2.2222%;
 	font-weight: bold;
 }
 
@@ -541,7 +541,7 @@ input[type=number]::-webkit-outer-spin-button {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 60px;
+	height: 4.5556%;
 	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
 	background-color: white;
 	text-align: center;
@@ -552,12 +552,12 @@ input[type=number]::-webkit-outer-spin-button {
 	overflow: hidden;
 	position: relative;
 	margin: auto;
-	top: 145px;
+	top: 13.4259%;
 	opacity: 100%;
 	background-image: url("gold.jpg");
-	background-size: 470px 660px;
-	height: 475px;
-	width: 656px;
+	background-size: 24.4792% 61.111%;
+	height: 43.9815%;
+	width: 34.1667%;
 	border: 5px solid #493F39;
 	border-top: 5px solid #BBB4AA;
 	border-right: 5px solid #BBB4AA;
@@ -566,14 +566,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 .wrapperCenter {
 	position: absolute;
-	top: 100px;
-	left: 228px;
-	padding-bottom: 10px;
+	top: 9.259%;
+	left: 11.875%;
+	padding-bottom: 0.9259%;
 	overflow: hidden;
 	opacity: 100%;
-	height: 245px;
+	height: 22.685%;
 	background-image: url("innerGold.jpg");
-	width: 185px;
+	width: 9.635%;
 	border: 5px solid #493F39;
 	border-bottom: 5px solid #BBB4AA;
 	border-left: 5px solid #BBB4AA;
@@ -593,29 +593,6 @@ input[type=number]::-webkit-outer-spin-button {
 	border-top: 5px solid #BBB4AA;
 	border-right: 5px solid #BBB4AA;
 	text-shadow: -4px 4px 3px black;
-}
-
-.resultFont {
-	color: #7DE549;
-	padding-top: 3px;
-	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
-	font-weight: 800;
-	font-size: 34px;
-	text-shadow: -6px 6px 3px black;
-}
-
-.result {
-	position: absolute;
-	color: #D7D7D7;
-	top: 374px;
-	left: 228px;
-	height: 65px;
-	background-image: url("innerGold.jpg");
-	width: 185px;
-	border: 5px solid #493F39;
-	border-bottom: 5px solid #BBB4AA;
-	border-left: 5px solid #BBB4AA;
-	text-align: center;
 }
 
 .shadow {
