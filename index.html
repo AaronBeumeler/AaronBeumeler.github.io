@@ -152,9 +152,12 @@ var shake1 = document.getElementById("shake1");
 var tubaFall = document.getElementById("tubaFall");
 <<<<<<< HEAD
 var almost = document.getElementById("almost");
+<<<<<<< HEAD
 var clock = document.getElementById("clock");
 =======
 >>>>>>> parent of 546e28a (Update index.html)
+=======
+>>>>>>> parent of 1e491be (Math Jungle v1.02)
 
 var oneMin;
 var min;
@@ -240,7 +243,6 @@ function playMenuMusic() {
 
 function delayMenuMusic() {
 	menuMusic.currentTime = 0;
-	menuMusic.loop = true;
 	setTimeout(function() {
 		menuMusic.play();
 	}, 3000);
@@ -263,8 +265,9 @@ function stopMenuMusic() {
 }
 
 function playRoundMusic() {
-	roundMusic.loop = true;
+	
 	setTimeout(function() {
+		menuMusic.loop = true;
 		roundMusic.play();
 	}, 850);
 }
@@ -460,16 +463,17 @@ function check() {
 		showStatsHead();
 		if (count == 20) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			document.getElementById("clock").style.color = "white";
+=======
+>>>>>>> parent of 1e491be (Math Jungle v1.02)
 			document.getElementById("clock").innerHTML = "Great Job!";
 			delayMenuMusic();
 			playWinnerMusic();
 		} else if ((count < 20) && (count >= 15)) {
-			document.getElementById("clock").style.color = "white";
 			document.getElementById("clock").innerHTML = "Almost!";
 			playAlmost();
 		} else {
-			document.getElementById("clock").style.color = "white";
 			document.getElementById("clock").innerHTML = "Try Again";
 =======
 			delayMenuMusic();
@@ -626,11 +630,11 @@ function resetGems() {
 
 //COUNTDOWN
 
-clock.innerHTML = "0:00";
+document.getElementById("clock").innerHTML = "0:00";
 
 function timeStop() {
 	clearTimeout();
-	clock.innerHTML = "Game Over";
+	document.getElementById("clock").innerHTML = "Game Over";
 }
 
 function countdown() {
@@ -644,11 +648,16 @@ function countdown() {
 			playMenuMusic();
 			clearInterval(timer);
 <<<<<<< HEAD
+<<<<<<< HEAD
 			clock.style.color = "white";
 			clock.innerHTML = "Time's Up";
 =======
 			document.getElementById("clock").innerHTML = "Time's Up";
 >>>>>>> parent of 546e28a (Update index.html)
+=======
+			document.getElementById("clock").style.color = "white";
+			document.getElementById("clock").innerHTML = "Time's Up";
+>>>>>>> parent of 1e491be (Math Jungle v1.02)
 			hideCenterCluster();
 			showReset();
 			showStatsHead();
@@ -659,13 +668,17 @@ function countdown() {
 				newTime = "0:" + sec;
 <<<<<<< HEAD
 				if (timeLeft == 10) {
-					clock.style.color = "#E0423D";
+					document.getElementById("clock").style.color = "#E0423D";
 				}
 				if (sec < 10) {
+<<<<<<< HEAD
 					clock.style.color = "#E0423D";
 =======
 				if (sec < 10) {
 >>>>>>> parent of 546e28a (Update index.html)
+=======
+					document.getElementById("clock").style.color = "#E0423D";
+>>>>>>> parent of 1e491be (Math Jungle v1.02)
 					newTime = "0:0" + sec;
 				}
 			} else {
@@ -679,7 +692,7 @@ function countdown() {
 					newTime = newMin + ":00";
 				}
 			}
-			clock.innerHTML = newTime;
+			document.getElementById("clock").innerHTML = newTime;
 		}
 		timeLeft -= 1;
 	}, 1000);
@@ -691,19 +704,19 @@ function countdown() {
 function timeOne() {
 	startTime = 60;
 	timeLeft = 59;
-	clock.innerHTML = "1:00";
+	document.getElementById("clock").innerHTML = "1:00";
 }
 
 function timeTwo() {
 	startTime = 120;
 	timeLeft = 119;
-	clock.innerHTML = "2:00";
+	document.getElementById("clock").innerHTML = "2:00";
 }
 
 function timeThree() {
 	startTime = 180;
 	timeLeft = 179;
-	clock.innerHTML = "3:00";
+	document.getElementById("clock").innerHTML = "3:00";
 }
 
 function quickClear() {

@@ -2,7 +2,7 @@ body {
 	background-image: url("floral.jpg");
 	color: black;
 	overflow: hidden;
-	min-width: 35%;
+	min-width: 672px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -13,11 +13,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .header {
 	position: absolute;	
-	min-width: 35%;
+	min-width: 672px;
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 14%;
+	height: 151px;
 	background-color: white;
 	text-align: center;
 	box-shadow: 0px 4px 12px black;
@@ -25,11 +25,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .seeThru {
 	position: relative;
-	top: -48%;
+	top: 500px;
 	background-image: url("floral.jpg");
 	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
 	font-weight: 800;
-	font-size: 3.3333%;
+	font-size: 64px;
 	text-transform: uppercase;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -42,13 +42,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .the {
 	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
-	font-size: 2.407%;
+	font-size: 25px;
 	overflow: hidden;
 	text-transform: uppercase;
 	font-weight: bold;
 	position: relative;
-	right: 14.9%;
-	top: 10.18%;
+	right: 300px;
+	top: 109px;
 	animation-name: theDrop;
 	animation-duration: 2.5s;
 	-webkit-font-smoothing: antialiased;
@@ -65,10 +65,10 @@ input[type=number]::-webkit-outer-spin-button {
 	align-items: center;
 	position: absolute;
 	opacity: 0%;
-	top: 24%;
+	top: 260px;
 	font-family: helvetica, arial, sans-serif;
 	font-weight: 800;
-	font-size: 7.87%;
+	font-size: 85px;
 	text-transform: uppercase;
 	color: #C2488B;
 	-webkit-font-smoothing: antialiased;
@@ -549,15 +549,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .wrapperOuter {
+	padding-bottom: 100px;
 	overflow: hidden;
-	position: relative;
+	position: absolute;
 	margin: auto;
-	top: 13.4259%;
+	top: 150px;
 	opacity: 100%;
 	background-image: url("gold.jpg");
-	background-size: 24.4792% 61.111%;
-	height: 43.9815%;
-	width: 34.1667%;
+	background-size: 470px 660px;
+	height: 475px;
+	width: 656px;
 	border: 5px solid #493F39;
 	border-top: 5px solid #BBB4AA;
 	border-right: 5px solid #BBB4AA;
@@ -629,10 +630,13 @@ input[type=number]::-webkit-outer-spin-button {
 	width: 80px;
 }
 
+<<<<<<< HEAD
 .clock {
 	color: white;
 }
 
+=======
+>>>>>>> parent of 1e491be (Math Jungle v1.02)
 .tinyTimerBorder {
 	position: absolute;
 	margin-left: 50%;
