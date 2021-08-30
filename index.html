@@ -150,17 +150,6 @@ var bongoRoll = document.getElementById("bongoRoll");
 var winner = document.getElementById("winner");
 var shake1 = document.getElementById("shake1");
 var tubaFall = document.getElementById("tubaFall");
-<<<<<<< HEAD
-var almost = document.getElementById("almost");
-<<<<<<< HEAD
-<<<<<<< HEAD
-var clock = document.getElementById("clock");
-=======
->>>>>>> parent of 546e28a (Update index.html)
-=======
->>>>>>> parent of 1e491be (Math Jungle v1.02)
-=======
->>>>>>> parent of 1e491be (Math Jungle v1.02)
 
 var oneMin;
 var min;
@@ -465,27 +454,9 @@ function check() {
 		showStats();
 		showStatsHead();
 		if (count == 20) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			document.getElementById("clock").style.color = "white";
-=======
->>>>>>> parent of 1e491be (Math Jungle v1.02)
-=======
->>>>>>> parent of 1e491be (Math Jungle v1.02)
-			document.getElementById("clock").innerHTML = "Great Job!";
-			delayMenuMusic();
-			playWinnerMusic();
-		} else if ((count < 20) && (count >= 15)) {
-			document.getElementById("clock").innerHTML = "Almost!";
-			playAlmost();
-		} else {
-			document.getElementById("clock").innerHTML = "Try Again";
-=======
 			delayMenuMusic();
 			playWinnerMusic();
 		} else {
->>>>>>> parent of 546e28a (Update index.html)
 			delayMenuMusic();
 			playTubaFall();
 		}
@@ -653,22 +624,7 @@ function countdown() {
 			playBongoRoll();
 			playMenuMusic();
 			clearInterval(timer);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			clock.style.color = "white";
-			clock.innerHTML = "Time's Up";
-=======
 			document.getElementById("clock").innerHTML = "Time's Up";
->>>>>>> parent of 546e28a (Update index.html)
-=======
-			document.getElementById("clock").style.color = "white";
-			document.getElementById("clock").innerHTML = "Time's Up";
->>>>>>> parent of 1e491be (Math Jungle v1.02)
-=======
-			document.getElementById("clock").style.color = "white";
-			document.getElementById("clock").innerHTML = "Time's Up";
->>>>>>> parent of 1e491be (Math Jungle v1.02)
 			hideCenterCluster();
 			showReset();
 			showStatsHead();
@@ -677,23 +633,7 @@ function countdown() {
 			if (timeLeft < 60) {
 				sec = timeLeft;
 				newTime = "0:" + sec;
-<<<<<<< HEAD
-				if (timeLeft == 10) {
-					document.getElementById("clock").style.color = "#E0423D";
-				}
 				if (sec < 10) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-					clock.style.color = "#E0423D";
-=======
-				if (sec < 10) {
->>>>>>> parent of 546e28a (Update index.html)
-=======
-					document.getElementById("clock").style.color = "#E0423D";
->>>>>>> parent of 1e491be (Math Jungle v1.02)
-=======
-					document.getElementById("clock").style.color = "#E0423D";
->>>>>>> parent of 1e491be (Math Jungle v1.02)
 					newTime = "0:0" + sec;
 				}
 			} else {
