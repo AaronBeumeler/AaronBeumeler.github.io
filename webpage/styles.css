@@ -1,0 +1,88 @@
+body {
+   font-family: calibri; 
+   width: 800px;
+   background: url('images/webpage-background.jpg') repeat-x center fixed;
+   margin: auto;
+   margin-top: 30px;
+   margin-bottom: 45px;
+   border: 1px solid white;
+   background-size: contain;
+}
+
+//header START -----------------------------
+
+#header {
+   position: fixed;
+}
+
+#header-image {
+   width: 100%;
+   height: 185px;
+   background-image: url('images/webpage-header.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #111111;
+}
+
+li {
+   float: left;
+}
+
+li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+   background-color: rgb(41, 41, 41);
+}
+
+//header END -----------------------------------
+
+#p1 {
+   float:left;
+}
+
+img {
+   width: 160px;
+   float: right;
+   border: black solid 1px;
+   margin: 14px;
+   margin-top: 6px;
+}
+
+p.alert {
+   color: gray;
+}
+
+footer {  
+   vertical-align: middle;
+   color: white;
+   background-color: black;
+   padding-left: 14px;
+   padding-top: 14px;
+   height: 35px;
+}
+
+#content {
+   background-color: white;
+   padding: 25px;
+   padding-top: 5px;
+   background-size: cover;
+}
+
+.def {
+   padding-left: 25px;
+}
