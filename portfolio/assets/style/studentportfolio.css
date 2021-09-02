@@ -78,6 +78,7 @@ p {
     height: 1056px;
     width: 800px;
     padding: 50px;
+    border: 1px solid black;
 }
 
 /* Go from zero to full opacity */
