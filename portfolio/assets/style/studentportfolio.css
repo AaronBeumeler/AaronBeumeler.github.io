@@ -75,7 +75,8 @@ p {
 }
 
 #resume_pdf {
-    height: 900px;
+    height: 1056px;
+    width: 816px;
 }
 
 /* Go from zero to full opacity */
