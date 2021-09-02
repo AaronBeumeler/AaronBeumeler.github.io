@@ -1,16 +1,27 @@
 /*  body */
 	
 body {
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: white;
+	font-family: Helvetica, sans-serif;
 	/*background-color: #666;*/
+    background-color: rgb(111, 128, 143);
 	}
 
 #container {
 	width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 50px;
+	margin-top: 10px;
 	margin-bottom: 50px;
+    box-shadow: 5px 8px 6px rgb(46, 56, 65);
+}
+
+#titlecontainer {
+    width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+	margin-bottom: 10px;
 }
 
 p {
@@ -68,18 +79,30 @@ p {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
-}
-
-.tabcontent {
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    animation: fadeEffect 1s;
 }
 
 #resume_pdf {
-    width: 700px;
-    padding-left: 130px;
-    padding-bottom: 70px;
-    overflow: hidden;
+    width: 850px;
+    margin-left: 58px;
+    margin-bottom: 75px;
+    box-shadow: 3px 3px 3px rgb(44, 54, 63)
 }
+
+#headshot {
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 55px;
+    box-shadow: 2px 2px 2px rgb(44, 54, 63);
+}
+
+#webproject1 {
+    width: 550px;
+}
+
+
 
 body::-webkit-scrollbar {
     display: none;
