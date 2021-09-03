@@ -9,13 +9,14 @@
                                    Developer, Portfolio">
     <meta name="author" content="Aaron Beumeler">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/style/portfoliostyle.css">
+    <link rel="stylesheet" href="assets/style/studentportfolio.css">
 </head>
 
 <body>
+    <div id="titlecontainer">
+        <h1 class="titlefont">Work Examples</h1>
+    </div>
     <div id="container">
-        <h1>Work Examples</h1>
-
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Writing')" id="defaultOpen">Writing</button>
             <button class="tablinks" onclick="openTab(event, 'WebProject')">Web Project</button>
@@ -25,7 +26,6 @@
             <button class="tablinks" onclick="openTab(event, 'Capstone')">Capstone Project</button>
             <button class="tablinks" onclick="openRedirect('index.html')">Home</button>
         </div>
-
         <div id="Writing" class="tabcontent">
               <h2>Writing Example 1</h2>
               <h2>Writing Example 2</h2>
@@ -33,7 +33,7 @@
 
         <div id="WebProject" class="tabcontent">
               <h2>Web Project 1</h2>
-              <img id="webproject1" src="assets/images/webpagetask1.jpg" alt="Aaron Beumeler Resume">
+              <a href="https://aaronbeumeler.github.io/webpage" target="_blank"><img id="webproject1" class="examplepics" src="assets/images/webpagetask1.jpg" alt="Webpage Example Screenshot"></a>
               <p class="webprojtext">
                   <div class="floatright">
                         <b>Description</b>
@@ -43,7 +43,7 @@
                               of the webpage.
                         <br><br>
                         <a href="https://aaronbeumeler.github.io/webpage" target="_blank">Click here to view 
-                              Aaron Beumeler's version of the page.</p>
+                              Aaron Beumeler's version of the page.</a></p>
                   </div>
         </div>
 
@@ -53,8 +53,9 @@
         </div>
 
         <div id="Programming" class="tabcontent">
-              <h2>Programming Project 1</h2>
-              <h2>Programming Project 2</h2>
+              <h2>Image Management - Java</h2>
+              <img class="examplepics" src="assets/images/javaapps.jpg" alt="Java Application Management">
+              <img class="examplepics" src="assets/images/computerimages.jpg" alt="Java Image Management">
         </div>
 
         <div id="SoftSkills" class="tabcontent">
@@ -63,6 +64,7 @@
 
         <div id="Capstone" class="tabcontent">
               <h2>Capstone Project</h2>
+              <a href="https://aaronbeumeler.github.io/math_jungle/"><img class="examplepics" src="assets/images/mathjungle1.jpg" alt="Math Jungle Screenshot"></a> 
         </div>
 
     </div>
