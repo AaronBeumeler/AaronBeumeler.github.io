@@ -24,6 +24,10 @@ body {
 	margin-bottom: 10px;
 }
 
+.titlefont {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 p {
 	margin-bottom: 20px;
 	}
@@ -94,19 +98,24 @@ p {
     border-radius: 10px;
     margin-left: 30px;
     margin-top: 20px;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
     box-shadow: 2px 2px 2px rgb(44, 54, 63);
 }
 
-#webproject1 {
-    width: 550px;
+.examplepics {
+    width: 600px;
+    margin: 20px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 3px rgb(44, 54, 63);
 }
 
-
+.floatright {
+    float: right;
+}
 
 body::-webkit-scrollbar {
     display: none;
-  }
+}
 
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
