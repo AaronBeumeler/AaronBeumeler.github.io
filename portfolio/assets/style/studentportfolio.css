@@ -3,7 +3,7 @@
 body {
     color: rgb(255, 255, 255);
 	font-family: Helvetica, sans-serif;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(224, 224, 224);
 	}
 
 #container {
@@ -45,8 +45,8 @@ body {
 /* Style the tab */
 .tab {
     overflow: hidden;
-    border: 1px solid rgb(64, 74, 85);
-    border-top:rgb(95, 106, 117);
+    border: .5px solid rgb(64, 74, 85);
+    border-bottom: 1px solid black;
     border-bottom: none;
     background-color: #424242;
 }
@@ -83,34 +83,58 @@ body {
     padding: 40px 40px;
     border: 1px solid rgb(69, 79, 90);
     border-top: none;
-    animation: fadeEffect .7s;
 }
 
 /*----------resume css section----------*/
 
 #resumetext {
-    padding: 30px;
-    background-color: rgb(243, 243, 243);;
+    padding: 50px;
+    background-color: rgb(241, 241, 241);
     box-shadow: 5px 8px 6px rgb(56, 60, 65);
+    color: #313131;
+    height: 950px;
 }
 
 #resumetitle {
-    padding-top: 15px;
-    font-size: 50px;
+    font-size: 48px;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-    color: black;
     text-align: center;
 }
 
 #resumesubtitle{
-    color: black;
     text-align: center;
     font-size: 18px;
     font-weight: 200;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(155, 165, 177);
 }
 
-#resumesectionhead {
-    color: black;
+.sectiontitle {
+    font-size: 1.3em;
+    border-bottom: 1px solid rgb(134, 149, 163)
+}
+
+.jobrole {
+    color: #313131;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+.jobinfo {
+    padding-bottom: 3px;
+}
+
+.resleftcolumn {
+    padding-top: 20px;
+    padding-right: 10px;
+    float: left;
+    width: 250px;
+    border-right: 1px solid rgb(155, 165, 177);
+}
+
+.resrightcolumn {
+    padding-top: 20px;
+    padding-left: 295px;
 }
 
 .examplepics {
@@ -134,6 +158,11 @@ body {
     margin-right: 100px;
 }
 
+.floatright {
+    float: right;
+    width: 283px;
+}
+
 #headshot {
     width: 300px;
     border-radius: 9px;
@@ -142,7 +171,12 @@ body {
 .bragtitle {
     font-weight: bold;
     padding-bottom: 4px;
+}
 
+.sectionhead {
+    text-align: center;
+    font-weight: bold;
+    color: #313131;
 }
 
 /* Go from zero to full opacity */
