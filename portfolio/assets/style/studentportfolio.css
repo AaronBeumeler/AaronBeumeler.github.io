@@ -53,13 +53,13 @@ body {
 
 /* Style the buttons inside the tab */
 .tab button {
+    transition: 0.3s;
     background-color: inherit;
     float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    transition: 0.7s;
     font-size: 17px;
     color: white;
 }
@@ -97,7 +97,7 @@ body {
 
 #resumetitle {
     font-size: 48px;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-family: font-family: Helvetica, sans-serif;
     text-align: center;
 }
 
