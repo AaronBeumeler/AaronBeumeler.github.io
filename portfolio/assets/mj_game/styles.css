@@ -1,0 +1,915 @@
+body {
+	background-image: url("floral.jpg");
+	color: black;
+	opacity: 100%;
+	overflow: hidden;
+	min-width: 670px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+}
+
+.header {
+	position: fixed;	
+	min-width: 670px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 115px;
+	background-color: white;
+	text-align: center;
+	box-shadow: 0px 4px 12px black;
+}
+
+.seeThru {
+	position: relative;
+	top: -52px;
+	background-image: url("floral.jpg");
+	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 800;
+	font-size: 36px;
+	text-transform: uppercase;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+	animation-name: slideFromL, mjDrop;
+	animation-duration: 2.5s;
+}  
+
+.the {
+	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 26px;
+	overflow: hidden;
+	text-transform: uppercase;
+	font-weight: bold;
+	position: relative;
+	right: 228px;
+	top: 11px;
+	animation-name: theDrop;
+	animation-duration: 2.5s;
+	-webkit-font-smoothing: antialiased;
+}
+
+.absoluteCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.discover {
+	align-items: center;
+	position: absolute;
+	opacity: 0%;
+	top: 275px;
+	font-family: helvetica, arial, sans-serif;
+	font-weight: 800;
+	font-size: 85px;
+	text-transform: uppercase;
+	color: #C2488B;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+	text-shadow: -4px 4px 12px black;
+	animation-delay: 1.9s;
+	animation-name: pulseAppear, slowDrop;
+	animation-duration: 3.6s;
+}
+
+.gem1 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 371px;
+	transform: rotate(-8deg);
+	animation-name: gemDrop;
+	animation-duration: .5s;
+}
+
+.gem2 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 369px;
+	left: 38px;
+	transform: rotate(-24deg);
+	animation-name: gemDrop;
+	animation-duration: .5s;
+}
+
+.gem3 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 370px;
+	left: 81px;
+	animation-name: gemDrop;
+	animation-duration: .5s;
+}
+
+.gem4 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 370px;
+	left: 125px;
+	animation-name: gemDrop;
+	animation-duration: .5s;
+}
+
+.gem5 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 335px;
+	left: 110px;
+	animation-name: gemDrop1a;
+	animation-duration: .5s;
+}
+
+.gem6 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 331px;
+	left: 17px;
+	transform: rotate(-5deg);
+	animation-name: gemDrop1;
+	animation-duration: .5s;
+}
+
+.gem7 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 333px;
+	left: 55px;
+	transform: rotate(25deg);
+	animation-name: gemDrop1;
+	animation-duration: .5s;
+}
+
+.gem8 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 292px;
+	left: 2px;
+	transform: rotate(10deg);
+	animation-name: gemDrop2;
+	animation-duration: .5s;
+}
+
+.gem9 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 292px;
+	left: 35px;
+	transform: rotate(-80deg);
+	animation-name: gemDrop2;
+	animation-duration: .5s;
+}
+
+.gem10 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 302px;
+	left: 82px;
+	transform: rotate(-80deg);
+	animation-name: gemDrop2a;
+	animation-duration: .5s;
+}
+
+.gem11 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 295px;
+	left: 125px;
+	transform: rotate(-80deg);
+	animation-name: gemDrop2;
+	animation-duration: .5s;
+}
+
+.gem12 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 258px;
+	left: 55px;
+	transform: rotate(-80deg);
+	animation-name: gemDrop3;
+	animation-duration: .5s;
+}
+
+.gem13 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 260px;
+	left: 96px;
+	transform: rotate(-80deg);
+	animation-name: gemDrop3b;
+	animation-duration: .5s;
+}
+
+.gem14 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 240px;
+	left: 130px;
+	transform: rotate(-35deg);
+	animation-name: gemDrop3a;
+	animation-duration: .5s;
+}
+
+.gem15 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 252px;
+	left: 5px;
+	transform: rotate(25deg);
+	animation-name: gemDrop3c;
+	animation-duration: .4s;
+}
+
+.gem16 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 221px;
+	left: 78px;
+	transform: rotate(50deg);
+	animation-name: gemDrop5;
+	animation-duration: .4s;
+}
+
+.gem17 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 216px;
+	left: 28px;
+	transform: rotate(53deg);
+	animation-name: gemDrop5;
+	animation-duration: .4s;
+}
+
+.gem18 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 196px;
+	left: -7px;
+	transform: rotate(145deg);
+	animation-name: gemDrop6a;
+	animation-duration: .4s;
+}
+
+.gem19 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 199px;
+	left: 115px;
+	transform: rotate(-35deg);
+	animation-name: gemDrop6;
+	animation-duration: .4s;
+}
+
+.gem20 {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 180px;
+	left: 59px;
+	transform: rotate(5deg);
+	animation-name: gemDrop7;
+	animation-duration: .4s;
+}
+
+/*20 Gems ------------------*/
+
+@keyframes gemDrop {
+	0%		{top: 0px;}
+	100%	{top: 88%;}
+}
+
+@keyframes gemDrop1 {
+	0%		{top: 0px;}
+	100%	{top: 79%;}
+}
+
+@keyframes gemDrop1a {
+	0%		{top: 0px;}
+	100%	{top: 80%;}
+}
+
+@keyframes gemDrop2 {
+	0%		{top: 0px;}
+	100%	{top: 70%;}
+}
+
+@keyframes gemDrop2a {
+	0%		{top: 0px;}
+	100%	{top: 72%;}
+}
+
+@keyframes gemDrop3 {
+	0%		{top: 0px;}
+	100%	{top: 61%;}
+}
+
+@keyframes gemDrop3a {
+	0%		{top: 0px;}
+	100%	{top: 57%;}
+}
+
+@keyframes gemDrop3b {
+	0%		{top: 0px;}
+	100%	{top: 62%;}
+}
+
+@keyframes gemDrop3c {
+	0%		{top: 0px;}
+	100%	{top: 60%;}
+}
+
+@keyframes gemDrop4 {
+	0%		{top: 0px;}
+	100%	{top: 61%;}
+}
+
+@keyframes gemDrop5 {
+	0%		{top: 0px;}
+	100%	{top: 52%;}
+}
+
+@keyframes gemDrop6 {
+	0%		{top: 0px;}
+	100%	{top: 48%;}
+}
+
+@keyframes gemDrop6a {
+	0%		{top: 0px;}
+	100%	{top: 47%;}
+}
+
+@keyframes gemDrop7 {
+	0%		{top: 0px;}
+	100%	{top: 43%;}
+}
+/*End Gems--------------------------------*/
+
+@keyframes rise {
+	0%		{top: 220px;}
+	90%		{top: 160px;}
+	100%	{top: 150px;}
+}
+
+@keyframes slideFromL {
+	0%		{margin-left: -40%;}
+	70%		{margin-left: 1.8%;}
+	94%		{margin-left: 0%;}
+	100%	{margin-left: 0%;}
+}	
+
+@keyframes mjDrop {
+	0%		{top: -52px;}
+	90%		{top: -52px;}
+	94%		{top: -51px;}
+	97%		{top: -47px;}
+	100%	{top: -52px;}
+}
+
+@keyframes theDrop {
+	0%		{top: -30px;}
+	90%		{top: -30px;}
+	94%		{top: 12px;}
+	97%		{top: 8px;}
+	100%	{top: 11px;}	
+}
+
+@keyframes slowDrop{
+	0%		{top: 210px;}
+	80%		{top: 320px;}
+	90%		{top: 325px;}
+	100%	{top: 325px;}
+}
+
+@keyframes pulseAppear {
+	0%		{opacity: 0%;}
+	50%		{opacity: 100%}
+	80%		{opacity: 100%}
+	100%	{opacity: 0%;}
+}	
+
+@keyframes fadeIn {
+	0%		{opacity: 0%;}
+	80%		{opacity: 0%;}
+	100%	{opacity: 100%;}
+}
+
+@keyframes resultFade {
+	0%		{opacity: 100%;}
+	90%		{opacity: 100%;}
+	100%	{opacity: 0%;}
+}
+
+/*Bouncing animation set: bounce, bounceOut, shadowEnlarge*/
+@keyframes bounce {
+	0%		{margin-top: 0px;}
+	55%		{margin-top: 16px;}
+	100%	{margin-top: 0px;}
+}
+
+@keyframes bounceOut {
+	0%		{font-size: 27px;}
+	53%		{font-size:	26px;}
+	100%	{font-size: 27px;}
+}
+
+@keyframes shadowEnlarge {
+	0%		{text-shadow: -6px 6px 3px black;}
+	55%		{text-shadow: -4px 4px 2px black;}
+	100%	{text-shadow: -6px 6px 3px black;}
+}
+/*-----------------------*/
+	
+.fadeIn {
+	animation-name: fadeIn;
+	animation-duration: 6s;
+	text-align: center;
+}
+
+.answerMain {
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 28px;
+	font-weight: bold;
+	color: #59A6F2;
+	padding-bottom: 25px;
+	display: none;
+	position: relative;
+	margin-top: 20px;
+}
+
+.wrongAnswer {
+	text-align: left;
+	position: relative;
+	color: #DF5632;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 23px;
+	font-weight: bold;
+	padding-left: 16px;
+}
+
+.confirmMain {
+	text-align: left;
+	position: relative;
+	color: #82DA50;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 20px;
+	font-size: 23px;
+	font-weight: bold;
+	padding-left: 16px;
+}
+
+.confirmHead {
+	position: relative;
+	margin-top: 20px;
+	color: #59A6F2;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.footer { 
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+	background-color: white;
+	text-align: center;
+	box-shadow: 0px -4px 12px black;
+}
+
+.wrapperOuter {
+	overflow: hidden;
+	position: relative;
+	margin: auto;
+	top: 145px;
+	opacity: 100%;
+	background-image: url("gold.jpg");
+	background-size: 470px 660px;
+	height: 475px;
+	width: 656px;
+	border: 5px solid #493F39;
+	border-top: 5px solid #BBB4AA;
+	border-right: 5px solid #BBB4AA;
+	box-shadow: -4px 4px 12px black;
+}
+
+.wrapperCenter {
+	position: absolute;
+	top: 100px;
+	left: 228px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	opacity: 100%;
+	height: 245px;
+	background-image: url("innerGold.jpg");
+	width: 185px;
+	border: 5px solid #493F39;
+	border-bottom: 5px solid #BBB4AA;
+	border-left: 5px solid #BBB4AA;
+}	
+
+.checkBtn {
+	margin-top: 10px;
+	color: white;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	height: 40px;
+	width: 125px;
+	font-size: 24px;
+	text-align: center;
+	background-image: url("gold.jpg");
+	border: 5px solid #493F39;
+	border-top: 5px solid #BBB4AA;
+	border-right: 5px solid #BBB4AA;
+	text-shadow: -4px 4px 3px black;
+}
+
+.resultFont {
+	color: #7DE549;
+	padding-top: 3px;
+	font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 800;
+	font-size: 34px;
+	text-shadow: -6px 6px 3px black;
+}
+
+.result {
+	position: absolute;
+	color: #D7D7D7;
+	top: 374px;
+	left: 228px;
+	height: 65px;
+	background-image: url("innerGold.jpg");
+	width: 185px;
+	border: 5px solid #493F39;
+	border-bottom: 5px solid #BBB4AA;
+	border-left: 5px solid #BBB4AA;
+	text-align: center;
+}
+
+.shadow {
+	font-family: arial, serif;
+	color: white;
+}
+
+.timerBox {
+	position: absolute;
+	height: 60px;
+	top: 20px;
+	left: 228px;
+	background-image: url("innerGold.jpg");
+	width: 185px;
+	border: 5px solid #624A1F;
+	border: 5px solid #493F39;
+	border-bottom: 5px solid #BBB4AA;
+	border-left: 5px solid #BBB4AA;
+}	
+
+.tinyTimer {
+	position: relative;
+	font-weight: 800;
+	color: white;
+	text-shadow: -4px 4px 3px black;
+	margin-left: 50%;
+	left: -40px;
+	top: -18px;
+	background-image: url("gold.jpg");
+	background-position: -440px center;
+	-webkit-background-clip: content-box;
+	background-size: 470px 660px;
+	height: 25px;
+	width: 80px;
+}
+
+.tinyTimerBorder {
+	position: absolute;
+	margin-left: 50%;
+	left: -40px;
+	top: 0px;
+	background-color: transparent;
+	height: 7px;
+	width: 80px;
+	border-bottom: 5px solid #493F39;
+	border-left: 5px solid #493F39;
+	border-right: 5px solid #BBB4AA;
+	z-index: 1;
+}
+
+.tinyAdd {
+	position: relative;
+	top: 21px;
+	left: 367px;
+	width: 8px;
+	transform: rotate(45deg);
+	border-bottom: 5px solid #BBB4AA;
+	z-index: 1;
+}
+
+.factorBuffer {
+	padding-bottom: 10px;
+}
+
+.guessBox {
+	height: 50px;
+	width: 80px;
+	margin: 5px;
+	font-family: arial, serif;
+	font-size: 50px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.RBox {
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 447px;
+  height: 420px;
+  width: 175px;
+  background-image: url("innerGold.jpg");
+  color: #4FAEF8;
+  border: 5px solid #493F39;
+  border-bottom: 5px solid #BBB4AA;
+  border-left: 5px solid #BBB4AA;
+}
+
+.count {
+	color: white;
+	font-size: 75px;
+	font-weight: bold;
+	text-shadow: -6px 6px 3px black;
+	font-family: helvetica, arial, sans-serif;
+	padding: 8px;
+}
+
+.countText {	
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 28px;
+	font-weight: bold;
+	color: #59A6F2;
+}
+
+.countTop {
+	padding-top: 20px;
+	display: none;
+}
+
+.LBox {
+	overflow: auto;
+	background-image: url("innerGold.jpg");
+	top: 20px;
+	left: 24px;
+	position: absolute;
+	height: 418px;
+	width: 170px;
+	display: inline-block;
+	border: 5px solid #493F39;
+	border-bottom: 5px solid #BBB4AA;
+	border-left: 5px solid #BBB4AA;
+	-webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+.probNums {
+	font-weight: 700;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 50px;
+	padding-top: 5px;
+	text-shadow: -6px 6px 3px black;
+}
+
+.numGrid {
+	padding-top: 28px;
+	display: block;
+	padding-bottom: 10px;
+	font-family: helvetica, arial, sans-serif;
+	overflow: hidden;
+	height: 400px;
+	width: 170px;
+	color: white;
+	text-shadow: -6px 6px 3px black;
+	animation-name: optionSlide;
+	animation-duration: 1s;
+}
+
+.singleNum {
+	display: inline-block;
+	position: relative;
+	width: 62px;
+	height: 50px;
+	font-weight: bold;
+	font-size: 28px;
+	padding: 4px;
+}
+
+.start {
+	position: absolute;
+	display: none;
+	color: white;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	height: 65px;
+	width: 185px;
+	font-size: 30px;
+	text-align: center;
+	background-image: url("gold.jpg");
+	border: 5px solid #493F39;
+	border-top: 5px solid #BBB4AA;
+	border-right: 5px solid #BBB4AA;
+	text-shadow: -4px 4px 3px black;
+}
+
+.reset {
+	position: absolute;
+	display: none;
+	color: white;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	height: 65px;
+	width: 185px;
+	font-size: 30px;
+	text-align: center;
+	background-image: url("gold.jpg");
+	border: 5px solid #493F39;
+	border-top: 5px solid #BBB4AA;
+	border-right: 5px solid #BBB4AA;
+	text-shadow: -4px 4px 3px black;
+}
+
+.centerCluster {
+	display: none;
+}
+
+.instructions {
+	display: block;
+	text-align: center;
+	position: relative;
+	top: 70px;
+	color: #EFE44B;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 27px;
+	font-weight: bold;
+	animation-name: bounce, bounceOut, shadowEnlarge;
+	animation-duration: 1.7s;
+	animation-iteration-count: infinite;
+}
+
+.instructions1 {
+	display: none;
+	text-align: center;
+	position: relative;
+	top: 70px;
+	color: #EFE44B;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 27px;
+	font-weight: bold;
+	animation-name: bounce, bounceOut, shadowEnlarge;
+	animation-duration: 1.7s;
+	animation-iteration-count: infinite;
+}
+
+.stats {
+	overflow: hidden;
+	display: none;
+	text-align: center;
+	position: relative;
+	padding-top: 24px;
+	padding-bottom: 4px;
+	color: white;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.statsHead {
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 28px;
+	font-weight: bold;
+	color: #59A6F2;
+	display: none;
+	padding-top: 22px;
+	text-align: center;
+	position: relative;
+}
+
+.countdown {
+	font-size: 32px;
+	margin-top: 13px;
+	font-weight: 800;
+	color: white;
+	text-shadow: -4px 4px 3px black;
+}
+
+.minutes {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.timeLimit {
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 26px;
+	font-weight: bold;
+	color: white;
+	display: none;
+	padding-top: 74px;
+	overflow: hidden;
+	height: 339px;
+	width: 170px;
+}
+
+.top {
+	margin-right: -40px;
+}
+
+.singleNum:hover {
+  text-shadow: -7px 7px 4px black;
+  font-size: 33px;
+  width: 70px;
+  padding: 0px;
+}
+
+.minutes:hover {
+  text-shadow: -7px 7px 4px black;
+  font-size: 28px;
+}
+	
