@@ -135,7 +135,6 @@ var bNum = Math.floor(Math.random() * 13);
 var bottomHold = document.getElementById("random").innerHTML = "";
 var input = document.getElementById("guess");
 var correct, guess, result, count = 0, totalCount = 0, wrong = 0;
-//------------------------------------------------------------------
 
 var confirmList = [];
 var wrongList = [];
@@ -226,7 +225,7 @@ window.onload = function() {
 }
 
 function playMenuMusic() {
-	
+	document.getElementById("menuMusic").volume = 0.3;
 	menuMusic.currentTime = 0;
 	setTimeout(function() {
 		menuMusic.play();
@@ -241,6 +240,7 @@ function delayMenuMusic() {
 }
 
 function playWinnerMusic() {
+	document.getElementById("winner").volume = 0.3;
 	setTimeout(function() {
 		winner.play();
 	}, 500);
@@ -248,6 +248,7 @@ function playWinnerMusic() {
 }
 
 function playBongoRoll() {
+	document.getElementById("bongoRoll").volume = 0.3;
 	bongoRoll.currentTime = 0;
 	bongoRoll.play();
 }
@@ -256,8 +257,8 @@ function stopMenuMusic() {
 	menuMusic.pause();
 }
 
-function playRoundMusic() {
-	
+function playRoundMusic() {	
+	document.getElementById("roundMusic").volume = 0.3;
 	setTimeout(function() {
 		menuMusic.loop = true;
 		roundMusic.play();
@@ -270,31 +271,37 @@ function stopRoundMusic() {
 }
 
 function playFastBongos() {
+	document.getElementById("fastBongos").volume = 0.3;
 	fastBongos.currentTime = 0;
 	fastBongos.play();
 }
 
 function playLowDrum() {
+	document.getElementById("lowDrum").volume = 0.3;
 	lowDrum.play();
 }
 
 function playChime() {
+	document.getElementById("chime").volume = 0.3;
 	chime.currentTime = 0;
 	chime.play();
 }
 
 function playTrumpet() {
+	document.getElementById("trumpet").volume = 0.3;
 	trumpet.currentTime = 0;
 	trumpet.play();
 }
 
 function playShake1() {
+	document.getElementById("shake1").volume = 0.3;
 	shake1.pause();
 	shake1.currentTime = 0;
 	shake1.play();
 }
 
 function playTubaFall() {
+	document.getElementById("tubaFall").volume = 0.3;
 	tubaFall.play();
 }
 
