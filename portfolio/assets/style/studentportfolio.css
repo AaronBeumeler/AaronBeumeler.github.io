@@ -25,8 +25,8 @@ body {
 .titlefont {
     font-family: Helvetica, sans-serif;
     font-variant: small-caps;
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 400;
 }
 
 .img-style-1 {
@@ -83,14 +83,19 @@ body {
     padding: 40px 40px;
     border: 1px solid rgb(69, 79, 90);
     border-top: none;
+    padding-bottom: 50px;
 }
 
 /*----------resume css section----------*/
 
 #resumetext {
+    border: solid black 1px;
+    margin-left: 25px;
+    margin-right: 25px;
     padding: 50px;
+    padding-bottom: 65px;
     background-color: rgb(241, 241, 241);
-    box-shadow: 5px 8px 6px rgb(56, 60, 65);
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
     color: #313131;
     height: 950px;
 }
@@ -139,24 +144,26 @@ body {
 }
 
 .examplepics {
-    width: 600px;
-    box-shadow: 5px 8px 6px rgb(56, 60, 65);
+    border: solid black 1px;
+    width: 598px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
     margin-right: 35px;
     margin-bottom: 20px;
     float: left;
+}
+
+.mobileexamplepics {
+    width: 269px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+    border: solid black 1px;
 }
 
 .schoollogo {
     width: 250px;
-    box-shadow: 5px 8px 6px rgb(56, 60, 65);
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
     margin-right: 35px;
     margin-bottom: 20px;
     float: left;
-}
-
-.floatlefttext {
-    float: left;
-    margin-right: 100px;
 }
 
 .floatright {
@@ -171,18 +178,21 @@ body {
 }
 
 #headshot {
-    width: 300px;
+    border: none;
+    margin-left: 40px;
+    width: 280px;
     border-radius: 9px;
 }
 
 .bragtitle {
+    text-shadow:3px 3px 2px rgb(79, 85, 92);
     font-weight: bold;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
 }
 
 .sectionhead {
     font-size: 1.1em;
-    text-shadow:3px 3px 2px rgb(56, 60, 65);
+    text-shadow:3px 3px 2px rgb(79, 85, 92);
     text-align: center;
     font-weight: bold;
     color: #ffffff;
@@ -204,6 +214,35 @@ body {
     margin-top: 40px;
     border-top: solid 1px #424242;
     border-bottom: solid 1px #424242;
+}
+
+.floatlefttext {
+    float: left;
+    padding-left: 50px;
+}
+
+.floatrighttext {
+    width: 307px;
+    float: right;
+    padding-right: 155px;
+}
+
+.accsection {
+    font-size: 1.1em;
+    text-shadow:3px 3px 2px rgb(79, 85, 92);
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.accframe {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #686868;
+    border: solid black 1px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
 }
 
 /* Go from zero to full opacity */
