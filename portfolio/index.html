@@ -20,10 +20,10 @@
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Profile</button>
             <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
-            <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+            <!--<button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>-->
             <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
             <button class="tablinks" onclick="openTab(event, 'Accomplishments')">Accomplishments</button>
-            <button class="tablinks" onclick="openTab(event, 'CoverLetter')">Cover Letter</button>
+            <!--<button class="tablinks" onclick="openTab(event, 'CoverLetter')">Cover Letter</button>-->
             <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
             <button class="tablinks" onclick="openRedirect('workexamples.html')">Work Examples</button>
         </div>
@@ -33,58 +33,72 @@
             <img class="examplepics" id="headshot" src="assets/images/headshot.jpeg" alt="Aaron Beumeler Resume">
             <div id="floatRtPro">
                 <div id="profileText">
-                <p>I am a highly-motivated senior in Information Science who is creative 
-                    and has good attention to detail. I previously worked with teams of musicians in entertainment venues and ran 
-                    a business teaching piano lessons. I currently work as a Solution Developer intern at Acxiom where I am learning 
-                    a variety of applied skills such as SQL, BASH, process automation software, and project tracking 
-                    software. I am looking forward to future opportunities in which I can continue learning and growing in my 
-                    career in IT.
-                </p>
+                    <p>I am a highly-motivated senior in Information Science who is creative 
+                        and has good attention to detail. I previously worked with teams of musicians in entertainment venues and ran 
+                        a business teaching piano lessons. I currently work as a Solution Developer intern at Acxiom where I am learning 
+                        a variety of applied skills such as SQL, BASH, process automation software, and project tracking 
+                        software. I am looking forward to future opportunities in which I can continue learning and growing in my 
+                        career in IT.
+                    </p>
                 </div>
             </div>
         </div>
 
         <!-- Begin Skills Section -->
-        <div id="Skills" class="tabcontent">
-        </div>
+        <!--<div id="Skills" class="tabcontent">
+        </div>-->
 
         <div id="Education" class="tabcontent">
-            <a href="https://ualr.edu/" target="_blank"><img class="schoollogo" src="assets/images/ua_little_rock.jpg" alt="UALR Logo"></a>
+            <div class="floatlefttext">
+                <a href="https://ualr.edu/" target="_blank"><img class="schoollogo" src="assets/images/ua_little_rock.jpg" alt="UALR Logo"></a>
+            </div>
             <span><div class="bragtitle">University of Arkansas Little Rock</div>
                 Fall 2018 - Present
                 <br>GPA: 3.84
                 <br>Expected Graduation: May 2022</span>
             <br><br><br><br>
-            <a href="https://uaptc.edu/" target="_blank"><img class="schoollogo" src="assets/images/UAPTC.png" alt="UA Pulaski Tech Logo"></a>
+            <div class="floatlefttext">
+                <a href="https://uaptc.edu/" target="_blank"><img class="schoollogo" src="assets/images/UAPTC.png" alt="UA Pulaski Tech Logo"></a>
+            </div>
             <span><div class="bragtitle">UA Pulaski Technical College</div>
                 June 2016 - December 2018</span>
         </div>
 
         <div id="Accomplishments" class="tabcontent">
             <div class="floatlefttext">
-                <span><div class="bragtitle">Appointed to UA Little Rock Dean's 
-                    <br>Leadership Council</div>
-                    Fall 2021</span>
+                <span class="accsection">2021</span>
                 <br><br>
-                <span><div class="bragtitle">Awarded Joseph and Mary Kaufman 
-                    <br>Scholarship</div>
-                    Fall 2021</span>
+                <div class="accframe">
+                    <span><div class="bragtitle">Appointed to UA Little Rock Dean's 
+                        <br>Leadership Council</div>
+                        Fall 2021</span>
+                    <br><br>
+                    <span><div class="bragtitle">Awarded Joseph and Mary Kaufman 
+                        <br>Scholarship</div>
+                        Fall 2021</span>                   
+                    <br><br>
+                    <span><div class="bragtitle">UA Little Rock 
+                        <br>Chancellor's List</div>
+                        Spring 2021</span>
+                </div>
+            </div>
+            <div class="floatrighttext">
+                <span class="accsection">2020</span>
                 <br><br>
+                <div class="accframe">
                 <span><div class="bragtitle">UA Little Rock 
                     <br>Chancellor's List</div>
-                    Spring 2021</span>
+                    Fall 2020</span>
+                <br><br>
+                <span><div class="bragtitle">UA Little Rock 
+                    <br>Dean's List</div>
+                    Fall 2020</span>
+                <br><br>
+                <span><div class="bragtitle">UA Little Rock 
+                    <br>Dean's List</div>
+                    Spring 2020</span>
+                </div>
             </div>
-            <span><div class="bragtitle">UA Little Rock 
-                <br>Chancellor's List</div>
-                Fall 2020</span>
-            <br><br>
-            <span><div class="bragtitle">UA Little Rock 
-                <br>Dean's List</div>
-                Fall 2020</span>
-            <br><br>
-            <span><div class="bragtitle">UA Little Rock 
-                <br>Dean's List</div>
-                Spring 2020</span>
         </div>        
         
         <!-- Begin Skills Section -->
@@ -162,23 +176,26 @@
             <!--<img id="resume_pdf" src="assets/images/resume.jpg" alt="Aaron Beumeler Resume">-->
         </div>
         
-        <div id="CoverLetter" class="tabcontent">
-            
-        </div>
+        <!--<div id="CoverLetter" class="tabcontent">    
+        </div>-->
 
         <div id="Contact" class="tabcontent">
-            <div id="contactType">
-                <span>Phone:</span>
-                <br><br>
-                <span>Email:</span>
-                <br><br>
-                <span>Web Address:</span>
+            <div class="floatlefttext">
+                <div class="accframe" style="width: 450px;">
+                    <div id="contactType">
+                        <span class="bragtitle">Phone:</span>
+                        <br><br>
+                        <span class="bragtitle">Email:</span>
+                        <br><br>
+                        <span class="bragtitle">Web Address:</span>
+                    </div>
+                    <span>501.519.4519</span>
+                    <br><br>
+                    <span>awbeumeler@ualr.edu</span>
+                    <br><br>
+                    <span>https://aaronbeumeler.github.io/portfolio</span>
+                </div>
             </div>
-            <span>(501) 519-4519</span>
-            <br><br>
-            <span>awbeumeler@ualr.edu</span>
-            <br><br>
-            <span>https://aaronbeumeler.github.io/portfolio</span>
         </div>    
 </div>
 <script type="text/javascript" src="assets/scripts/index.js"></script>
