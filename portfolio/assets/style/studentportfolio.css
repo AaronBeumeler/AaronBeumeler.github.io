@@ -70,7 +70,7 @@ body {
 
 #link:hover {   
     box-shadow: 7px 10px 8px rgb(79, 85, 92);
-    transition-duration: .1s;
+    transition-duration: .3s;
 }
 
 /* Create an active/current tablink class */
