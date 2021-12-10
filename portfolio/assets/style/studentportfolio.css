@@ -3,7 +3,7 @@
 body {
     color: rgb(255, 255, 255);
 	font-family: Helvetica, sans-serif;
-    background-color: rgb(241, 241, 241);
+    background-color: #e0e0e0;
 	}
 
 #container {
@@ -23,7 +23,7 @@ body {
 }
 
 .titlefont {
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica;
     font-variant: small-caps;
     font-size: 36px;
     font-weight: 400;
@@ -86,6 +86,19 @@ body {
     padding-bottom: 50px;
 }
 
+/*-------skill section css-------------*/
+
+.skillsection {
+    margin-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #757575;
+    border: solid black 1px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+}
+
 /*------cover letter css section--------*/
 
 #coverletter {
@@ -95,8 +108,8 @@ body {
     padding-left: 55px;
     padding-right: 55px;
     padding-top: 50px;
-    padding-bottom: 75px;
-    background-color: rgb(241, 241, 241);
+    padding-bottom: 85px;
+    background-color: rgb(238, 238, 237);
     box-shadow: 4px 7px 5px rgb(79, 85, 92);
     color: #313131;
     height: 485px;
@@ -114,7 +127,7 @@ body {
     margin-right: 25px;
     padding: 50px;
     padding-bottom: 65px;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(238, 238, 237);
     box-shadow: 4px 7px 5px rgb(79, 85, 92);
     color: #313131;
     height: 950px;
@@ -173,11 +186,10 @@ body {
 }
 
 .tinypics {
+    margin-bottom: 15px;
     border: solid black 1px;
     width: 280px;
     box-shadow: 4px 7px 5px rgb(79, 85, 92);
-    margin-right: 35px;
-    margin-bottom: 20px;
 }
 
 .smfloatleft {
@@ -187,7 +199,8 @@ body {
 
 .designdoc {
     margin-top: 20px;
-    margin-left: 20px; 
+    margin-left: 20px;
+    margin-bottom: 10px; 
     width: 190px;
     border: solid black 1px;
 }
@@ -249,11 +262,12 @@ body {
 }
 
 #profileText {
-    padding-top: 10px;
-    padding-bottom: 12px;
-    margin-top: 40px;
-    border-top: solid 1px #383838;
-    border-bottom: solid 1px #383838;
+    margin-top: 25px;
+    padding: 28px;
+    padding-bottom: 32px;
+    background-color: #757575;
+    border: solid 1px #383838;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
 }
 
 .floatlefttext {
@@ -280,7 +294,7 @@ body {
     padding-bottom: 20px;
     padding-left: 25px;
     padding-right: 25px;
-    background-color: #686868;
+    background-color: #757575;
     border: solid black 1px;
     box-shadow: 4px 7px 5px rgb(79, 85, 92);
 }
