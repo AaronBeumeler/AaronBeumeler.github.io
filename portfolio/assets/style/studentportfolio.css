@@ -68,6 +68,11 @@ body {
     background-color: rgb(20, 20, 20);
 }
 
+#link:hover {   
+    box-shadow: 7px 10px 8px rgb(79, 85, 92);
+    transition-duration: .1s;
+}
+
 /* Create an active/current tablink class */
 .tab button.active {
     background-color: rgb(134, 149, 163);
@@ -203,6 +208,7 @@ body {
     margin-bottom: 10px; 
     width: 190px;
     border: solid black 1px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
 }
 
 .mobileexamplepics {
