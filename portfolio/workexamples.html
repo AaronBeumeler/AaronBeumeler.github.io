@@ -10,6 +10,7 @@
     <meta name="author" content="Aaron Beumeler">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/style/studentportfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
     </div>
     <div id="container">
         <div class="tab">
-            <button class="tablinks" onclick="openRedirect('index.html')">Home</button>
+            <button class="tablinks" onclick="openRedirect('index.html')"><i class="fa fa-arrow-left"></i></button>
             <button class="tablinks" onclick="openTab(event, 'Writing')" id="defaultOpen">Writing</button>
             <button class="tablinks" onclick="openTab(event, 'WebProject')" id="defaultOpen">Web Project</button>
             <button class="tablinks" onclick="openTab(event, 'Database')">Database</button>
@@ -28,12 +29,17 @@
 
         <div id="Writing" class="tabcontent">
             <div class="smfloatleft">
-                <a href="assets/images/remembered.pdf" target="_blank"><img class="tinypics" id="link" src="assets/images/p1remembered.png" alt="Writing Example 1"></img></a>
+                <a href="assets/images/analysis_design.pdf" target="_blank"><img class="tinypics" id="link" src="assets/images/analysis.jpg" alt="Writing Example 1"></img></a>
                 <br>
-                <a href="assets/images/remembered.pdf" target="_blank" style="padding-left: 38px;">World Literature Essay PDF</a>
+                <a href="assets/images/analysis_design.pdf" target="_blank" style="padding-left: 40px;">Analysis & Design Report PDF</a>
             </div>
-            <div class="smfloatleft" style="padding-left: 50px;">
-                <a href="assets/images/astronomy.pdf" target="_blank"><img class="tinypics" id="link" src="assets/images/astronomy.jpg" alt="Writing Example 2"></img></a>
+            <div class="smfloatleft" style="padding-left: 34px;">
+                <a href="assets/images/remembered.pdf" target="_blank"><img class="tinypics" id="link" src="assets/images/p1remembered.png" alt="Writing Example 2"></img></a>
+                <br>
+                <a href="assets/images/remembered.pdf" target="_blank" style="padding-left: 40px;">World Literature Essay PDF</a>
+            </div>
+            <div class="smfloatleft" style="padding-left: 34px;">
+                <a href="assets/images/astronomy.pdf" target="_blank"><img class="tinypics" id="link" src="assets/images/astronomy.jpg" alt="Writing Example 3"></img></a>
                 <br>
                 <a href="assets/images/astronomy.pdf" target="_blank" style="padding-left: 55px;">Astronomy Essay PDF</a>
             </div>
@@ -76,11 +82,11 @@
                     </p>
                     <br>
                     <div class="sectionhead">
-                        <div>Analysis & Design</div>
+                        <div>SQL Code</div>
                     </div>
-                    <a src="assets/images/analysis_design.pdf" target="_blank"><img class="designdoc" id="link" src="assets/images/analysis.jpg" alt="Design Document"></img></a>
+                    <a href="assets/images/sql_statements.pdf" target="_blank"><img class="designdoc" id="link" src="assets/images/create_sql.png" alt="SQL Example"></img></a>
                     <br>
-                    <a src="assets/images/analysis_design.pdf" target="_blank" style="padding-left: 50px;">View full document</a>
+                    <a href="assets/images/sql_statements.pdf" target="_blank" style="padding-left: 50px;">View full document</a>
                 </div>
             </div>
             <img class="examplepics" src="assets/images/DB Relation Schemas.jpeg" alt="Music Lesson ER Diagram"></img>
