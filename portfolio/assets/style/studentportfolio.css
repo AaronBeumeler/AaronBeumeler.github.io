@@ -8,8 +8,7 @@ body {
 
 #container {
 	width: 1000px;
-	margin-right: auto;
-	margin-left: auto;
+	margin: auto;
 	margin-top: 10px;
 }
 
@@ -44,7 +43,7 @@ body {
 /* Style the tab */
 .tab {
     overflow: hidden;
-    border: .5px solid rgb(64, 74, 85);
+    border: 1px solid black;
     border-bottom: 1px solid black;
     border-bottom: none;
     background-color: #424242;
@@ -69,7 +68,12 @@ body {
 }
 
 #link:hover {   
-    box-shadow: 7px 10px 8px rgb(79, 85, 92);
+    box-shadow: 8px 11px 9px rgb(79, 85, 92);
+    transform: scale(1.01);
+    transition-duration: .3s;
+}
+
+#link {
     transition-duration: .3s;
 }
 
@@ -101,7 +105,7 @@ body {
     padding-right: 35px;
     background-color: #757575;
     border: solid black 1px;
-    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+    
 }
 
 /*------cover letter css section--------*/
