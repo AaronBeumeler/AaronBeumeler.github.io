@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Aaron Beumeler</title>
+    <meta name="description" content="Portfolio of Aaron Beumeler">
+    <meta name="keywords" content="Information, Science, UALR, Bachelors, Computer, HTML, CSS, Javascript, SQL, Web Design
+                                   Developer, Portfolio">
+    <meta name="author" content="Aaron Beumeler">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/style/large.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="titlecontainer">
+        <h1 class="titlefont">Work Examples</h1>
+    </div>
+    <div id="container">
+        <div class="tab">
+            <button class="tablinks" onclick="openRedirect('index.html')"><i class="fa fa-arrow-left"></i></button>
+            <button class="tablinks" onclick="openTab(event, 'Writing')" id="defaultOpen">Writing</button>
+            <button class="tablinks" onclick="openTab(event, 'WebProject')" id="defaultOpen">Web Project</button>
+            <button class="tablinks" onclick="openTab(event, 'Database')">Database</button>
+            <button class="tablinks" onclick="openTab(event, 'Programming')">Programming</button>
+            <button class="tablinks" onclick="openTab(event, 'Capstone')">Capstone Project</button>
+        </div>
+
+        <div id="Writing" class="tabcontent">
+            <div class="smfloatleft">
+                <a href="assets/images/analysis_design.pdf" target="_blank"><img class="tinypics" id="link" src="assets/images/analysis.jpg" alt="Writing Example 1"></img></a>
+                <br>
+                <a href="assets/images/analysis_design.pdf" target="_blank" style="padding-left: 40px;">Analysis & Design Report PDF</a>
+            </div>
+            <div class="smfloatleft" style="padding-left: 34px;">
+                <a href="assets/images/remembered.pdf" target="_blank"><img class="tinypics" id="link" src="assets/images/p1remembered.png" alt="Writing Example 2"></img></a>
+                <br>
+                <a href="assets/images/remembered.pdf" target="_blank" style="padding-left: 40px;">World Literature Essay PDF</a>
+            </div>
+            <div class="smfloatleft" style="padding-left: 34px;">
+                <a href="assets/images/astronomy.pdf" target="_blank"><img class="tinypics" id="link" src="assets/images/astronomy.jpg" alt="Writing Example 3"></img></a>
+                <br>
+                <a href="assets/images/astronomy.pdf" target="_blank" style="padding-left: 55px;">Astronomy Essay PDF</a>
+            </div>
+        </div>
+
+        <div id="WebProject" class="tabcontent">
+            <a href="https://aaronbeumeler.github.io/webpage" target="_blank"><img class="examplepics" id="link" src="assets/images/webpagetask1.jpg" alt="Webpage Example Screenshot"></a>
+            <div class="floatright">
+                <div class="accframe">
+                    <div class="sectionhead">Webpage</div>
+                    <p>My objective was to reproduce the webpage shown in this image. 
+                    The only content provided with the project's description were the image files to be included in the page 
+                    and the image to the left. Click on the image to see how my   
+                    <a href="https://aaronbeumeler.github.io/webpage" target="_blank">webpage</a>
+                    compares with the image.
+                </div>
+            </div>
+        </div>
+
+        <div id="Database" class="tabcontent">
+            <img class="examplepics" src="assets/images/Music Lesson ER Diagram.jpeg" alt="Music Lesson ER Diagram"></img>
+            <div class="floatright">
+                <div class="accframe">
+                    <div class="sectionhead">Music Lesson Studio Database</div>
+                    <p>This project is a database that I created for a music lesson 
+                        studio organization. There are multiple studios, teachers and students interacting 
+                        here and my database is designed to manage all of the necessary information.
+                    </p>
+                    <br>
+                    <div class="sectionhead">The ER Diagram</div>
+                    <p>This example shows a graphical representation of the database. Included 
+                        in this diagram are entities, their relationships and attributes. Important details are noted
+                        such as the number of entities involved in a relationship and primary keys. Assumptions are also
+                        noted at the bottom to avoid any possible confusion in the design.
+                    </p>
+                    <br>
+                    <div class="sectionhead">Relational Database Schemas</div>
+                    <p>This diagram of the database schemas was created after normalizing the above entity relationship diagram to 
+                    third normal form. Primary keys are underlined with arrows connecting to foreign keys in the related schemas.
+                    </p>
+                    <br>
+                    <div class="sectionhead">
+                        <div>SQL Code</div>
+                    </div>
+                    <a href="assets/images/sql_statements.pdf" target="_blank"><img class="designdoc" id="link" src="assets/images/create_sql.png" alt="SQL Example"></img></a>
+                    <br>
+                    <a href="assets/images/sql_statements.pdf" target="_blank" style="padding-left: 50px;">View full document</a>
+                </div>
+            </div>
+            <img class="examplepics" src="assets/images/DB Relation Schemas.jpeg" alt="Music Lesson ER Diagram"></img>
+        </div>
+       
+        <div id="Programming" class="tabcontent">
+            <img class="examplepics" src="assets/images/javaapps.jpg" alt="Java Application Management">
+            <div class="floatright">
+                <div class="accframe">
+                    <div class="sectionhead">Image Management<br>User Interface</div>
+                        <p>This is a user interface I created in a team project with two other classmates.
+                        The purpose of this application is to allow a user to add and delete computer images. A user must also be able to add and 
+                        delete applications which can then be added to a selected computer image.
+                        </p>  
+                    </div>
+                </div>
+            <img class="examplepics" src="assets/images/computerimages.jpg" alt="Java Image Management">
+        </div>
+
+        <div id="Capstone" class="tabcontent">
+            <a href="https://aaronbeumeler.github.io/math_jungle/" target="_blank"><img class="examplepics" id="link" src="assets/images/mathjungle1.jpg" alt="Math Jungle Image"></a>
+            <div class="floatright">
+                <div class="accframe">
+                    <div class="sectionhead">Math Game</div>
+                        <p>I created this game to help my daughter study for her weekly tests 
+                        over multiplication facts. In the tests she was required to answer twenty random questions correctly under one minute. 
+                        This game is my attempt to make studying for her tests fun!
+                        </p>
+                    <div class="sectionhead">How It Works</div>
+                        <p>The Math Jungle lets players select a multiple to practice, then a time limit. They 
+                        attempt to answer twenty questions correctly, collecting gems and improving on their stats along the way. After 
+                        the player has answered twenty multiplication questions or time has expired, statistics are displayed in the 
+                        left of the panel. Scrolling down in that area allows them to review their answers from the previous round.
+                        </p>
+                    <div class="sectionhead">Project Goals</div>
+                        <p>Math Jungle does not display appropriately on screens with different aspect ratios and resolutions. Over the course of
+                            the capstone project, I will add to the existing Math Jungle code to make it playable on a variety of devices. It 
+                            is crucial to the project's success that Math Jungle is playable on mobile touch screen devices with narrower 
+                            vertical screens.
+                        </p>
+                    <div id="pdfbox">
+                        <span class="pdflist">
+                            <a href="assets/images/project_charter.pdf" target="_blank" style="padding-left: 28px;">Project Charter PDF</a>
+                            <br>
+                            <a href="assets/images/design.pdf" target="_blank" style="padding-left: 18px;">Analysis & Design PDF</a>
+                        </span> 
+                    </div>
+                </div>
+            </div>
+            <img src="assets/images/mobile_pre.JPG" class="mobileexamplepics" alt="Mobile Game Image 1" style="margin-right: 40px;">
+            <img src="assets/images/mobile_gameplay.JPG" class="mobileexamplepics" alt="Mobile Game Image 2">
+        </div>
+    </div>
+    
+<script type="text/javascript" src="assets/scripts/index.js"></script>
+</body>
+</html>
