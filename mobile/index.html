@@ -1,1 +1,295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Aaron Beumeler</title>
+    <meta name="description" content="Portfolio of Aaron Beumeler">
+    <meta name="keywords" content="Information, Science, UALR, Bachelors, Computer, HTML, CSS, Javascript, SQL, Web Design
+                                   Developer, Portfolio">
+    <meta name="author" content="Aaron Beumeler">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- My CSS -->
+    <link id="pagestyle" rel="stylesheet" href="assets/style/large.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
+<body>
+    <div id="titlecontainer">
+        <h1 class="titlefont">Aaron Beumeler</h1>
+    </div>
+    <div id="container">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Profile</button>
+            <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
+            <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+            <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
+            <button class="tablinks" onclick="openTab(event, 'Accomplishments')">Accomplishments</button>
+            <button class="tablinks" onclick="openTab(event, 'CoverLetter')">Cover Letter</button>
+            <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+            <button class="tablinks" onclick="openRedirect('workexamples.html')">Work Examples</button>
+        </div>
+
+        <!-- Begin Home Section -->
+        <div id="Home" class="tabcontent">
+            <img class="examplepics" id="headshot" src="assets/images/headshot.jpeg" alt="Aaron Beumeler Resume">
+            <div id="floatRtPro">
+                <div id="profileText">
+                    <div>I am a highly-motivated senior in Information Science who is creative 
+                        and has good attention to detail. I previously worked with teams of musicians in entertainment venues and ran 
+                        a business teaching piano lessons. I currently work as an intern Solution Developer at Acxiom where I am applying 
+                        a variety of skills such as SQL, BASH, process automation software, and project tracking 
+                        software. I am looking forward to future opportunities toe learn and grow in my 
+                        IT career.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Begin Skills Section -->
+        <div id="Skills" class="tabcontent">
+            <div class="skillsection" style="height: 165px;">
+                <div style="float: left;">
+                <span class="bragtitle">Programming Languages</span>
+                <br>
+                <ul>
+                    <li>SQL</li>
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                    <li>CSS</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+                <div style="float: right; margin-right: 400px;">
+                    <span class="bragtitle">Additional Skills</span>
+                    <br>
+                    <ul class="skillslist">
+                        <li>Microsoft Azure</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Excel</li>
+                        <li>Microsoft Word</li>
+                        <li>Powerpoint</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skillsection">
+                <div class="sm_screen">
+                <span class="bragtitle">Visual Design</span>
+                <br><br>
+                <div style="float: left; width: 280px; padding-left: 45px; padding-right: 60px; border-right: solid black 1px;">
+                The first example is a logo I designed for use on business cards and song request forms
+                related to my piano teaching and performance. The second is an invitation I designed 
+                to be sent to my piano students via email. I used Adobe Photoshop to create both.
+                <br><br><br>
+                <img class="tinypics" style="width: 200px; margin-left: 35px; margin-bottom: 50px;" src="assets/images/ab_logo.jpeg"></img>
+                </div> 
+                <img class="tinypics" style="margin-left: 70px; width: 315px" src="assets/images/recital.jpg"></img>
+            </div>
+            <div class="skillsection">
+                <span class="bragtitle">Music & Performance</span>
+                <br><br>
+                <img class="tinypics" style="width: 500px; margin-bottom: 10px; margin-left: 25px;" src="assets/images/performance.jpg"></img>
+                <div class="floatright" style="margin-top: 30px; margin-left: 0px; margin-right: 25px; width: 240px;">
+                    I began studying piano at the age of five and have since added drums, guitar, bass guitar, alto saxophone, and vocals.
+                    As a professional musician, I have performed in numerous clubs across the United States over a span of fifteen years. 
+                    I also enjoyed teaching piano lessons for six years. I will remain passionate about music while I shift my focus to 
+                    developing my career in information technology.
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div id="Education" class="tabcontent">
+            <div class="floatlefttext">
+                <a href="https://ualr.edu/" target="_blank"><img class="schoollogo" id="link" src="assets/images/ua_little_rock.jpg" alt="UALR Logo"></a>
+            </div>
+            <span><div class="bragtitle">University of Arkansas Little Rock</div>
+                Fall 2018 - Present
+                <br>GPA: 3.84
+                <br>Expected Graduation: May 2022</span> 
+                <br>
+                <a href="assets/images/University of Arkansas at Little Rock.pdf" target="_blank">View courses completed at UALR</a> 
+            <br><br><br><br>
+            <div class="floatlefttext">
+                <a href="https://uaptc.edu/" target="_blank"><img class="schoollogo" id="link" src="assets/images/UAPTC.png" alt="UA Pulaski Tech Logo"></a>
+            </div>
+            <span><div class="bragtitle">UA Pulaski Technical College</div>
+                June 2016 - December 2018</span>
+                <br><span><a href="assets/images/University of Arkansas - Pulaski Tech.pdf" target="_blank">View courses completed at UA-PTC</a> </span>
+        </div>
+
+        <div id="Accomplishments" class="tabcontent">
+            <div class="floatlefttext">
+                <span class="accsection">2021</span>
+                <br><br>
+                <div class="accframe">
+                    <span><div class="bragtitle">Appointed to UA Little Rock Dean's 
+                        <br>Leadership Council</div>
+                        Fall 2021</span>
+                    <br><br>
+                    <span><div class="bragtitle">Awarded Joseph and Mary Kaufman 
+                        <br>Scholarship</div>
+                        Fall 2021</span>                   
+                    <br><br>
+                    <span><div class="bragtitle">UA Little Rock 
+                        <br>Chancellor's List</div>
+                        Spring 2021</span>
+                </div>
+            </div>
+            <div class="floatrighttext">
+                <span class="accsection">2020</span>
+                <br><br>
+                <div class="accframe">
+                <span><div class="bragtitle">UA Little Rock 
+                    <br>Chancellor's List</div>
+                    Fall 2020</span>
+                <br><br>
+                <span><div class="bragtitle">UA Little Rock 
+                    <br>Dean's List</div>
+                    Fall 2020</span>
+                <br><br>
+                <span><div class="bragtitle">UA Little Rock 
+                    <br>Dean's List</div>
+                    Spring 2020</span>
+                </div>
+            </div>
+        </div>        
+        
+        <!-- Begin Resume Section -->
+        <div id="Resume" class="tabcontent">
+            <span style="padding-left: 28px;"><a href="assets/images/resume.pdf" target="_blank">Click here</a> to view resume PDF</span>
+            <br><br>
+            <div id="resumetext">
+                <div id="resumetitle">
+                    <span>Aaron Beumeler</span>
+                </div>
+                <div id="resumesubtitle">
+                    <span>Information Science Student</span>
+                </div>
+                <div class="resleftcolumn">
+                    <div class="sectiontitle">Contact</div>
+                    <p>Phone: 501.519.4519<br>
+                       Email: awbeumeler@ualr.edu<br>
+                       Location: Little Rock, Arkansas</p>
+                    <br>
+                    <div class="sectiontitle">Education</div>
+                    <p>Persuing BS, Information Science<br>
+                       University of Arkansas Little Rock<br>
+                       Expected Graduation, May 2022<br>
+                       GPA 3.84</b></p>
+                    <br>
+                    <div class="sectiontitle">Skills</div>
+                    <p>36 Credits completed in Information Science courses</p>
+                    <p>Coursework completed using HTML, CSS, JavaScript, Java, Python, Azure, SQL, and PHP</p>
+                    <p>Adobe Photoshop</p>
+                    <br>
+                    <div class="sectiontitle">Awards</div>
+                    <p>Appointed to Dean's Leadership Council</p>
+                    <p>Awarded Joseph and Mary Kaufman Scholarship</p>
+                    <p>Named to Dean's List and Chancellor's List</p>
+                    <br>
+                    <div class="sectiontitle">Interests</div>
+                    <p>Web design, UI/UX, playing piano, snowboarding, and camping with my family.</p>
+                </div>
+                <div class="resrightcolumn">
+                    <div class="sectiontitle">Profile</div>
+                    <p>Highly-motivated senior in Information Science with creativity and attention to detail.
+                    Worked with teams of musicians in entertainment venues and ran a business teaching piano 
+                    lessons. Gained many piano students and work opportunities based on good reputation. Eager
+                    to apply classroom knowledge and learn new skills in technology field.
+                    </p>
+                    <br>
+                    <div class="sectiontitle">Experience</div>
+                    <p>
+                    <div class="jobrole">Solution Developer Intern</div>
+                        <div class="jobinfo">Acxiom | Conway, AR | May 2021 - Present</div>
+                    </p>
+                    <p>Working on the insurance team making changes to code and processes using
+                    SQL, Bash, process automation software, and a variety of professional developer 
+                    tools. Using git on client servers to manage and implement changes to solutions.
+                    </p>
+                    <p>
+                    <div class="jobrole">Dueling Piano Musician</div>
+                        <div class="jobinfo">Willy D's Dueling Pianos | Little Rock, AR | 2018 - Present</div>
+                        <div class="jobinfo">Ernie Biggs | Little Rock, AR | 2014 - 2018</div>
+                        <div class="jobinfo">Howl at the Moon | San Antonio, TX | 2007 - 2014</div>
+                    </p>
+                    <p>Performing as a member of a rotating group of musicians. Entertain customers with live
+                    music playing a variety of instruments. Responsible for providing excellent customer 
+                    service while engaging the audience in a high quality, interactive show.
+                    </p>
+                    <p>
+                    <div class="jobrole">Piano Teacher</div>
+                        <div class="jobinfo">Piano Lessons | Little Rock, AR | 2015 - 2021</div>
+                    </p>
+                    <p>Taught piano lessons to as many as 18 students each week. Assigned a customized 
+                    lesson plan for each student every week. Maintained a regular weekly schedule
+                    while tracking student progress and catering to individual student needs.
+                    </p>
+                </div>
+            </div>
+            <br>
+        </div>
+        
+        <div id="CoverLetter" class="tabcontent">
+            <div id="coverletter">
+                <div class="floatrightcover">
+                    <p>Aaron Beumeler
+                    <br>
+                    Little Rock, AR
+                    <br>
+                    501.519.4519
+                    <br>
+                    awbeumeler@ualr.edu
+                    </p>
+                </div>
+                <br><br><br><br><br><br><br><br>
+                <p>Dear Prospective Employer:
+                <br><br><br>
+                I am a Senior in the UALR Infromation Science program with an anticipated graduation date 
+                of May 2022. I am motivated and excited about my upcoming carreer in IT. My goal is to contribute 
+                my skills in web development and database technology at a company where I can continue to grow. 
+                <br><br>
+                I have a background in music performance and I am skilled in visual design. I have completed course work using
+                HTML, CSS, JavaScript, Java, Python, SQL, PHP and Microsoft Azure. I currently work as an intern Solution 
+                Developer at Acxiom and I plan to land a rewarding career following graduation.
+                <br><br>
+                My internship terminates in May 2022 and I am open to opportunities working with databases or in
+                web development. Please feel free to contact me by email at awbeumeler@ualr.edu or by phone to schedule
+                an interview. Thank you for your time and consideration.
+                <br><br><br>
+                Sincerely,
+                <br>
+                Aaron Beumeler
+                </p>
+            </div>
+        </div>
+
+        <div id="Contact" class="tabcontent">
+            <div class="floatlefttext">
+            <div class="accframe" style="width: 450px;">
+                <div id="contactType">
+                    <span class="bragtitle">Email:</span>
+                    <br><br>
+                    <span class="bragtitle">Phone:</span>
+                    <br><br>
+                    <span class="bragtitle">LinkedIn:</span>
+                    <br><br>
+                    <span class="bragtitle">Web Address:</span>
+                </div>
+                <span>awbeumeler@ualr.edu</span>
+                <br><br>
+                <span>501.519.4519</span>
+                <br><br>
+                <span><a href="https://www.linkedin.com/in/aaron-beumeler-019671219" target="_blank">Click to view profile</a></span>
+                <br><br>
+                <span>https://aaronbeumeler.github.io/portfolio</span>
+            </div>
+        </div>
+        </div>  
+</div>
+<script type="text/javascript" src="assets/scripts/index.js"></script>
+</body>
+</html>
