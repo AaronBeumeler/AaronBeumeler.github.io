@@ -1,0 +1,331 @@
+/*  body */
+	
+body {
+    color: rgb(255, 255, 255);
+	font-family: Helvetica, sans-serif;
+    background-color: #e0e0e0;
+	}
+
+#container {
+	width: 1000px;
+	margin: auto;
+	margin-top: 10px;
+}
+
+#titlecontainer {
+    color: black;
+    width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+    padding-left: 10px;
+}
+
+.titlefont {
+    font-family: Helvetica;
+    font-variant: small-caps;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.img-style-1 {
+	float: left;
+	margin-right: 10px;
+    margin-bottom: 10px;
+	padding: 5px;
+	border: 1px solid #CCC;
+}	
+	
+/* tutorial styles */
+
+/* tabs */
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom: none;
+    background-color: #424242;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    transition: 0.3s;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    font-size: 17px;
+    color: white;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+#link:hover {   
+    box-shadow: 8px 11px 9px rgb(79, 85, 92);
+    transform: scale(1.01);
+    transition-duration: .3s;
+}
+
+#link {
+    transition-duration: .3s;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: rgb(134, 149, 163);
+    border-bottom: rgb(134, 149, 163);
+}
+
+/* Style the tab content */
+.tabcontent {
+    font-size: 16px;
+    position: absolute;
+    width: 918px;
+    background-color:rgb(134, 149, 163);
+    padding: 40px 40px;
+    border: 1px solid rgb(69, 79, 90);
+    border-top: none;
+    padding-bottom: 50px;
+}
+
+/*-------skill section css-------------*/
+
+.skillsection {
+    margin-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #757575;
+    border: solid black 1px;
+    
+}
+
+/*------cover letter css section--------*/
+
+#coverletter {
+    border: solid black 1px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 50px;
+    padding-bottom: 85px;
+    background-color: rgb(238, 238, 237);
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+    color: #313131;
+    height: 485px;
+}
+
+.floatrightcover {
+    float: right;
+}
+
+/*----------resume css section----------*/
+
+#resumetext {
+    border: solid black 1px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 50px;
+    padding-bottom: 65px;
+    background-color: rgb(238, 238, 237);
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+    color: #313131;
+    height: 950px;
+}
+
+#resumetitle {
+    font-size: 48px;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+#resumesubtitle{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(155, 165, 177);
+}
+
+.sectiontitle {
+    font-size: 1.3em;
+    border-bottom: 1px solid rgb(134, 149, 163)
+}
+
+.jobrole {
+    color: #313131;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+.jobinfo {
+    padding-bottom: 3px;
+    color: #696969;
+}
+
+.resleftcolumn {
+    padding-top: 20px;
+    padding-right: 10px;
+    float: left;
+    width: 250px;
+    border-right: 1px solid rgb(155, 165, 177);
+}
+
+.resrightcolumn {
+    padding-top: 20px;
+    padding-left: 295px;
+}
+
+.examplepics {
+    border: solid black 1px;
+    width: 598px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+    margin-right: 35px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.tinypics {
+    margin-bottom: 15px;
+    border: solid black 1px;
+    width: 280px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+}
+
+.smfloatleft {
+    float: left;
+    width: 280px;
+}
+
+.designdoc {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px; 
+    width: 190px;
+    border: solid black 1px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+}
+
+.mobileexamplepics {
+    width: 269px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+    border: solid black 1px;
+}
+
+.schoollogo {
+    width: 250px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+    margin-right: 35px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.floatright {
+    float: right;
+    width: 283px;
+}
+
+#floatRtPro {
+    float: right;
+    width: 483px;
+    padding-right: 60px;
+}
+
+#headshot {
+    border: none;
+    margin-left: 40px;
+    width: 280px;
+    border-radius: 9px;
+}
+
+.bragtitle {
+    text-shadow:3px 3px 2px rgb(79, 85, 92);
+    font-weight: bold;
+    padding-bottom: 6px;
+}
+
+.sectionhead {
+    font-size: 1.1em;
+    text-shadow:3px 3px 2px rgb(79, 85, 92);
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: solid 1px #383838;
+    padding-bottom: 10px;
+}
+
+#contactType {
+    float: left;
+    width: 120px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+}
+
+#profileText {
+    margin-top: 25px;
+    padding: 28px;
+    padding-bottom: 32px;
+    background-color: #757575;
+    border: solid 1px #383838;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+}
+
+.floatlefttext {
+    float: left;
+    padding-left: 50px;
+}
+
+.floatrighttext {
+    width: 307px;
+    float: right;
+    padding-right: 155px;
+}
+
+.accsection {
+    font-size: 1.1em;
+    text-shadow:3px 3px 2px rgb(79, 85, 92);
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.accframe {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #757575;
+    border: solid black 1px;
+    box-shadow: 4px 7px 5px rgb(79, 85, 92);
+}
+
+#pdfbox {
+    padding: 12px;
+    background-color: #ebebeb;
+    border: solid black 2px;
+}
+
+.pdflist {
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
