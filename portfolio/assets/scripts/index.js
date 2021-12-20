@@ -1,5 +1,19 @@
 document.getElementById("defaultOpen").click();
 
+function layoutHandler() {
+    var styleLink = document.getElementById("pagestyle");
+    if (window.innerWidth < 700) {
+        styleLink.setAttribute("href", "assets/style/mobile.css");
+    } /*else if (window.innerWidth < 1200) {
+        styleLink.setAttribute("href", "assets/style/medium.css");
+    } */else if (window.innerWidth >= 700) {
+        styleLink.setAttribute("href", "assets/style/large.css");
+    }
+}
+
+window.onresize = layoutHandler;
+layoutHandler();
+
 function openTab(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
