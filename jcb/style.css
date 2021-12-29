@@ -1,10 +1,48 @@
 .cosmos {
-    background-image: url("images/astronaut.jpg");
+    background-image: url("images/cosmos_background.jpg");
     background-size: cover;
-    height: 100%;
+    background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 90px;
+}
+
+.shadow-bottom {
+    box-shadow: black 0px 10px 12px;
 }
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+.page-outer {
+    text-align: center;
+    margin: auto;
+}
+
+.lg-v-img {
+    display: inline-block;
+    width: 25%;
+    margin: 40px;
+    box-shadow: black 4px 8px 12px;
+    border: whitesmoke solid 1px;
+    border-radius: 4px;
+}
+
+.lg-h-img {
+    display: inline-block;
+    width: 35%;
+    margin: 40px;
+    box-shadow: black 4px 8px 12px;
+    border: whitesmoke solid 1px;
+    border-radius: 4px;
+}
+
+.lg-bk-img {
+    display: inline-block;
+    width: 8%;
+    margin: 50px;
+    box-shadow: black 4px 8px 12px;
+    border: whitesmoke solid 1px;
+    border-radius: 4px;
 }
