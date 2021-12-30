@@ -6,15 +6,20 @@
     background-attachment: fixed;
 }
 
+.avatar-pic {
+    width: 50px;
+    border-radius: 50%;
+}
+
 .shadow-bottom {
     box-shadow: black 0px 10px 12px;
 }
 
-/*
+
 body::-webkit-scrollbar {
     display: none;
 }
-*/
+
 
 .page-outer {
     text-align: center;
