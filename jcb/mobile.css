@@ -32,6 +32,7 @@ body::-webkit-scrollbar {
     margin: 10px;
     border: whitesmoke solid 1px;
     border-radius: 2px;
+    box-shadow: black 2px 4px 6px;
 }
 
 .lg-h-img {
@@ -40,6 +41,7 @@ body::-webkit-scrollbar {
     margin: 10px;
     border: whitesmoke solid 1px;
     border-radius: 2px;
+    box-shadow: black 2px 4px 6px;
 }
 
 .lg-bk-img {
@@ -48,4 +50,5 @@ body::-webkit-scrollbar {
     margin: 10px;
     border: whitesmoke solid 1px;
     border-radius: 2px;
+    box-shadow: black 2px 4px 6px;
 }
