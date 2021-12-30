@@ -1,0 +1,46 @@
+.cosmos {
+    background-image: url("images/cosmos_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.shadow-bottom {
+    box-shadow: black 0px 10px 12px;
+}
+
+/*
+body::-webkit-scrollbar {
+    display: none;
+}
+*/
+
+.page-outer {
+    text-align: center;
+    margin: auto;
+}
+
+.lg-v-img {
+    display: inline-block;
+    width: 90%;
+    margin: 10px;
+    border: whitesmoke solid 1px;
+    border-radius: 2px;
+}
+
+.lg-h-img {
+    display: inline-block;
+    width: 90%;
+    margin: 10px;
+    border: whitesmoke solid 1px;
+    border-radius: 2px;
+}
+
+.lg-bk-img {
+    display: inline-block;
+    width: 40%;
+    margin: 10px;
+    border: whitesmoke solid 1px;
+    border-radius: 2px;
+}
