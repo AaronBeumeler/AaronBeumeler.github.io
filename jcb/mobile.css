@@ -1,9 +1,10 @@
 .cosmos {
-    background-image: url("images/cosmos_background.jpg");
+    padding-top: 10px;
+    background-color: black;
+    /*linear-gradient(to left: url("images/cosmos_background.jpg");*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .avatar-pic {
@@ -29,27 +30,38 @@ body::-webkit-scrollbar {
 
 .lg-v-img {
     display: inline-block;
-    width: 94%;
-    margin: 10px;
-    border: whitesmoke solid 1px;
+    width: 100%;
+    margin: 0px;
+    border: grey solid 1px;
     border-radius: 2px;
-    box-shadow: black 2px 4px 6px;
+    /*box-shadow: black 2px 4px 6px;*/
 }
 
 .lg-h-img {
     display: inline-block;
-    width: 94%;
-    margin: 10px;
-    border: whitesmoke solid 1px;
+    width: 100%;
+    margin: 0px;
+    border: grey solid 1px;
     border-radius: 2px;
-    box-shadow: black 2px 4px 6px;
+    /*box-shadow: black 2px 4px 6px;*/
 }
 
 .lg-bk-img {
     display: inline-block;
-    width: 40%;
+    width: 20%;
     margin: 10px;
-    border: whitesmoke solid 1px;
+    /*border: whitesmoke solid 1px;*/
     border-radius: 2px;
-    box-shadow: black 2px 4px 6px;
+    /*box-shadow: black 2px 4px 6px;*/
+}
+
+.img-title {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 28px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: large;
+    font-weight: 700;
+
 }
