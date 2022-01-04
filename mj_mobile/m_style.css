@@ -12,6 +12,7 @@
 }
 
 body {
+    min-width: 388px;
     background-image: url("images/floral.jpg");
 	overflow: hidden;
 }
@@ -131,12 +132,15 @@ body {
     width: 32%;
     line-height: 24%;
     min-height: 60px;
-    padding-top: 20px;
     background-image: url("images/main-container.jpg");
     border: 5px solid #BBB4AA;
 	border-bottom: 5px solid #493F39;
 	border-left: 5px solid #493F39;
     touch-action: manipulation;
+}
+
+.num-button {
+    padding-top: 18px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
