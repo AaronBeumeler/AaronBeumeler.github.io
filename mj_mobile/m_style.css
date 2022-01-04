@@ -124,23 +124,27 @@ body {
 #one {
     border-right: 3px solid #493F39; 
     border-bottom: 3px solid #afa99f; 
+    touch-action: manipulation;
 }
 
 #two {
     border-left: 3px solid #afa99f; 
     border-right: 3px solid #493F39;
     border-bottom: 3px solid #afa99f; 
+    touch-action: manipulation;
 }
 
 #three {
     border-left: 3px solid #afa99f; 
     border-bottom: 3px solid #afa99f; 
+    touch-action: manipulation;
 }
 
 #four {
     border-right: 3px solid #493F39; 
     border-bottom: 3px solid #afa99f; 
     border-top: 3px solid #493F39; 
+    touch-action: manipulation;
 }
 
 #five {
@@ -148,18 +152,21 @@ body {
     border-bottom: 3px solid #afa99f; 
     border-top: 3px solid #493F39; 
     border-left: 3px solid #afa99f;
+    touch-action: manipulation;
 }
 
 #six {
     border-bottom: 3px solid #afa99f; 
     border-top: 3px solid #493F39; 
     border-left: 3px solid #afa99f;
+    touch-action: manipulation;
 }
 
 #seven {
     border-right: 3px solid #493F39; 
     border-bottom: 3px solid #afa99f; 
     border-top: 3px solid #493F39;
+    touch-action: manipulation;
 }
 
 #eight {
@@ -167,26 +174,31 @@ body {
     border-bottom: 3px solid #afa99f; 
     border-top: 3px solid #493F39; 
     border-left: 3px solid #afa99f;
+    touch-action: manipulation;
 }
 
 #nine {
     border-bottom: 3px solid #afa99f; 
     border-top: 3px solid #493F39; 
     border-left: 3px solid #afa99f;
+    touch-action: manipulation;
 }
 
 #del {
     border-right: 3px solid #493F39;
     border-top: 3px solid #493F39;
+    touch-action: manipulation;
 }
 
 #zero {
     border-right: 3px solid #493F39;
     border-top: 3px solid #493F39; 
     border-left: 3px solid #afa99f;
+    touch-action: manipulation;
 }
 
 #enter {
     border-top: 3px solid #493F39; 
     border-left: 3px solid #afa99f;
+    touch-action: manipulation;
 }
