@@ -1,3 +1,7 @@
+.navbar .navbar-collapse {
+    text-align: center;
+  }
+
 .title {
     background-image: url("images/floral.jpg");
 	font-family: helvetica, arial, sans-serif;
