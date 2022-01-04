@@ -45,10 +45,9 @@ body {
 	border-left: 5px solid #BBB4AA;
 }
 
-
 .top-right-box {
-    background-image: url("images/inner-container.jpg");
     text-align: center;
+    background-image: url("images/inner-container.jpg");
     float: right;
     min-height: 220px;
     width: 48.5%;
@@ -79,6 +78,22 @@ body {
     border: 5px solid #493F39;
 	border-bottom: 5px solid #BBB4AA;
 	border-left: 5px solid #BBB4AA;
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: large;
+    text-shadow: #241f1c -3px 4px 3px;
+    text-align: center;
+}
+
+#start_button {
+    width: 100%;
+    height: 100%;
+    min-height: 60px;
+    padding-top: 9px;
+    background-image: url("images/main-container.jpg");
+    border: 5px solid #BBB4AA;
+	border-bottom: 5px solid #493F39;
+	border-left: 5px solid #493F39;
 }
 
 .num-pad-outer {
@@ -107,98 +122,44 @@ body {
 	border-left: 5px solid #BBB4AA;
 }
 
-.num-button {
+.num-pad-inner > div {
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: x-large;
+    text-shadow: #241f1c -3px 4px 3px;
+    display: inline-block;
+    width: 32%;
+    line-height: 24%;
+    min-height: 60px;
+    padding-top: 20px;
+    background-image: url("images/main-container.jpg");
+    border: 5px solid #BBB4AA;
+	border-bottom: 5px solid #493F39;
+	border-left: 5px solid #493F39;
+    touch-action: manipulation;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+}
+
+.number-select-grid {
+    padding-top: 4%;
+    clear: both;
     color: whitesmoke;
     font-weight: 700;
     font-size: large;
     text-shadow: #241f1c -3px 4px 3px;
-    padding-top: 10px;
     display: inline-block;
-    min-width: 40px;
-    width: 30.6%;
-    min-height: 50px;
-    height: 22%;
-    text-align: center;
 }
 
-#one {
-    border-right: 3px solid #493F39; 
-    border-bottom: 3px solid #afa99f; 
-    touch-action: manipulation;
+.number-select-grid div{
+    width: 50%;
+    display: inline-block;
 }
 
-#two {
-    border-left: 3px solid #afa99f; 
-    border-right: 3px solid #493F39;
-    border-bottom: 3px solid #afa99f; 
-    touch-action: manipulation;
-}
-
-#three {
-    border-left: 3px solid #afa99f; 
-    border-bottom: 3px solid #afa99f; 
-    touch-action: manipulation;
-}
-
-#four {
-    border-right: 3px solid #493F39; 
-    border-bottom: 3px solid #afa99f; 
-    border-top: 3px solid #493F39; 
-    touch-action: manipulation;
-}
-
-#five {
-    border-right: 3px solid #493F39; 
-    border-bottom: 3px solid #afa99f; 
-    border-top: 3px solid #493F39; 
-    border-left: 3px solid #afa99f;
-    touch-action: manipulation;
-}
-
-#six {
-    border-bottom: 3px solid #afa99f; 
-    border-top: 3px solid #493F39; 
-    border-left: 3px solid #afa99f;
-    touch-action: manipulation;
-}
-
-#seven {
-    border-right: 3px solid #493F39; 
-    border-bottom: 3px solid #afa99f; 
-    border-top: 3px solid #493F39;
-    touch-action: manipulation;
-}
-
-#eight {
-    border-right: 3px solid #493F39; 
-    border-bottom: 3px solid #afa99f; 
-    border-top: 3px solid #493F39; 
-    border-left: 3px solid #afa99f;
-    touch-action: manipulation;
-}
-
-#nine {
-    border-bottom: 3px solid #afa99f; 
-    border-top: 3px solid #493F39; 
-    border-left: 3px solid #afa99f;
-    touch-action: manipulation;
-}
-
-#del {
-    border-right: 3px solid #493F39;
-    border-top: 3px solid #493F39;
-    touch-action: manipulation;
-}
-
-#zero {
-    border-right: 3px solid #493F39;
-    border-top: 3px solid #493F39; 
-    border-left: 3px solid #afa99f;
-    touch-action: manipulation;
-}
-
-#enter {
-    border-top: 3px solid #493F39; 
-    border-left: 3px solid #afa99f;
-    touch-action: manipulation;
+.checkBtn {
+    display: none;
 }
