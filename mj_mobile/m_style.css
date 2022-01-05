@@ -2,10 +2,6 @@
     text-align: center;
   }
 
-html {
-    background-color: black;
-}
-
 .title {
     background-image: url("images/floral.jpg");
 	font-family: helvetica, arial, sans-serif;
@@ -238,3 +234,15 @@ input[type=number]::-webkit-outer-spin-button {
 	-webkit-appearance: none; 
 	margin: 0; 
 }
+
+/* Lock orientation to Portrait mode */
+
+.orientleft #shell {
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin:160px 160px;
+}
+
+.orientright #shell {
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin:230px 230px;
+} 
