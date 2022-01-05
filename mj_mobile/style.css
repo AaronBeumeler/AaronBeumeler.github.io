@@ -138,6 +138,54 @@ body {
     display: none;
 }
 
+.instructions {
+	display: block;
+	text-align: center;
+	position: relative;
+	top: 70px;
+	color: #EFE44B;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 27px;
+	font-weight: bold;
+	animation-name: bounce, bounceOut, shadowEnlarge;
+	animation-duration: 1.7s;
+	animation-iteration-count: infinite;
+}
+
+.instructions1 {
+	display: none;
+	text-align: center;
+	position: relative;
+	top: 70px;
+	color: #EFE44B;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: -6px 6px 3px black;
+	font-size: 27px;
+	font-weight: bold;
+	animation-name: bounce, bounceOut, shadowEnlarge;
+	animation-duration: 1.7s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+	0%		{margin-top: 0px;}
+	55%		{margin-top: 16px;}
+	100%	{margin-top: 0px;}
+}
+
+@keyframes bounceOut {
+	0%		{font-size: 27px;}
+	53%		{font-size:	26px;}
+	100%	{font-size: 27px;}
+}
+
+@keyframes shadowEnlarge {
+	0%		{text-shadow: -6px 6px 3px black;}
+	55%		{text-shadow: -4px 4px 2px black;}
+	100%	{text-shadow: -6px 6px 3px black;}
+}
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
 	-webkit-appearance: none; 
