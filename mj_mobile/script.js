@@ -12,21 +12,6 @@ function layoutHandler() {
 window.onresize = layoutHandler;
 layoutHandler();
 
-function hideStartButton() {
-	var x = document.getElementById("start");
-	x.style.display = "none";
-}
-
-function showTopLeftGameplay() {
-	var x = document.getElementById("topLeftGameplay");
-	x.style.display = "block";
-}	
-
-function updateList() {
-	confirmList.unshift(numberInput + " x " + bNum + " = " + guess + "<br>");
-	document.getElementById("confirmMain").innerHTML = confirmList.join(" ");
-}
-
 function check() {
 	correct = (slotVal * bNum);
 	guess = document.getElementById("guess").value;
@@ -80,4 +65,44 @@ function check() {
     }
     inputClear();
 	lastBottomNum = bNum;
+}
+
+function hideStartButton() {
+	var x = document.getElementById("start");
+	x.style.display = "none";
+}
+
+function showTopLeftGameplay() {
+	var x = document.getElementById("topLeftGameplay");
+	x.style.display = "block";
+}	
+
+function hideInstructions() {
+	var x = document.getElementById("instructions");
+	x.style.display = "none";
+}
+
+function showInstructions() {
+	var x = document.getElementById("instructions");
+	x.style.display = "block";
+}
+
+function hideInstructions1() {
+	var x = document.getElementById("instructions1");
+	x.style.display = "none";
+}
+
+function showInstructions1() {
+	var x = document.getElementById("instructions1");
+	x.style.display = "block";
+}
+
+function showNum() {
+	var x = document.getElementById("number-select-grid");
+	x.style.display = "block";
+}
+
+function hideNum() {
+	var x = document.getElementById("number-select-grid");
+	x.style.display = "none";
 }
