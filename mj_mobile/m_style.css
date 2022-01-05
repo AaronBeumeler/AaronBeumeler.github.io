@@ -162,11 +162,10 @@ body {
 }
 
 .num-button {
-    padding: 7%;
 }
 
 .number-select-grid {
-    padding-top: 12px;
+    padding-top: 7px;
     text-align: center;
     clear: both;
     color: whitesmoke;
