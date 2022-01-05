@@ -81,3 +81,18 @@ function check() {
     inputClear();
 	lastBottomNum = bNum;
 }
+
+// lock orientation to portrat 
+
+$(window).bind('orientationchange', function(e, onready){
+    if(onready){
+        $(document.body).addClass('portrait-onready');
+    }
+    if (Math.abs(window.orientation) != 90){
+        $(document.body).addClass('portrait');
+    } 
+    else {
+        $(document.body).removeClass('portrait').removeClass('portrait-onready');
+    }
+ });
+ $(window).trigger('orientationchange', true);
