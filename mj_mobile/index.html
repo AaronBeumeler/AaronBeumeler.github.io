@@ -38,7 +38,7 @@
     <div class="top-left-box">
         <div id="topLeftGameplay" class="">
             <div id="instructions" class="instructions">Select<br>Number</div>
-            <div id="instructions1" class="instructions1">Select<br>Time Limit</div>
+            <div id="instructions1" class="instructions1">Select<br>Time</div>
             <!--
             <div class="probNums">
                 <div class="top">
@@ -73,7 +73,7 @@
             </div>
             <!--sm screen number grid-->
             <div id="sm-screen-num-grid">
-                <div type="button"  class="singleNum" onclick="createProb(); swap1(); hideNum(); showTime(); hideInstructions(); showInstructions1();">1</div>
+                <div type="button"  class="singleNum" onclick="/*createProb(); swap1(); */hideNum(); showTime(); hideInstructions(); showInstructions1();">1</div>
                 <div type="button"  class="singleNum" onclick="createProb(); swap2(); hideNum(); showTime(); hideInstructions(); showInstructions1();">2</div>
                 <div type="button"  class="singleNum" onclick="createProb(); swap3(); hideNum(); showTime(); hideInstructions(); showInstructions1();">3</div>
                 <div type="button"  class="singleNum" onclick="createProb(); swap4(); hideNum(); showTime(); hideInstructions(); showInstructions1();">4</div>
@@ -93,7 +93,13 @@
             <div id="3min" class="minutes" onclick="timeThree(); showStartButton(); hideTime(); hideInstructions1(); playFastBongos()">3 Minutes</div>
         </div>
         -->
+        <div id="timeLimit" class="timeLimit" /*onmouseover="playShake1()"*/>
+        <div id="1min" class="minutes" onclick="timeOne(); showStartButton(); hideTime(); hideInstructions1(); playFastBongos()">1 Minute</div>
+        <div id="2min" class="minutes" onclick="timeTwo(); showStartButton(); hideTime(); hideInstructions1(); playFastBongos()">2 Minutes</div>
+        <div id="3min" class="minutes" onclick="timeThree(); showStartButton(); hideTime(); hideInstructions1(); playFastBongos()">3 Minutes</div>
     </div>
+    </div>
+    
     <br>
     <div class="bottom-left-box">
         <p>Bottom Left</p>
