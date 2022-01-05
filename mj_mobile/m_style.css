@@ -2,6 +2,10 @@
     text-align: center;
   }
 
+html {
+    background-color: black;
+}
+
 .title {
     background-image: url("images/floral.jpg");
 	font-family: helvetica, arial, sans-serif;
@@ -162,7 +166,7 @@ body {
 }
 
 .num-button {
-    padding-top: 25px;
+    padding-top: 17px;
 }
 
 .number-select-grid {
