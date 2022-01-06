@@ -29,7 +29,6 @@ body {
     width: 90%;
     margin-top: 4%;
     margin-bottom: 2%;
-
 	border: 5px solid #493F39;
 	border-top: 5px solid #BBB4AA;
 	border-right: 5px solid #BBB4AA;
@@ -51,6 +50,7 @@ body {
 }
 
 .top-right-box {
+    text-align: center;
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
@@ -75,6 +75,7 @@ body {
 	border-bottom: 5px solid #BBB4AA;
 	border-left: 5px solid #BBB4AA;
 }
+
 
 .bottom-right-box {
     background-image: url("images/inner-container.jpg");
@@ -194,7 +195,6 @@ body {
 }
 
 .minutes {
-    text-align: center;
 	padding-top: 10px;
 	padding-bottom: 15px;
 }
