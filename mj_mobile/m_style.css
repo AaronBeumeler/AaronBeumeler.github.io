@@ -194,6 +194,7 @@ body {
 }
 
 .minutes {
+    text-align: center;
 	padding-top: 10px;
 	padding-bottom: 15px;
 }
