@@ -103,9 +103,82 @@ function check() {
 	lastBottomNum = bNum;
 }
 
+document.getElementById("clock").innerHTML = "0:00";
+
+function timeStop() {
+	clearTimeout();
+	document.getElementById("clock").innerHTML = "Game Over";
+}
+
+function countdown() {
+	clearTimeout(timer);
+	var newMin;
+	timer = setInterval(function(){
+		if (timeLeft <= 0) {
+			inputClear();
+			stopRoundMusic();
+			playBongoRoll();
+			playMenuMusic();
+			clearInterval(timer);
+			document.getElementById("clock").innerHTML = "Time's Up";
+			hideCenterCluster();
+			showReset();
+			showStatsHead();
+			showStats();
+			showAnswerMain();
+		} else {
+			if (timeLeft < 60) {
+				sec = timeLeft;
+				newTime = "0:" + sec;
+				if (sec < 10) {
+					newTime = "0:0" + sec;
+				}
+			} else {
+				newMin = Math.floor(timeLeft / 60);
+				sec = timeLeft % 60;
+				newTime = newMin + ":" + sec;
+				if (sec < 10) {
+					newTime = newMin + ":" + "0" + sec;
+				} 
+				if (sec == 0) {
+					newTime = newMin + ":00";
+				}
+			}
+			document.getElementById("clock").innerHTML = newTime;
+		}
+		timeLeft -= 1;
+	}, 1000);
+	document.getElementById("guess").focus();
+	showReset();
+}
+
+//Set the timer
+function timeOne() {
+	startTime = 60;
+	timeLeft = 59;
+	document.getElementById("clock").innerHTML = "1:00";
+}
+
+function timeTwo() {
+	startTime = 120;
+	timeLeft = 119;
+	document.getElementById("clock").innerHTML = "2:00";
+}
+
+function timeThree() {
+	startTime = 180;
+	timeLeft = 179;
+	document.getElementById("clock").innerHTML = "3:00";
+}
+
 function hideStartButton() {
-	var x = document.getElementById("start");
+	var x = document.getElementById("start-button");
 	x.style.display = "none";
+}
+
+function showStartButton() {
+	var x = document.getElementById("start-button");
+	x.style.display = "block";
 }
 
 function showTopLeftGameplay() {
@@ -144,12 +217,22 @@ function hideNum() {
 }
 
 function showTime() {
-	var x = document.getElementById("timeLimit");
+	var x = document.getElementById("timeLimitList");
 	x.style.display = "block";
 }
 
 function hideTime() {
-	var x = document.getElementById("timeLimit");
+	var x = document.getElementById("timeLimitList");
+	x.style.display = "none";
+}
+
+function showClock() {
+	var x = document.getElementById("clock");
+	x.style.display = "block";
+}
+
+function hideClock() {
+	var x = document.getElementById("clock");
 	x.style.display = "none";
 }
 
@@ -361,16 +444,6 @@ function showReset() {
 	x.style.display = "block";
 }
 
-function showStartButton() {
-	var x = document.getElementById("start");
-	x.style.display = "block";
-}
-
-function hideStartButton() {
-	var x = document.getElementById("start");
-	x.style.display = "none";
-}
-
 function showAnswerMain() {
 	var x = document.getElementById("answerMain");
 	x.style.display = "block";
@@ -428,7 +501,7 @@ function addRound() {
 function hideTimeNum() {
 	var w = document.getElementById("countTop");
 	var x = document.getElementById("numGrid");
-	var y = document.getElementById("timeLimit");
+	var y = document.getElementById("timeLimitList");
 	var z = document.getElementById("instructions");
 	w.style.display = "block";
 	x.style.display = "none";
