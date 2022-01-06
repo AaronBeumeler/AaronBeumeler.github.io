@@ -99,7 +99,7 @@ function showInstructions1() {
 
 function showNum() {
 	var x = document.getElementById("number-select-grid");
-	x.style.display = "block";
+	x.style.display = "inline-block";
 }
 
 function hideNum() {
