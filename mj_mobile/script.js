@@ -12,6 +12,42 @@ function layoutHandler() {
 window.onresize = layoutHandler;
 layoutHandler();
 
+/*JS Variable List*/
+
+var numberInput = document.getElementById("numberInput").innerHTML = "";
+var bNum = Math.floor(Math.random() * 13);
+var bottomHold = document.getElementById("random").innerHTML = "";
+var input = document.getElementById("guess");
+var correct, guess, result, count = 0, totalCount = 0, wrong = 0;
+
+var confirmList = [];
+var wrongList = [];
+
+var menuMusic = document.getElementById("menuMusic");
+var fastBongos = document.getElementById("fastBongos");
+var lowDrum = document.getElementById("lowDrum");
+var roundMusic = document.getElementById("roundMusic");
+var chime = document.getElementById("chime");
+var trumpet = document.getElementById("trumpet");
+var bongoRoll = document.getElementById("bongoRoll");
+var winner = document.getElementById("winner");
+var shake1 = document.getElementById("shake1");
+var tubaFall = document.getElementById("tubaFall");
+
+var oneMin;
+var min;
+var sec;
+var timeLeft;
+var newTime;
+var timer;	
+var finishTime;
+var startTime;
+var gemTotal = 0;
+var roundsPlayed = 0;
+var lastBottomNum;
+
+
+
 function check() {
 	correct = (slotVal * bNum);
 	guess = document.getElementById("guess").value;
@@ -99,7 +135,7 @@ function showInstructions1() {
 
 function showNum() {
 	var x = document.getElementById("number-select-grid");
-	x.style.display = "inline-block";
+	x.style.display = "block";
 }
 
 function hideNum() {
@@ -109,13 +145,15 @@ function hideNum() {
 
 function showTime() {
 	var x = document.getElementById("timeLimit");
-	x.style.display = "inline-block";
+	x.style.display = "block";
 }
 
 function hideTime() {
 	var x = document.getElementById("timeLimit");
 	x.style.display = "none";
 }
+
+
 
 /*All Javascript
 
