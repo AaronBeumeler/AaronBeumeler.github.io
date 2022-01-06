@@ -109,7 +109,7 @@ function hideNum() {
 
 function showTime() {
 	var x = document.getElementById("timeLimit");
-	x.style.display = "block";
+	x.style.display = "inline-block";
 }
 
 function hideTime() {
