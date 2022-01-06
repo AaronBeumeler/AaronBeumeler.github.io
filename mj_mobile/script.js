@@ -112,6 +112,11 @@ function showTime() {
 	x.style.display = "block";
 }
 
+function hideTime() {
+	var x = document.getElementById("timeLimit");
+	x.style.display = "none";
+}
+
 /*All Javascript
 
 var numberInput = document.getElementById("numberInput").innerHTML = "";
@@ -555,11 +560,6 @@ function showNum() {
 
 function hideNum() {
 	var x = document.getElementById("number-select-grid");
-	x.style.display = "none";
-}
-
-function hideTime() {
-	var x = document.getElementById("timeLimit");
 	x.style.display = "none";
 }
 
