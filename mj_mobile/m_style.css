@@ -173,12 +173,6 @@ body {
 
 }
 
-.num-button {
-    padding: 8px;
-    margin-right: 9px;
-    margin-bottom: 4px;
-}
-
 .number-select-grid {
     display: -webkit-inline-box;
     -webkit-box-pack: center;
@@ -190,7 +184,7 @@ body {
     text-shadow: #241f1c -3px 4px 3px;
 }
 
-.timeLimit {
+.timeLimitList {
     display: none;
     padding-top: 14px;
     -webkit-box-pack: center;
@@ -213,13 +207,15 @@ body {
 
 #sm-screen-num-grid {
     justify-content: center;
-    padding-top: 5px;
     padding-bottom: 20px;
 }
 
 .number-select-grid div{
-    width: 50%;
+    width: 100%;
     display: inline-block;
+    padding: 1px;
+    margin-bottom: 4px;
+    padding-right: 4px;
 }
      
 .instructions {
