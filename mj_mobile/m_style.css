@@ -51,6 +51,7 @@ body {
 }
 
 .top-right-box {
+    overflow-x: hidden;
     overflow-y: auto;
     position: relative;
     background-image: url("images/inner-container.jpg");
@@ -182,7 +183,7 @@ body {
 
 .timeLimit {
     padding-top: 18px;
-    display: -webkit-inline-box;
+    display: none;
     -webkit-box-pack: center;
     -webkit-box-align: center;
     text-align: center;
