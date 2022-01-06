@@ -50,6 +50,7 @@ body {
 }
 
 .top-right-box {
+    padding: 10px;
     text-align: center;
     overflow-x: hidden;
     overflow-y: auto;
@@ -168,7 +169,14 @@ body {
     touch-action: manipulation;
 }
 
+.num-pad-button {
+
+}
+
 .num-button {
+    padding: 8px;
+    margin-right: 9px;
+    margin-bottom: 4px;
 }
 
 .number-select-grid {
@@ -184,7 +192,7 @@ body {
 
 .timeLimit {
     display: none;
-    padding-top: 18px;
+    padding-top: 14px;
     -webkit-box-pack: center;
     -webkit-box-align: center;
     text-align: center;
@@ -195,8 +203,7 @@ body {
 }
 
 .minutes {
-	padding-top: 10px;
-	padding-bottom: 15px;
+	padding-bottom: 28px;
 }
 
 /*remove number select grid that is used for lg screens*/
