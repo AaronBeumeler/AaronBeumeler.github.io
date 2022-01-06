@@ -89,17 +89,18 @@
             </div>
         </div>
         <div id="timeLimitList" class="timeLimitList" onmouseover="playShake1()">
-            <div type="button" id="1min" class="minutes" onclick="/*timeOne(); showStartButton(); */hideTime(); hideInstructions1(); /*playFastBongos()*/">1 Minute</div>
-            <div type="button" id="2min" class="minutes" onclick="/*timeTwo(); showStartButton(); */hideTime(); hideInstructions1(); /*playFastBongos()*/">2 Minutes</div>
-            <div type="button" id="3min" class="minutes" onclick="/*timeThree(); showStartButton(); */hideTime(); hideInstructions1(); /*playFastBongos()*/">3 Minutes</div>
+            <div type="button" id="1min" class="minutes" onclick="timeOne(); /*showStartButton(); */showClock(); hideTime(); hideInstructions1(); /*playFastBongos()*/">1 Minute</div>
+            <div type="button" id="2min" class="minutes" onclick="timeTwo(); /*showStartButton(); */showClock(); hideTime(); hideInstructions1(); /*playFastBongos()*/">2 Minutes</div>
+            <div type="button" id="3min" class="minutes" onclick="timeThree(); /*showStartButton(); */showClock(); hideTime(); hideInstructions1(); /*playFastBongos()*/">3 Minutes</div>
         </div>
     </div>
     
     <br>
     <div class="bottom-left-box">
+        <div id="clock" class="clock"></div>
     </div>
     <div class="bottom-right-box">
-        <div type="button" id="start_button" onclick="hideStartButton(); showTopLeftGameplay(); /*hideTimeNum(); countdown(); hideReset(); addRound(); stopMenuMusic(); playLowDrum();
+        <div type="button" id="start_button" class="start-button" onclick="hideStartButton(); showTopLeftGameplay(); /*hideTimeNum(); countdown(); hideReset(); addRound(); stopMenuMusic(); playLowDrum();
 		playRoundMusic();*/ showEnterButton()">Start</div>
         <button id="button" class="checkBtn" onclick="check()">Enter</button>
     </div>
