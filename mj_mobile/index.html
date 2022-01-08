@@ -36,9 +36,9 @@
 </header>
 
 <div class="main-container">
+<!--Top Left Part of Main Container-->    
     <div class="top-left-box">
-        <div id="gameplayCluster" class="gameplayCluster">
-<!--=====================================================================-->            
+        <div id="gameplayCluster" class="gameplayCluster">          
             <div class="probNums">
                 <div class="top">
                     <div class="numberInput" id="numberInput"></div>
@@ -54,7 +54,7 @@
     </div>
     <div class="top-right-box">
         <div id="number-select-grid" class="number-select-grid">
-            <!--lg screen number grid-->
+<!--lg screen number grid-->
             <div id="lg-screen-num-grid">
             <div style="float: left;">
                 <div type="button"  id="drop1" class="num-button" onclick="createProb(); swap1(); hideNum(); showTime(); hideInstructions(); showInstructions1();">1</div>
@@ -101,8 +101,10 @@
         <div id="clock" class="clock"></div>
     </div>
     <div class="bottom-right-box">
-        <div type="button" id="start-button" class="start-button" onclick="hideStartButton(); showGameplayCluster(); countdown(); /*hideReset(); addRound(); stopMenuMusic(); playLowDrum();
+        <div type="button" id="start-button" class="start-button" onclick="hideStartButton(); showGameplayCluster(); countdown(); hideReset(); /*addRound(); stopMenuMusic(); playLowDrum();
 		playRoundMusic(); showEnterButton();*/">Start</div>
+        <div type="button" id="reset" class="reset" onclick="resetCount(); showInstructions(); showNum(); hideReset(); hideStatsHead(); hideStats(); hideAnswerMain(); resetCount(); resetGems();
+		clearArrays(); playFastBongos(); hideCountTop();">Play Again</div>
     </div>
 </div>
 <div class="num-pad-outer">
