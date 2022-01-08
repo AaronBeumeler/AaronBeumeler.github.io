@@ -17,7 +17,7 @@ layoutHandler();
 var numberInput = document.getElementById("numberInput").innerHTML = "";
 var bNum = Math.floor(Math.random() * 13);
 var bottomHold = document.getElementById("random").innerHTML = "";
-var input = document.getElementById("guess");
+var input = document.getElementById("guessBox");
 var correct, guess, result, count = 0, totalCount = 0, wrong = 0;
 
 var confirmList = [];
@@ -48,70 +48,13 @@ var lastBottomNum;
 
 
 
-function check() {
-	correct = (slotVal * bNum);
-	guess = document.getElementById("guess").value;
-	result = document.getElementById("result").innerHTML;
-	if (guess == null) {
-		wrong += 1;
-		totalCount += 1;
-	}
-	if (guess == correct) {
-		updateList();
-		document.getElementById("result").style.color = "rgb(141, 234, 73)";
-		count += 1;
-		gemTotal += 1;
-		totalCount += 1;
-		playChime();
-		bNum = Math.floor(Math.random() * 13);
-		document.getElementById("random").innerHTML = "x " + bNum;
-		document.getElementById("count").innerHTML = count;
-		document.getElementById("guess").focus();
-	} else if (guess != correct) {
-		playTrumpet();
-		updateWrong();
-		totalCount += 1;
-		wrong += 1;
-		document.getElementById("result").style.color = "red";
-		bNum = Math.floor(Math.random() * 13);
-		document.getElementById("random").innerHTML = "x " + bNum;
-		document.getElementById("guess").focus();
-		clearTimeout(oneMin);
-	}
-    if (totalCount == 20) {
-		stopRoundMusic();
-		clearTimeout(timer);
-		document.getElementById("count").innerHTML = count;
-		document.getElementById("guess").focus();
-		document.getElementById("clock").innerHTML = "End";
-		hideCenterCluster();
-		hideEnterButton();
-		showReset();
-		showAnswerMain();
-		finishTime = timeLeft;
-		showStats();
-		showStatsHead();
-		if (count == 20) {
-			delayMenuMusic();
-			playWinnerMusic();
-		} else {
-			delayMenuMusic();
-			playTubaFall();
-		}
-    }
-    inputClear();
-	lastBottomNum = bNum;
-}
-
 document.getElementById("clock").innerHTML = "0:00";
 
 function timeStop() {
-	clearTimeout();
 	document.getElementById("clock").innerHTML = "Game Over";
 }
 
 function countdown() {
-	clearTimeout(timer);
 	var newMin;
 	timer = setInterval(function(){
 		if (timeLeft <= 0) {
@@ -120,8 +63,8 @@ function countdown() {
 			playBongoRoll();
 			playMenuMusic();
 			clearInterval(timer);
-			document.getElementById("clock").innerHTML = "Time's Up";
-			hideCenterCluster();
+			document.getElementById("clock").innerHTML = "Game Over";
+			hideGameplayCluster();
 			showReset();
 			showStatsHead();
 			showStats();
@@ -148,7 +91,7 @@ function countdown() {
 		}
 		timeLeft -= 1;
 	}, 1000);
-	document.getElementById("guess").focus();
+	document.getElementById("guessBox").focus();
 	showReset();
 }
 
@@ -170,7 +113,87 @@ function timeThree() {
 	timeLeft = 179;
 	document.getElementById("clock").innerHTML = "3:00";
 }
+///////////////////////////////////////////////////////////////////
+function update() {
+	document.getElementById("numberInput").value = numberInput;
+	document.getElementById("random").innerHTML = "x " + bottomHold;
+}
 
+//Assemble the problem in the center.
+function createProb() {
+	bNum = Math.floor(Math.random() * 13);
+	document.getElementById("numberInput").value = numberInput;
+	document.getElementById("random").innerHTML = "x " + bNum;
+}
+
+//Response to correct or incorrect answer.
+
+
+function check() {
+	correct = (slotVal * bNum);
+	guess = document.getElementById("guessBox").value;
+	result = document.getElementById("result").innerHTML;
+	if (guess == null) {
+		wrong += 1;
+		totalCount += 1;
+	}
+	if (guess == correct) {
+		updateList();
+		document.getElementById("result").style.color = "rgb(141, 234, 73)";
+		count += 1;
+		gemTotal += 1;
+		totalCount += 1;
+		playChime();
+		bNum = Math.floor(Math.random() * 13);
+		document.getElementById("random").innerHTML = "x " + bNum;
+		document.getElementById("count").innerHTML = count;
+		document.getElementById("guessBox").focus();
+	} else if (guess != correct) {
+		playTrumpet();
+		updateWrong();
+		totalCount += 1;
+		wrong += 1;
+		document.getElementById("result").style.color = "red";
+		bNum = Math.floor(Math.random() * 13);
+		document.getElementById("random").innerHTML = "x " + bNum;
+		document.getElementById("guessBox").focus();
+	}
+    if (totalCount == 20) {
+		stopRoundMusic();
+		document.getElementById("count").innerHTML = count;
+		document.getElementById("guessBox").focus();
+		document.getElementById("clock").innerHTML = "End";
+		hideGameplayCluster();
+		hideEnterButton();
+		showReset();
+		showAnswerMain();
+		finishTime = timeLeft;
+		showStats();
+		showStatsHead();
+		if (count == 20) {
+			delayMenuMusic();
+			playWinnerMusic();
+		} else {
+			delayMenuMusic();
+			playTubaFall();
+		}
+    }
+    inputClear();
+	lastBottomNum = bNum;
+}
+
+function inputClear() {
+	document.getElementById("guessBox").value = ""
+}
+
+function quickClear() {
+	var clear = setTimeout(clearResult, 1000);
+}
+
+function clearResult() {
+	document.getElementById("result").innerHTML = "";
+}
+////////////////////////////////////////////////////////////////////
 function hideStartButton() {
 	var x = document.getElementById("start-button");
 	x.style.display = "none";
@@ -178,13 +201,8 @@ function hideStartButton() {
 
 function showStartButton() {
 	var x = document.getElementById("start-button");
-	x.style.display = "block";
+	x.style.display = "-webkit-inline-box";
 }
-
-function showTopLeftGameplay() {
-	var x = document.getElementById("topLeftGameplay");
-	x.style.display = "block";
-}	
 
 function hideInstructions() {
 	var x = document.getElementById("instructions");
@@ -236,41 +254,125 @@ function hideClock() {
 	x.style.display = "none";
 }
 
+function showGameplayCluster() {
+	var x = document.getElementById("gameplayCluster");
+	x.style.display = "block";
+}	
+
+function hideGameplayCluster() {
+	var x = document.getElementById("gameplayCluster");
+	x.style.display = "none";
+}
+
+function showEnterButton() {
+	var x = document.getElementById("enterButton");
+	x.style.display = "block";
+}
+
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+     event.preventDefault();
+     document.getElementById("button").click();
+     document.getElementById("guessBox").focus();
+     inputClear();
+    }
+});
+  
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 32) {
+     event.preventDefault();
+     stopRoundMusic();
+    }
+});
+  
+function inputClear() {
+    document.getElementById("guessBox").value = ""
+}
+  
+function clearArrays() {
+    wrongList.length = 0;
+    confirmList.length = 0;
+    document.getElementById("wrongAnswer").innerHTML = wrongList;
+    document.getElementById("confirmMain").innerHTML = confirmList;
+}
+
+var slotVal;
+
+function swap1() {
+	slotVal = 1;
+	numberInput = document.getElementById("numberInput").innerHTML = parseInt(slotVal);
+}
+
+function swap2() {
+	slotVal = document.getElementById("drop2").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap3() {
+	slotVal = document.getElementById("drop3").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap4() {
+	slotVal = document.getElementById("drop4").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap5() {
+	slotVal = document.getElementById("drop5").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap6() {
+	slotVal = document.getElementById("drop6").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap7() {
+	slotVal = document.getElementById("drop7").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap8() {
+	slotVal = document.getElementById("drop8").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap9() {
+	slotVal = document.getElementById("drop9").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap10() {
+	slotVal = document.getElementById("drop10").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap11() {
+	slotVal = document.getElementById("drop11").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap12() {
+	slotVal = document.getElementById("drop12").value;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+/*
+function hideEnterButton() {
+	var x = document.getElementById("enterButton");
+	x.style.display = "none";
+}
+
+function timeStop() {
+	var x = document.getElementById("clock");
+    x.innerHTML = "Game Over";
+    x.style.color = "rgb(226, 36, 36)";
+}
+*/
 
 
 /*All Javascript
-
-var numberInput = document.getElementById("numberInput").innerHTML = "";
-var bNum = Math.floor(Math.random() * 13);
-var bottomHold = document.getElementById("random").innerHTML = "";
-var input = document.getElementById("guess");
-var correct, guess, result, count = 0, totalCount = 0, wrong = 0;
-
-var confirmList = [];
-var wrongList = [];
-
-var menuMusic = document.getElementById("menuMusic");
-var fastBongos = document.getElementById("fastBongos");
-var lowDrum = document.getElementById("lowDrum");
-var roundMusic = document.getElementById("roundMusic");
-var chime = document.getElementById("chime");
-var trumpet = document.getElementById("trumpet");
-var bongoRoll = document.getElementById("bongoRoll");
-var winner = document.getElementById("winner");
-var shake1 = document.getElementById("shake1");
-var tubaFall = document.getElementById("tubaFall");
-
-var oneMin;
-var min;
-var sec;
-var timeLeft;
-var newTime;
-var timer;	
-var finishTime;
-var startTime;
-var gemTotal = 0;
-var roundsPlayed = 0;
-var lastBottomNum;
 
 //var combinedTime = 0;
 
@@ -296,32 +398,7 @@ var sGem = document.getElementById("gem19");
 var tGem = document.getElementById("gem20");
 
 
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("button").click();
-   document.getElementById("guess").focus();
-   inputClear();
-  }
-});
 
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 32) {
-   event.preventDefault();
-   stopRoundMusic();
-  }
-});
-
-function inputClear() {
-	document.getElementById("guess").value = ""
-}
-
-function clearArrays() {
-	wrongList.length = 0;
-	confirmList.length = 0;
-	document.getElementById("wrongAnswer").innerHTML = wrongList;
-	document.getElementById("confirmMain").innerHTML = confirmList;
-}
 
 //-------------------------------------------------------
 
@@ -452,26 +529,6 @@ function showAnswerMain() {
 function hideAnswerMain() {
 	var x = document.getElementById("answerMain");
 	x.style.display = "none";
-}
-
-function hideEnterButton() {
-	var x = document.getElementById("button");
-	x.style.display = "none";
-}
-
-function showEnterButton() {
-	var x = document.getElementById("button");
-	x.style.display = "block";
-}
-
-function showCenterCluster() {
-	var x = document.getElementById("centerCluster");
-	x.style.display = "block";
-}	
-
-function hideCenterCluster() {
-	var x = document.getElementById("centerCluster");
-	x.style.display = "none";
 }	
 
 function hideInstructions() {
@@ -508,76 +565,17 @@ function hideTimeNum() {
 	y.style.display = "none";
 	z.style.display = "none";
 	
-	document.getElementById("guess").focus();
+	document.getElementById("guessBox").focus();
 }
 
 
 //end start button functions
 
-function update() {
-	document.getElementById("numberInput").value = numberInput;
-	document.getElementById("random").innerHTML = "x " + bottomHold;
-}
-	
-//Assemble the problem in the center.
-function createProb() {
-	bNum = Math.floor(Math.random() * 13);
-	document.getElementById("numberInput").value = numberInput;
-	document.getElementById("random").innerHTML = "x " + bNum;
-}
 
-//Response to correct or incorrect answer.
-function check() {
-	correct = (slotVal * bNum);
-	guess = document.getElementById("guess").value;
-	result = document.getElementById("result").innerHTML;
-	if (guess == null) {
-		wrong += 1;
-		totalCount += 1;
-	}
-	if (guess == correct) {
-		updateList();
-		document.getElementById("result").style.color = "rgb(141, 234, 73)";
-		count += 1;
-		gemTotal += 1;
-		totalCount += 1;
-		playChime();
-		bNum = Math.floor(Math.random() * 13);
-		document.getElementById("random").innerHTML = "x " + bNum;
-		document.getElementById("count").innerHTML = count;
-		document.getElementById("guess").focus();
-	} else if (guess != correct) {
-		playTrumpet();
-		updateWrong();
-		totalCount += 1;
-		wrong += 1;
-		document.getElementById("result").style.color = "red";
-		bNum = Math.floor(Math.random() * 13);
-		document.getElementById("random").innerHTML = "x " + bNum;
-		document.getElementById("guess").focus();
-		clearTimeout(oneMin);
-	}
-    if (totalCount == 20) {
-		stopRoundMusic();
-		clearTimeout(timer);
-		document.getElementById("count").innerHTML = count;
-		document.getElementById("guess").focus();
-		document.getElementById("clock").innerHTML = "End";
-		hideCenterCluster();
-		hideEnterButton();
-		showReset();
-		showAnswerMain();
-		finishTime = timeLeft;
-		showStats();
-		showStatsHead();
-		if (count == 20) {
-			delayMenuMusic();
-			playWinnerMusic();
-		} else {
-			delayMenuMusic();
-			playTubaFall();
-		}
-    }
+	
+
+
+
 	if (count >= 1) {
 		aGem.style.display = "block";
 		}
@@ -638,9 +636,7 @@ function check() {
 	if (count >= 20) {
 		tGem.style.display = "block";
 	}
-    inputClear();
-	lastBottomNum = bNum;
-}
+    
 
 
 //Need to correct Anser Time equation.
@@ -684,10 +680,6 @@ function hideStatsHead() {
 	x.style.display = "none";
 }
 
-function clickTime() {
-	document.getElementById("chooseTime").click();
-}
-
 function resetGems() {
 	aGem.style.display = "none";
 	bGem.style.display = "none";
@@ -717,12 +709,10 @@ function resetGems() {
 document.getElementById("clock").innerHTML = "0:00";
 
 function timeStop() {
-	clearTimeout();
 	document.getElementById("clock").innerHTML = "Game Over";
 }
 
 function countdown() {
-	clearTimeout(timer);
 	var newMin;
 	timer = setInterval(function(){
 		if (timeLeft <= 0) {
@@ -732,7 +722,7 @@ function countdown() {
 			playMenuMusic();
 			clearInterval(timer);
 			document.getElementById("clock").innerHTML = "Time's Up";
-			hideCenterCluster();
+			hideGameplayCluster();
 			showReset();
 			showStatsHead();
 			showStats();
@@ -759,7 +749,7 @@ function countdown() {
 		}
 		timeLeft -= 1;
 	}, 1000);
-	document.getElementById("guess").focus();
+	document.getElementById("guessBox").focus();
 	showReset();
 }
 
@@ -783,76 +773,11 @@ function timeThree() {
 }
 
 /*
-function quickClear() {
-	var clear = setTimeout(clearResult, 1000);
-}
 
-
-function clearResult() {
-	document.getElementById("result").innerHTML = "";
-}
 
 
 //Multiple functions to change number as you hover on dropdown items.
 var slotVal;
 
-function swap1() {
-	slotVal = document.getElementById("drop1").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
 
-function swap2() {
-	slotVal = document.getElementById("drop2").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap3() {
-	slotVal = document.getElementById("drop3").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap4() {
-	slotVal = document.getElementById("drop4").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap5() {
-	slotVal = document.getElementById("drop5").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap6() {
-	slotVal = document.getElementById("drop6").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap7() {
-	slotVal = document.getElementById("drop7").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap8() {
-	slotVal = document.getElementById("drop8").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap9() {
-	slotVal = document.getElementById("drop9").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap10() {
-	slotVal = document.getElementById("drop10").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap11() {
-	slotVal = document.getElementById("drop11").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap12() {
-	slotVal = document.getElementById("drop12").value;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
 */
