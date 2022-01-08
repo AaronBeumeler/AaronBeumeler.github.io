@@ -47,11 +47,13 @@ var roundsPlayed = 0;
 var lastBottomNum;
 
 
-
 document.getElementById("clock").innerHTML = "0:00";
 
-function timeStop() {
-	document.getElementById("clock").innerHTML = "Game Over";
+function showReset() {
+	var x = document.getElementById("reset");
+	/*hideEnterButton();*/
+	hideStartButton();
+	x.style.display = "block";
 }
 
 function countdown() {
@@ -59,11 +61,13 @@ function countdown() {
 	timer = setInterval(function(){
 		if (timeLeft <= 0) {
 			inputClear();
+			/*
 			stopRoundMusic();
 			playBongoRoll();
 			playMenuMusic();
+			*/
 			clearInterval(timer);
-			document.getElementById("clock").innerHTML = "Game Over";
+			document.getElementById("clock").innerHTML = "End";
 			hideGameplayCluster();
 			showReset();
 			showStatsHead();
@@ -164,7 +168,7 @@ function check() {
 		document.getElementById("guessBox").focus();
 		document.getElementById("clock").innerHTML = "End";
 		hideGameplayCluster();
-		hideEnterButton();
+		/*hideEnterButton();*/
 		showReset();
 		showAnswerMain();
 		finishTime = timeLeft;
@@ -296,6 +300,36 @@ function clearArrays() {
     document.getElementById("confirmMain").innerHTML = confirmList;
 }
 
+function resetCount() {
+	count = 0;
+	wrong = 0;
+	totalCount = 0;
+	document.getElementById("count").innerHTML = 0
+}
+
+function hideTimeNum() {
+	var w = document.getElementById("countTop");
+	var x = document.getElementById("numGrid");
+	var y = document.getElementById("timeLimitList");
+	var z = document.getElementById("instructions");
+	w.style.display = "block";
+	x.style.display = "none";
+	y.style.display = "none";
+	z.style.display = "none";
+	
+	document.getElementById("guessBox").focus();
+}
+
+function hideReset() {
+	var x = document.getElementById("reset");
+	x.style.display = "none";
+} 
+
+function hideCountTop() {
+	var x = document.getElementById("countTop");
+	x.style.display = "none";
+}
+
 var slotVal;
 
 function swap1() {
@@ -304,57 +338,57 @@ function swap1() {
 }
 
 function swap2() {
-	slotVal = document.getElementById("drop2").value;
+	slotVal = 2;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap3() {
-	slotVal = document.getElementById("drop3").value;
+	slotVal = 3;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap4() {
-	slotVal = document.getElementById("drop4").value;
+	slotVal = 4;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap5() {
-	slotVal = document.getElementById("drop5").value;
+	slotVal = 5;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap6() {
-	slotVal = document.getElementById("drop6").value;
+	slotVal = 6;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap7() {
-	slotVal = document.getElementById("drop7").value;
+	slotVal = 7;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap8() {
-	slotVal = document.getElementById("drop8").value;
+	slotVal = 8;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap9() {
-	slotVal = document.getElementById("drop9").value;
+	slotVal = 9;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap10() {
-	slotVal = document.getElementById("drop10").value;
+	slotVal = 10;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap11() {
-	slotVal = document.getElementById("drop11").value;
+	slotVal = 11;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap12() {
-	slotVal = document.getElementById("drop12").value;
+	slotVal = 12;
 	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
 }
 
@@ -368,6 +402,10 @@ function timeStop() {
 	var x = document.getElementById("clock");
     x.innerHTML = "Game Over";
     x.style.color = "rgb(226, 36, 36)";
+}
+
+function timeStop() {
+	document.getElementById("clock").innerHTML = "Game Over";
 }
 */
 
@@ -555,18 +593,7 @@ function addRound() {
 	roundsPlayed += 1;
 }
 
-function hideTimeNum() {
-	var w = document.getElementById("countTop");
-	var x = document.getElementById("numGrid");
-	var y = document.getElementById("timeLimitList");
-	var z = document.getElementById("instructions");
-	w.style.display = "block";
-	x.style.display = "none";
-	y.style.display = "none";
-	z.style.display = "none";
-	
-	document.getElementById("guessBox").focus();
-}
+
 
 
 //end start button functions
@@ -653,12 +680,7 @@ function hideStats() {
 	x.style.display = "none";
 }
 
-function resetCount() {
-	count = 0;
-	wrong = 0;
-	totalCount = 0;
-	document.getElementById("count").innerHTML = 0
-}
+
 
 function showNum() {
 	var x = document.getElementById("number-select-grid");
@@ -706,71 +728,9 @@ function resetGems() {
 
 //COUNTDOWN
 
-document.getElementById("clock").innerHTML = "0:00";
 
-function timeStop() {
-	document.getElementById("clock").innerHTML = "Game Over";
-}
 
-function countdown() {
-	var newMin;
-	timer = setInterval(function(){
-		if (timeLeft <= 0) {
-			inputClear();
-			stopRoundMusic();
-			playBongoRoll();
-			playMenuMusic();
-			clearInterval(timer);
-			document.getElementById("clock").innerHTML = "Time's Up";
-			hideGameplayCluster();
-			showReset();
-			showStatsHead();
-			showStats();
-			showAnswerMain();
-		} else {
-			if (timeLeft < 60) {
-				sec = timeLeft;
-				newTime = "0:" + sec;
-				if (sec < 10) {
-					newTime = "0:0" + sec;
-				}
-			} else {
-				newMin = Math.floor(timeLeft / 60);
-				sec = timeLeft % 60;
-				newTime = newMin + ":" + sec;
-				if (sec < 10) {
-					newTime = newMin + ":" + "0" + sec;
-				} 
-				if (sec == 0) {
-					newTime = newMin + ":00";
-				}
-			}
-			document.getElementById("clock").innerHTML = newTime;
-		}
-		timeLeft -= 1;
-	}, 1000);
-	document.getElementById("guessBox").focus();
-	showReset();
-}
 
-//Set the timer
-function timeOne() {
-	startTime = 60;
-	timeLeft = 59;
-	document.getElementById("clock").innerHTML = "1:00";
-}
-
-function timeTwo() {
-	startTime = 120;
-	timeLeft = 119;
-	document.getElementById("clock").innerHTML = "2:00";
-}
-
-function timeThree() {
-	startTime = 180;
-	timeLeft = 179;
-	document.getElementById("clock").innerHTML = "3:00";
-}
 
 /*
 
