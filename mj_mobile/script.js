@@ -130,29 +130,6 @@ function createProb() {
 	document.getElementById("random").innerHTML = "x " + bNum;
 }
 
-/////////////////////////////////////////////////////////////////////
-
-var input = document.querySelectorAll("input")[1];
-input.select(); // you can also use input.focus()
-input.value="";
-
-var l=text.length;
-var current = 0;
-var time = 1000;
-
-//////////////////////////////////////////////////////////////////////
-
-var write_text = function() {
-  input.value+=text[current];
-  if(current < l-1) {
-    current++;
-    setTimeout(function(){write_text()},time);
-  } else {
-    input.setAttribute('value',input.value);
-  }
-}
-setTimeout(function(){write_text()},time);
-
 //Response to correct or incorrect answer.
 
 
