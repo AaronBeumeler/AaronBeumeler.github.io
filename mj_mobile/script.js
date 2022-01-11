@@ -131,17 +131,113 @@ function createProb() {
 }
 
 //Response to correct or incorrect answer.
+var slotVal;
 
+function swap1() {
+	slotVal = 1;
+	numberInput = document.getElementById("numberInput").innerHTML = parseInt(slotVal);
+}
+
+function swap2() {
+	slotVal = 2;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap3() {
+	slotVal = 3;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap4() {
+	slotVal = 4;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap5() {
+	slotVal = 5;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap6() {
+	slotVal = 6;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap7() {
+	slotVal = 7;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap8() {
+	slotVal = 8;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap9() {
+	slotVal = 9;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap10() {
+	slotVal = 10;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap11() {
+	slotVal = 11;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function swap12() {
+	slotVal = 12;
+	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+}
+
+function hideScore() {
+	var x = document.getElementById("count");
+	x.style.display = "none";
+	var y = document.getElementById("countText");
+	y.style.display = "none";
+}
 
 function check() {
 	correct = (slotVal * bNum);
 	guess = document.getElementById("guessBox").value;
-	if (guess == null) {
+	if (totalCount < 20) {
+		if (guess == correct) {
+			totalCount += 1;
+			count += 1;
+			document.getElementById("count").innerHTML = count;	
+		} else if ((guess != correct) || (guess == null)) {
+			wrong += 1;
+			totalCount += 1;
+		}
+	}
+	if (totalCount == 20) {
+		document.getElementById("clock").innerHTML = "End";
+		hideGameplayCluster();
+		finishTime = timeLeft;
+		clearTimeout(timer);
+		showReset();
+		showStats();
+		showStatsHead();
+		showAnswerMain();
+	}
+	inputClear();
+	bNum = Math.floor(Math.random() * 13);
+	document.getElementById("random").innerHTML = "x " + bNum;
+}
+//////////////	USE THESE 3 LINES AT END OF ALL IF STATEMENTS IN CHECK()
+	/*inputClear();
+		bNum = Math.floor(Math.random() * 13);
+		document.getElementById("random").innerHTML = "x " + bNum;
+	*/
+///////////////////////////////////////////////////////////////////////////
+	/*if (guess == null) {
 		wrong += 1;
 		totalCount += 1;
 	} else if (guess == correct) {
 		updateList();
-		document.getElementById("result").style.color = "rgb(141, 234, 73)";
 		count += 1;
 		gemTotal += 1;
 		totalCount += 1;
@@ -151,17 +247,12 @@ function check() {
 		document.getElementById("count").innerHTML = count;
 		document.getElementById("guessBox").focus();
 	} else if (guess != correct) {
-		playTrumpet();
-		updateWrong();
 		totalCount += 1;
 		wrong += 1;
-		document.getElementById("result").style.color = "red";
 		bNum = Math.floor(Math.random() * 13);
 		document.getElementById("random").innerHTML = "x " + bNum;
 		document.getElementById("guessBox").focus();
-	}
-    if (totalCount == 20) {
-		stopRoundMusic();
+	} else if (totalCount == 20) {
 		document.getElementById("count").innerHTML = count;
 		document.getElementById("guessBox").focus();
 		document.getElementById("clock").innerHTML = "End";
@@ -181,6 +272,10 @@ function check() {
     }
     inputClear();
 	lastBottomNum = bNum;
+}*/
+
+function focus() {
+	document.getElementById("guessBox").focus();
 }
 
 function quickClear() {
@@ -258,13 +353,6 @@ function showScore() {
 	y.style.display = "block";
 }
 
-function hideScore() {
-	var x = document.getElementById("count");
-	x.style.display = "none";
-	var y = document.getElementById("countText");
-	y.style.display = "none";
-}
-
 function showGameplayCluster() {
 	var x = document.getElementById("gameplayCluster");
 	x.style.display = "block";
@@ -296,7 +384,8 @@ input.addEventListener("keyup", function(event) {
 });
   
 function inputClear() {
-    document.getElementById("guessBox").value = ""
+    document.getElementById("guessBox").value = "";
+	document.getElementById("guessBox").focus();
 }
   
 function clearArrays() {
@@ -336,67 +425,7 @@ function hideCountTop() {
 	x.style.display = "none";
 }
 
-var slotVal;
 
-function swap1() {
-	slotVal = 1;
-	numberInput = document.getElementById("numberInput").innerHTML = parseInt(slotVal);
-}
-
-function swap2() {
-	slotVal = 2;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap3() {
-	slotVal = 3;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap4() {
-	slotVal = 4;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap5() {
-	slotVal = 5;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap6() {
-	slotVal = 6;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap7() {
-	slotVal = 7;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap8() {
-	slotVal = 8;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap9() {
-	slotVal = 9;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap10() {
-	slotVal = 10;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap11() {
-	slotVal = 11;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
-
-function swap12() {
-	slotVal = 12;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
-}
 
 /*
 function hideEnterButton() {
@@ -672,7 +701,7 @@ function addRound() {
     
 
 
-//Need to correct Anser Time equation.
+//Need to correct Answer Time equation.
 function showStats() {
 	var x = document.getElementById("stats");
 	document.getElementById("stats").innerHTML = "Factor: " + numberInput + "'s<br><br>" + "Correct: " + ((count / 20) * 100) + "%" + "<br><br>" + "Finish Time:<br>" + 
