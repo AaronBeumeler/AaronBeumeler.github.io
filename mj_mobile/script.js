@@ -136,12 +136,10 @@ function createProb() {
 function check() {
 	correct = (slotVal * bNum);
 	guess = document.getElementById("guessBox").value;
-	result = document.getElementById("result").innerHTML;
 	if (guess == null) {
 		wrong += 1;
 		totalCount += 1;
-	}
-	if (guess == correct) {
+	} else if (guess == correct) {
 		updateList();
 		document.getElementById("result").style.color = "rgb(141, 234, 73)";
 		count += 1;
@@ -168,7 +166,6 @@ function check() {
 		document.getElementById("guessBox").focus();
 		document.getElementById("clock").innerHTML = "End";
 		hideGameplayCluster();
-		/*hideEnterButton();*/
 		showReset();
 		showAnswerMain();
 		finishTime = timeLeft;
@@ -184,10 +181,6 @@ function check() {
     }
     inputClear();
 	lastBottomNum = bNum;
-}
-
-function inputClear() {
-	document.getElementById("guessBox").value = ""
 }
 
 function quickClear() {
@@ -258,6 +251,20 @@ function hideClock() {
 	x.style.display = "none";
 }
 
+function showScore() {
+	var x = document.getElementById("count");
+	x.style.display = "block";
+	var y = document.getElementById("countText");
+	y.style.display = "block";
+}
+
+function hideScore() {
+	var x = document.getElementById("count");
+	x.style.display = "none";
+	var y = document.getElementById("countText");
+	y.style.display = "none";
+}
+
 function showGameplayCluster() {
 	var x = document.getElementById("gameplayCluster");
 	x.style.display = "block";
@@ -276,9 +283,8 @@ function showEnterButton() {
 input.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
      event.preventDefault();
-     document.getElementById("button").click();
+     document.getElementById("enter").click();
      document.getElementById("guessBox").focus();
-     inputClear();
     }
 });
   
@@ -304,7 +310,7 @@ function resetCount() {
 	count = 0;
 	wrong = 0;
 	totalCount = 0;
-	document.getElementById("count").innerHTML = 0
+	document.getElementById("count").innerHTML = 0;
 }
 
 function hideTimeNum() {
