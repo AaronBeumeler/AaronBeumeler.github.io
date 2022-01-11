@@ -179,9 +179,7 @@ body {
 .num-button {
     width: 100%;
     display: inline-block;
-    padding: 1px;
-    margin-bottom: 4px;
-    padding-right: 4px;
+    padding-right: 6px;
 }
 
 .number-select-grid {
