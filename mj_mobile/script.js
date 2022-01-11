@@ -266,9 +266,6 @@ function concat9() {
 	updateBoxValue();
 }
 
-
-
-
 function check() {
 	correct = (slotVal * bNum);
 	guess = document.getElementById("guessBox").value;
