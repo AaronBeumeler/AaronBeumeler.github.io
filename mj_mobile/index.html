@@ -41,12 +41,10 @@
     <div class="top-left-box">
         <div id="gameplayCluster" class="gameplayCluster">          
             <div class="probNums">
-                <div class="top">
-                    <div class="numberInput" id="numberInput"></div>
-                </div>
+                <div class="numberInput" id="numberInput"></div>
                 <div id="random"></div>
-                <input id="guessBox" class="guessBox" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
-                    maxLength="3" autofocus autocomplete="off">
+                <div id="guessBox" class="guessBox" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
+                    maxLength="3"></div>
             </div>    		   
         </div>       
         <div id="instructions" class="instructions">Select<br>Number</div>
@@ -117,17 +115,17 @@
 </div>
 <div class="num-pad-outer">
     <div class="num-pad-inner">
-        <div type="button" id="one" class="num-pad-button">1</div>
-        <div type="button" id="two" class="num-pad-button">2</div>
-        <div type="button" id="three" class="num-pad-button">3</div>
-        <div type="button" id="four" class="num-pad-button">4</div>
-        <div type="button" id="five" class="num-pad-button">5</div>
-        <div type="button" id="six" class="num-pad-button">6</div>
-        <div type="button" id="seven" class="num-pad-button">7</div>
-        <div type="button" id="eight" class="num-pad-button">8</div>
-        <div type="button" id="nine" class="num-pad-button">9</div>
+        <div type="button" id="one" class="num-pad-button" onclick="concat1();">1</div>
+        <div type="button" id="two" class="num-pad-button" onclick="concat2();">2</div>
+        <div type="button" id="three" class="num-pad-button" onclick="concat3();">3</div>
+        <div type="button" id="four" class="num-pad-button" onclick="concat4();">4</div>
+        <div type="button" id="five" class="num-pad-button" onclick="concat5();">5</div>
+        <div type="button" id="six" class="num-pad-button" onclick="concat6();">6</div>
+        <div type="button" id="seven" class="num-pad-button" onclick="concat7();">7</div>
+        <div type="button" id="eight" class="num-pad-button" onclick="concat8();">8</div>
+        <div type="button" id="nine" class="num-pad-button" onclick="concat9();">9</div>
         <div type="button" id="del" class="num-pad-button"><i class="fa fa-arrow-left"></i></div>
-        <div type="button" id="zero" class="num-pad-button">0</div>
+        <div type="button" id="zero" class="num-pad-button" onclick="concat0();">0</div>
         <div type="button" id="enter" class="num-pad-button" onclick="check();">Enter</div>
     </div>
 </div>
