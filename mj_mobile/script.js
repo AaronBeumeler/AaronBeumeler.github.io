@@ -200,6 +200,75 @@ function hideScore() {
 	y.style.display = "none";
 }
 
+var guessArray = [];
+
+function updateBoxValue() {
+	document.getElementById("guessBox").innerHTML = guessArray;
+}
+
+function concat0() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(0);
+	updateBoxValue();
+}
+
+function concat1() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(1);
+	updateBoxValue();
+}
+
+function concat2() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(2);
+	updateBoxValue();
+}
+
+function concat3() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(3);
+	updateBoxValue();
+}
+
+function concat4() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(4);
+	updateBoxValue();
+}
+
+function concat5() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(5);
+	updateBoxValue();
+}
+
+function concat6() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(6);
+	updateBoxValue();
+}
+
+function concat7() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(7);
+	updateBoxValue();
+}
+
+function concat8() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(8);
+	updateBoxValue();
+}
+
+function concat9() {
+	currentValue = document.getElementById("guessBox").innerHTML;
+	guessArray = currentValue.concat(9);
+	updateBoxValue();
+}
+
+
+
+
 function check() {
 	correct = (slotVal * bNum);
 	guess = document.getElementById("guessBox").value;
@@ -384,8 +453,7 @@ input.addEventListener("keyup", function(event) {
 });
   
 function inputClear() {
-    document.getElementById("guessBox").value = "";
-	document.getElementById("guessBox").focus();
+    document.getElementById("guessBox").innerHTML = "";
 }
   
 function clearArrays() {
