@@ -36,6 +36,7 @@
 </header>
 
 <div class="main-container">
+
 <!--Top Left Part of Main Container-->    
     <div class="top-left-box">
         <div id="gameplayCluster" class="gameplayCluster">          
@@ -47,14 +48,16 @@
                 <input id="guessBox" class="guessBox" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
                     maxLength="3" autofocus autocomplete="off">
             </div>    		   
-        </div>
-        
+        </div>       
         <div id="instructions" class="instructions">Select<br>Number</div>
         <div id="instructions1" class="instructions1">Select<br>Time</div>
     </div>
+
+<!--Top Right Part of Main Container-->
     <div class="top-right-box">
         <div id="number-select-grid" class="number-select-grid">
-<!--lg screen number grid-->
+
+    <!--lg screen number grid-->
             <div id="lg-screen-num-grid">
             <div style="float: left;">
                 <div type="button"  id="drop1" class="num-button" onclick="createProb(); swap1(); hideNum(); showTime(); hideInstructions(); showInstructions1();">1</div>
@@ -73,7 +76,8 @@
                 <div type="button"  id="drop12" class="num-button" onclick="createProb(); swap12(); hideNum(); showTime(); hideInstructions(); showInstructions1()">12</div>
             </div>
             </div>
-            <!--sm screen number grid-->
+
+    <!--sm screen number grid-->
             <div id="sm-screen-num-grid">
                 <div type="button"  id="drop1" class="num-button" onclick="createProb(); swap1(); hideNum(); showTime(); hideInstructions(); showInstructions1();">1</div>
                 <div type="button"  id="drop2" class="num-button" onclick="createProb(); swap2(); hideNum(); showTime(); hideInstructions(); showInstructions1();">2</div>
@@ -94,17 +98,21 @@
             <div type="button" id="2min" class="minutes" onclick="timeTwo(); showStartButton(); showClock(); hideTime(); hideInstructions1(); /*playFastBongos()*/">2 min</div>
             <div type="button" id="3min" class="minutes" onclick="timeThree(); showStartButton(); showClock(); hideTime(); hideInstructions1(); /*playFastBongos()*/">3 min</div>
         </div>
+        <div id="countText" class="countText">Score</div>
+		<div id="count" class="count">0</div>
     </div>
     
-    <br>
+    <!--Bottom Left part of Main Container-->
     <div class="bottom-left-box">
         <div id="clock" class="clock"></div>
     </div>
+
+    <!--Bottom Right part of Main Container-->
     <div class="bottom-right-box">
-        <div type="button" id="start-button" class="start-button" onclick="hideStartButton(); showGameplayCluster(); countdown(); hideReset(); /*addRound(); stopMenuMusic(); playLowDrum();
+        <div type="button" id="start-button" class="start-button" onclick="hideStartButton(); showGameplayCluster(); countdown(); hideReset(); showScore();/*addRound(); stopMenuMusic(); playLowDrum();
 		playRoundMusic(); showEnterButton();*/">Start</div>
         <div type="button" id="reset" class="reset" onclick="resetCount(); showInstructions(); showNum(); hideReset(); hideStatsHead(); hideStats(); hideAnswerMain(); resetCount(); resetGems();
-		clearArrays(); playFastBongos(); hideCountTop();">Play Again</div>
+		clearArrays(); playFastBongos(); hideCountTop();">Play</div>
     </div>
 </div>
 <div class="num-pad-outer">
@@ -120,7 +128,7 @@
         <div type="button" class="num-pad-button" id="nine">9</div>
         <div type="button" class="num-pad-button" id="del"><i class="fa fa-arrow-left"></i></div>
         <div type="button" class="num-pad-button" id="zero">0</div>
-        <div type="button" class="num-pad-button" id="enter" onclick="check()">Enter</div>
+        <div type="button" class="num-pad-button" id="enter" onclick="check();">Enter</div>
     </div>
 </div>
 
