@@ -29,9 +29,9 @@ body {
     width: 90%;
     margin-top: 4%;
     margin-bottom: 2%;
-	border: 5px solid #493F39;
-	border-top: 5px solid #BBB4AA;
-	border-right: 5px solid #BBB4AA;
+	border: 4px solid #493F39;
+	border-top: 4px solid #BBB4AA;
+	border-right: 4px solid #BBB4AA;
 	box-shadow: -4px 4px 12px black;
 }
 
@@ -44,9 +44,9 @@ body {
     width: 48.5%;
     margin-right: 3%;
     margin-bottom: 3%;
-    border: 5px solid #493F39;
-	border-bottom: 5px solid #afa99f;
-	border-left: 5px solid #BBB4AA;
+    border: 4px solid #493F39;
+	border-bottom: 4px solid #afa99f;
+	border-left: 4px solid #BBB4AA;
 }
 
 .top-right-box {
@@ -60,9 +60,9 @@ body {
     height: 227px;
     width: 48.5%;
     margin-bottom: 3%;
-    border: 5px solid #493F39;
-	border-bottom: 5px solid #BBB4AA;
-	border-left: 5px solid #BBB4AA;
+    border: 4px solid #493F39;
+	border-bottom: 4px solid #BBB4AA;
+	border-left: 4px solid #BBB4AA;
 }
 
 .bottom-left-box {
@@ -72,9 +72,9 @@ body {
     min-height: 70px;
     width: 48.5%;
     margin-right: 3%;
-    border: 5px solid #493F39;
-	border-bottom: 5px solid #BBB4AA;
-	border-left: 5px solid #BBB4AA;
+    border: 4px solid #493F39;
+	border-bottom: 4px solid #BBB4AA;
+	border-left: 4px solid #BBB4AA;
 }
 
 
@@ -84,9 +84,9 @@ body {
     float: right;
     min-height: 70px;
     width: 48.5%;
-    border: 5px solid #493F39;
-	border-bottom: 5px solid #BBB4AA;
-	border-left: 5px solid #BBB4AA;
+    border: 4px solid #493F39;
+	border-bottom: 4px solid #BBB4AA;
+	border-left: 4px solid #BBB4AA;
     text-align: center;
 }
 
@@ -107,9 +107,9 @@ body {
     width: 100%;
     height: 100%;
     min-height: 60px;
-    border: 5px solid #BBB4AA;
-	border-bottom: 5px solid #493F39;
-	border-left: 5px solid #493F39;
+    border: 4px solid #BBB4AA;
+	border-bottom: 4px solid #493F39;
+	border-left: 4px solid #493F39;
 }
 
 .reset {
@@ -120,14 +120,14 @@ body {
     padding-top: 4px;
     color: whitesmoke;
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: x-large;
     text-shadow: #241f1c -3px 4px 3px;
     width: 100%;
     height: 100%;
     min-height: 60px;
-    border: 5px solid #BBB4AA;
-	border-bottom: 5px solid #493F39;
-	border-left: 5px solid #493F39;
+    border: 4px solid #BBB4AA;
+	border-bottom: 4px solid #493F39;
+	border-left: 4px solid #493F39;
 }
 
 .num-pad-outer {
@@ -138,9 +138,9 @@ body {
     margin: auto;
     width: 90%;
     margin-top: 0%;
-	border: 5px solid #493F39;
-	border-top: 5px solid #BBB4AA;
-	border-right: 5px solid #BBB4AA;
+	border: 4px solid #493F39;
+	border-top: 4px solid #BBB4AA;
+	border-right: 4px solid #BBB4AA;
 	box-shadow: -4px 4px 12px black;
 }
 
@@ -152,9 +152,9 @@ body {
     display: flex nowrap;
     margin: auto;
     width: 100%;
-	border: 5px solid #493F39;
-	border-bottom: 5px solid #BBB4AA;
-	border-left: 5px solid #BBB4AA;
+	border: 4px solid #493F39;
+	border-bottom: 4px solid #BBB4AA;
+	border-left: 4px solid #BBB4AA;
 }
 
 .num-pad-inner > div {
@@ -169,14 +169,18 @@ body {
     line-height: 24%;
     min-height: 60px;
     background-image: url("images/main-container.jpg");
-    border: 5px solid #BBB4AA;
-	border-bottom: 5px solid #493F39;
-	border-left: 5px solid #493F39;
+    border: 4px solid #BBB4AA;
+	border-bottom: 4px solid #493F39;
+	border-left: 4px solid #493F39;
     touch-action: manipulation;
 }
 
-.num-pad-button {
-
+.num-button {
+    width: 100%;
+    display: inline-block;
+    padding: 1px;
+    margin-bottom: 4px;
+    padding-right: 4px;
 }
 
 .number-select-grid {
@@ -186,7 +190,6 @@ body {
     text-align: center;
     color: whitesmoke;
     font-weight: 600;
-    font-size: 1.8em;
     text-shadow: #241f1c -3px 4px 3px;
 }
 
@@ -198,12 +201,12 @@ body {
     text-align: center;
     color: whitesmoke;
     font-weight: 600;
-    font-size: 1.6em;
     text-shadow: #241f1c -3px 4px 3px;
 }
 
 .minutes {
-	padding-bottom: 28px;
+	padding-bottom: 15px;
+    font-size: 1.9em;
 }
 
 .clock {
@@ -217,19 +220,31 @@ body {
 /*remove number select grid that is used for lg screens*/
 #lg-screen-num-grid {
     display: none;
+    font-size: 1.8em;
 }
 
 #sm-screen-num-grid {
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+    font-size: 3em;
 }
 
-.number-select-grid div{
-    width: 100%;
-    display: inline-block;
-    padding: 1px;
-    margin-bottom: 4px;
-    padding-right: 4px;
+.count {
+    display: none;
+	color: white;
+	font-size: 45px;
+	font-weight: 600;
+	text-shadow: #241f1c -3px 4px 3px;
+	font-family: helvetica, arial, sans-serif;
+}
+
+.countText {	
+    display: none;
+	font-family: helvetica, arial, sans-serif;
+	text-shadow: #241f1c -3px 4px 3px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #59A6F2;
 }
      
 .instructions {
@@ -239,7 +254,7 @@ body {
 	top: 40px;
 	color: #EFE44B;
 	font-family: helvetica, arial, sans-serif;
-	text-shadow: -6px 6px 3px black;
+	text-shadow: #241f1c -3px 4px 3px;
 	font-size: 27px;
 	font-weight: bold;
 	animation-name: bounce, bounceOut, shadowEnlarge;
@@ -254,7 +269,7 @@ body {
 	top: 40px;
 	color: #EFE44B;
 	font-family: helvetica, arial, sans-serif;
-	text-shadow: -6px 6px 3px black;
+	text-shadow: #241f1c -3px 4px 3px;
 	font-size: 27px;
 	font-weight: bold;
 	animation-name: bounce, bounceOut, shadowEnlarge;
@@ -278,7 +293,11 @@ body {
 .guessBox {
     text-align: center;
     width: 105px;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: xx-large;
+    border: 4px solid #493F39;
+	border-bottom: 4px solid #BBB4AA;
+	border-left: 4px solid #BBB4AA;
 }
 
 .stats {
