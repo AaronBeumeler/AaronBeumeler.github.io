@@ -207,7 +207,8 @@ body {
 
 .minutes {
 	padding-bottom: 15px;
-    font-size: 1.9em;
+    font-size: 1.6em;
+    font-weight: 600;
 }
 
 .clock {
