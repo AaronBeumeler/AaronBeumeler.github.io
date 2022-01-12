@@ -134,7 +134,7 @@ body {
 .num-pad-outer {
     overflow: auto;
     display: flex nowrap;
-    padding: 2%;
+    padding: 1%;
     background-image: url("images/main-container.jpg");
     margin: auto;
     width: 90%;
@@ -167,7 +167,7 @@ body {
     font-size: x-large;
     text-shadow: #201c19 -3px 4px 3px;
     width: 32%;
-    line-height: 24%;
+    line-height: 25%;
     min-height: 60px;
     background-image: url("images/main-container.jpg");
     border: 4px solid #BBB4AA;
@@ -204,8 +204,8 @@ body {
 }
 
 .minutes {
-	padding-bottom: 15px;
-    font-size: 1.6em;
+	padding-bottom: 10%;
+    font-size: 1.7em;
     font-weight: 600;
 }
 
@@ -296,15 +296,15 @@ body {
 }
 
 .guessBox {
-    padding-right: 20px;
+    padding-right: 16px;
     color: black;
     margin-left: 14px;
     background-color: whitesmoke;
     text-align: right;
     width: 105px;
-    height: 55px;
+    height: 65px;
     font-weight: 600;
-    font-size: xx-large;
+    font-size: 1em;
     border: 4px solid #493F39;
 	border-bottom: 4px solid #BBB4AA;
 	border-left: 4px solid #BBB4AA;
