@@ -53,7 +53,7 @@ function showReset() {
 	var x = document.getElementById("reset");
 	/*hideEnterButton();*/
 	hideStartButton();
-	x.style.display = "block";
+	x.style.display = "-webkit-inline-box";
 }
 
 function countdown() {
@@ -135,62 +135,62 @@ var slotVal;
 
 function swap1() {
 	slotVal = 1;
-	numberInput = document.getElementById("numberInput").innerHTML = parseInt(slotVal);
+	document.getElementById("numberInput").innerHTML = parseInt(slotVal);
 }
 
 function swap2() {
 	slotVal = 2;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap3() {
 	slotVal = 3;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap4() {
 	slotVal = 4;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap5() {
 	slotVal = 5;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap6() {
 	slotVal = 6;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap7() {
 	slotVal = 7;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap8() {
 	slotVal = 8;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap9() {
 	slotVal = 9;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap10() {
 	slotVal = 10;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap11() {
 	slotVal = 11;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function swap12() {
 	slotVal = 12;
-	numberInput = document.getElementById("numberInput").innerHTML = slotVal;
+	document.getElementById("numberInput").innerHTML = slotVal;
 }
 
 function hideScore() {
@@ -268,7 +268,7 @@ function concat9() {
 
 function check() {
 	correct = (slotVal * bNum);
-	guess = document.getElementById("guessBox").value;
+	guess = parseInt(document.getElementById("guessBox").innerHTML);
 	if (totalCount < 20) {
 		if (guess == correct) {
 			totalCount += 1;
@@ -278,8 +278,7 @@ function check() {
 			wrong += 1;
 			totalCount += 1;
 		}
-	}
-	if (totalCount == 20) {
+	} else if (totalCount == 20) {
 		document.getElementById("clock").innerHTML = "End";
 		hideGameplayCluster();
 		finishTime = timeLeft;
@@ -431,7 +430,7 @@ function hideGameplayCluster() {
 
 function showEnterButton() {
 	var x = document.getElementById("enterButton");
-	x.style.display = "block";
+	x.style.display = "-webkit-inline-box";
 }
 
 input.addEventListener("keyup", function(event) {
