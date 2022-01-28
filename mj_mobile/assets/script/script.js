@@ -297,15 +297,18 @@ function check() {
 }
 function showStats() {
 	var x = document.getElementById("stats");
+	var y = document.getElementById("statsHead");
 	document.getElementById("stats").innerHTML = "Factor: " + numberInput + "'s<br><br>" + "Correct: " + ((count / 20) * 100) + "%" + "<br><br>" + "Finish Time:<br>" + 
 			(startTime - finishTime) + " seconds" + "<br><br>" + "Missed:<br>" + wrong + "<br><br>" + "Total Gems:<br>" + gemTotal + "<br><br>" + "Rounds Played:<br>" + roundsPlayed;
 	x.style.display = "block";
+	y.style.display = "block";
 }
-
 function hideStats() {
 	var x = document.getElementById("stats");
+	var y = document.getElementById("statsHead");
 	document.getElementById("stats").innerHTML = "";
 	x.style.display = "none";
+	y.style.display = "none";
 }
 //////////////	USE THESE 3 LINES AT END OF ALL IF STATEMENTS IN CHECK()
 	/*inputClear();
