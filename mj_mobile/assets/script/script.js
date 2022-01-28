@@ -1,11 +1,11 @@
 function layoutHandler() {
     var styleLink = document.getElementById("pagestyle");
     if (window.innerWidth < 700) {
-        styleLink.setAttribute("href", "m_style.css");
+        styleLink.setAttribute("href", "assets/css/m_style.css");
     } /*else if (window.innerWidth < 1200) {
         styleLink.setAttribute("href", "assets/style/medium.css");
     } */else /*if (window.innerWidth >= 700)*/ {
-        styleLink.setAttribute("href", "style.css");
+        styleLink.setAttribute("href", "assets/css/style.css");
     }
 }
 
@@ -61,6 +61,7 @@ function countdown() {
 	timer = setInterval(function(){
 		if (timeLeft <= 0) {
 			inputClear();
+			hideScore();
 			/*
 			stopRoundMusic();
 			playBongoRoll();
@@ -96,7 +97,6 @@ function countdown() {
 		timeLeft -= 1;
 	}, 1000);
 	document.getElementById("guessBox").focus();
-	hideScore();
 	showReset();
 
 }
@@ -419,6 +419,13 @@ function showScore() {
 	x.style.display = "block";
 	var y = document.getElementById("countText");
 	y.style.display = "block";
+}
+
+function hideScore() {
+	var x = document.getElementById("count");
+	x.style.display = "none";
+	var y = document.getElementById("countText");
+	y.style.display = "none";
 }
 
 function showGameplayCluster() {
