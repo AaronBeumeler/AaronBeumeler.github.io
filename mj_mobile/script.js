@@ -96,7 +96,9 @@ function countdown() {
 		timeLeft -= 1;
 	}, 1000);
 	document.getElementById("guessBox").focus();
+	hideScore();
 	showReset();
+
 }
 
 //Set the timer
@@ -283,6 +285,7 @@ function check() {
 		hideGameplayCluster();
 		finishTime = timeLeft;
 		clearTimeout(timer);
+		hideScore();
 		showReset();
 		showStats();
 		showStatsHead();
