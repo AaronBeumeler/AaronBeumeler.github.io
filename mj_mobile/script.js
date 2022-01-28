@@ -208,14 +208,6 @@ function updateBoxValue() {
 	document.getElementById("guessBox").innerHTML = guessArray;
 }
 
-function createGuess() {
-	for (let i = 0; i < guessArray.length; i++) {
-		currentValue = document.getElementById("guessBox").innerHTML;
-		guessArray = currentValue.concat(parseInt(this.innerHTML));
-		updateBoxValue();
-	}
-}
-
 function concat0() {
 	currentValue = document.getElementById("guessBox").innerHTML;
 	guessArray = currentValue.concat(0);
