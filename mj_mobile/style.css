@@ -48,10 +48,8 @@ body {
 }
 .top-right-box {
     padding: 1%;
-    text-align: center;
     overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
     background-image: url("images/inner-container.jpg");
     float: right;
     height: 30.1vh;
@@ -166,10 +164,7 @@ body {
     touch-action: manipulation;
 }
 .number-select-grid {
-    display: -webkit-inline-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    text-align: center;
+    display: inline-block;
     color: whitesmoke;
     font-weight: 600;
     text-shadow: #241f1c -3px 4px 3px;
@@ -197,8 +192,8 @@ body {
 	text-shadow: #241f1c -3px 4px 3px;
 }
 #lg-screen-num-grid {
-    display: block;
-    font-size: 1.8em;
+    display: inline-block;
+    font-size: 2.2em;
 }
 /*remove number select grid that is used for sm screens*/
 #sm-screen-num-grid {
