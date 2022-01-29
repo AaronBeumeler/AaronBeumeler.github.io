@@ -37,18 +37,6 @@ body {
 	border-right: 4px solid #BBB4AA;
 	box-shadow: -4px 4px 12px black;
 }
-.num-pad-outer {
-    height: 40vh;
-    width: 90vw;
-    overflow: auto;
-    padding: 1%;
-    background-image: url("../images/main-container.jpg");
-    margin: auto;
-	border: 4px solid #493F39;
-	border-top: 4px solid #BBB4AA;
-	border-right: 4px solid #BBB4AA;
-	box-shadow: -4px 4px 12px black;
-}
 .top-left-box {
     overflow: scroll;
     padding: 8px;
@@ -116,7 +104,6 @@ body {
     text-shadow: #241f1c -3px 4px 3px;
     width: 100%;
     height: 100%;
-    min-height: 60px;
     border: 4px solid #BBB4AA;
 	border-bottom: 4px solid #493F39;
 	border-left: 4px solid #493F39;
@@ -135,6 +122,20 @@ body {
     border: 4px solid #BBB4AA;
 	border-bottom: 4px solid #493F39;
 	border-left: 4px solid #493F39;
+}
+.num-pad-outer {
+    height: 40vh;
+    width: 90vw;
+    overflow: auto;
+    padding: 1%;
+    margin-top: 1vh;
+    margin-bottom: 15px;
+    background-image: url("../images/main-container.jpg");
+    margin: auto;
+	border: 4px solid #493F39;
+	border-top: 4px solid #BBB4AA;
+	border-right: 4px solid #BBB4AA;
+	box-shadow: -4px 4px 12px black;
 }
 .num-pad-inner {
     position: relative;
@@ -194,6 +195,7 @@ body {
 .clock {
     display: none;
     padding-top: 9px;
+    padding-bottom: 9px;
 	font-size: 2em;
 	font-weight: 600;
 	color: white;
