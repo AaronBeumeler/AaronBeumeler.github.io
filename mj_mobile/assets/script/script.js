@@ -98,7 +98,7 @@ function countdown() {
 	}, 1000);
 	document.getElementById("guessBox").focus();
 	showReset();
-
+    addRound();
 }
 
 //Set the timer
@@ -201,7 +201,9 @@ function hideScore() {
 	var y = document.getElementById("countText");
 	y.style.display = "none";
 }
-
+function addRound() {
+	roundsPlayed += 1;
+}
 var guessArray = [];
 
 function updateBoxValue() {
@@ -290,6 +292,7 @@ function check() {
 		showStats();
 		showStatsHead();
 		showAnswerMain();
+		addRound();
 	}
 	inputClear();
 	bNum = Math.floor(Math.random() * 13);
@@ -360,11 +363,9 @@ function hideStats() {
 function focus() {
 	document.getElementById("guessBox").focus();
 }
-
 function quickClear() {
 	var clear = setTimeout(clearResult, 1000);
 }
-
 function clearResult() {
 	document.getElementById("result").innerHTML = "";
 }
@@ -373,91 +374,74 @@ function hideStartButton() {
 	var x = document.getElementById("start-button");
 	x.style.display = "none";
 }
-
 function showStartButton() {
 	var x = document.getElementById("start-button");
 	x.style.display = "-webkit-inline-box";
 }
-
 function hideInstructions() {
 	var x = document.getElementById("instructions");
 	x.style.display = "none";
 }
-
 function showInstructions() {
 	var x = document.getElementById("instructions");
 	x.style.display = "block";
 }
-
 function hideInstructions1() {
 	var x = document.getElementById("instructions1");
 	x.style.display = "none";
 }
-
 function showInstructions1() {
 	var x = document.getElementById("instructions1");
 	x.style.display = "block";
 }
-
 function showNum() {
 	var x = document.getElementById("number-select-grid");
 	x.style.display = "block";
 }
-
 function hideNum() {
 	var x = document.getElementById("number-select-grid");
 	x.style.display = "none";
 }
-
 function showTime() {
 	var x = document.getElementById("timeLimitList");
 	x.style.display = "block";
 }
-
 function hideTime() {
 	var x = document.getElementById("timeLimitList");
 	x.style.display = "none";
 }
-
 function showClock() {
 	var x = document.getElementById("clock");
 	x.style.display = "block";
 }
-
 function hideClock() {
 	var x = document.getElementById("clock");
 	x.style.display = "none";
 }
-
 function showScore() {
 	var x = document.getElementById("count");
 	x.style.display = "block";
 	var y = document.getElementById("countText");
 	y.style.display = "block";
 }
-
 function hideScore() {
 	var x = document.getElementById("count");
 	x.style.display = "none";
 	var y = document.getElementById("countText");
 	y.style.display = "none";
 }
-
 function showGameplayCluster() {
 	var x = document.getElementById("gameplayCluster");
 	x.style.display = "block";
 }	
-
 function hideGameplayCluster() {
 	var x = document.getElementById("gameplayCluster");
 	x.style.display = "none";
 }
-
 function showEnterButton() {
 	var x = document.getElementById("enterButton");
 	x.style.display = "-webkit-inline-box";
 }
-
 input.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
      event.preventDefault();
@@ -465,32 +449,27 @@ input.addEventListener("keyup", function(event) {
      document.getElementById("guessBox").focus();
     }
 });
-  
 input.addEventListener("keyup", function(event) {
     if (event.keyCode === 32) {
      event.preventDefault();
      stopRoundMusic();
     }
 });
-  
 function inputClear() {
     document.getElementById("guessBox").innerHTML = "";
 }
-  
 function clearArrays() {
     wrongList.length = 0;
     confirmList.length = 0;
     document.getElementById("wrongAnswer").innerHTML = wrongList;
     document.getElementById("confirmMain").innerHTML = confirmList;
 }
-
 function resetCount() {
 	count = 0;
 	wrong = 0;
 	totalCount = 0;
 	document.getElementById("count").innerHTML = 0;
 }
-
 function hideTimeNum() {
 	var w = document.getElementById("countTop");
 	var x = document.getElementById("numGrid");
@@ -503,12 +482,10 @@ function hideTimeNum() {
 	
 	document.getElementById("guessBox").focus();
 }
-
 function hideReset() {
 	var x = document.getElementById("reset");
 	x.style.display = "none";
 } 
-
 function hideCountTop() {
 	var x = document.getElementById("countTop");
 	x.style.display = "none";
