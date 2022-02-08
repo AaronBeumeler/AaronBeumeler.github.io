@@ -282,6 +282,7 @@ function check() {
 			wrong += 1;
 			totalCount += 1;
 		}
+	createProb();
 	} else if (totalCount == 20) {
 		document.getElementById("clock").innerHTML = "End";
 		hideGameplayCluster();
@@ -295,8 +296,6 @@ function check() {
 		addRound();
 	}
 	inputClear();
-	bNum = Math.floor(Math.random() * 13);
-	document.getElementById("random").innerHTML = "x " + bNum;
 }
 function showStats() {
 	var x = document.getElementById("stats");
