@@ -312,11 +312,6 @@ function hideStats() {
 	x.style.display = "none";
 	y.style.display = "none";
 }
-//////////////	USE THESE 3 LINES AT END OF ALL IF STATEMENTS IN CHECK()
-	/*inputClear();
-		bNum = Math.floor(Math.random() * 13);
-		document.getElementById("random").innerHTML = "x " + bNum;
-	*/
 ///////////////////////////////////////////////////////////////////////////
 	/*if (guess == null) {
 		wrong += 1;
@@ -368,7 +363,6 @@ function quickClear() {
 function clearResult() {
 	document.getElementById("result").innerHTML = "";
 }
-////////////////////////////////////////////////////////////////////
 function hideStartButton() {
 	var x = document.getElementById("start-button");
 	x.style.display = "none";
@@ -478,7 +472,6 @@ function hideTimeNum() {
 	x.style.display = "none";
 	y.style.display = "none";
 	z.style.display = "none";
-	
 	document.getElementById("guessBox").focus();
 }
 function hideReset() {
@@ -489,26 +482,21 @@ function hideCountTop() {
 	var x = document.getElementById("countTop");
 	x.style.display = "none";
 }
-
-
-
-/*
-function hideEnterButton() {
-	var x = document.getElementById("enterButton");
-	x.style.display = "none";
+function updateRight() {
+	rightList.unshift(numberInput + " x " + bNum + " = " + guess + "<br>");
+	document.getElementById("rightAnswer").innerHTML = confirmList.join(" ");
 }
 
-function timeStop() {
-	var x = document.getElementById("clock");
-    x.innerHTML = "Game Over";
-    x.style.color = "rgb(226, 36, 36)";
+function updateWrong() {
+	wrongList.unshift(numberInput + " x " + bNum + " = " + guess + "<br>");
+	document.getElementById("wrongAnswer").innerHTML = wrongList.join(" ");
 }
-
-function timeStop() {
-	document.getElementById("clock").innerHTML = "Game Over";
+function clearArrays() {
+	wrongList.length = 0;
+	rightList.length = 0;
+	document.getElementById("wrongAnswer").innerHTML = wrongList;
+	document.getElementById("rightAnswer").innerHTML = rightList;
 }
-*/
-
 
 /*All Javascript
 

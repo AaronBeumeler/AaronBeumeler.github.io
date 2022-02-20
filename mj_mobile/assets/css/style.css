@@ -1,8 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 .navbar .navbar-collapse {
     text-align: center;
   }
 .title {
-    background-image: url("images/floral.jpg");
+    background-image: url("../images/floral.jpg");
 	font-family: helvetica, arial, sans-serif;
 	font-weight: 800;
 	font-size: 36px;
@@ -15,31 +19,32 @@
 }
 body {
     height: 100vh;
-    min-width: 388px;
-    background-image: url("images/floral.jpg");
-	overflow: hidden;
+    width: 100vw;
+    background-image: url("../images/floral.jpg");
 }
 .main-container {
-    height: 45vh;
+    height: 43vh;
     overflow: hidden;
     padding: 1%;
-    background-image: url("images/main-container.jpg");
+    padding-bottom: 1%;
+    background-image: url("../images/main-container.jpg");
     margin: auto;
-    margin-top: 15vh;
     width: 90vw;
+    margin-top: 4%;
+    margin-bottom: 2%;
 	border: 4px solid #493F39;
 	border-top: 4px solid #BBB4AA;
 	border-right: 4px solid #BBB4AA;
 	box-shadow: -4px 4px 12px black;
 }
 .top-left-box {
+    overflow: scroll;
     padding: 8px;
-    background-image: url("images/inner-container.jpg");
+    background-image: url("../images/inner-container.jpg");
     text-align: center;
     float: left;
     height: 30.1vh;
     width: 48.5%;
-    max-width: 850px;
     margin-right: 1%;
     margin-bottom: 1%;
     border: 4px solid #493F39;
@@ -48,39 +53,37 @@ body {
 }
 .top-right-box {
     padding: 1%;
+    text-align: center;
     overflow-x: hidden;
     overflow-y: auto;
-    background-image: url("images/inner-container.jpg");
+    position: relative;
+    background-image: url("../images/inner-container.jpg");
     float: right;
     height: 30.1vh;
     width: 48.5%;
-    max-width: 850px;
     margin-bottom: 1%;
     border: 4px solid #493F39;
 	border-bottom: 4px solid #BBB4AA;
 	border-left: 4px solid #BBB4AA;
 }
 .bottom-left-box {
-    background-image: url("images/inner-container.jpg");
-    display: -webkit-inline-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+    background-image: url("../images/inner-container.jpg");
+    display: block;
+    text-align: center;
     float: left;
     height: 10vh;
     width: 48.5%;
-    max-width: 850px;
     margin-right: 1%;
     border: 4px solid #493F39;
 	border-bottom: 4px solid #BBB4AA;
 	border-left: 4px solid #BBB4AA;
 }
 .bottom-right-box {
-    background-image: url("images/inner-container.jpg");
+    background-image: url("../images/inner-container.jpg");
     text-align: center;
     float: right;
     height: 10vh;
     width: 48.5%;
-    max-width: 850px;
     border: 4px solid #493F39;
 	border-bottom: 4px solid #BBB4AA;
 	border-left: 4px solid #BBB4AA;
@@ -90,7 +93,7 @@ body {
     display: none;
 }
 .start-button {
-    background-image: url("images/main-container.jpg");
+    background-image: url("../images/main-container.jpg");
     display: none;
     -webkit-box-pack: center;
     -webkit-box-align: center;
@@ -101,19 +104,18 @@ body {
     text-shadow: #241f1c -3px 4px 3px;
     width: 100%;
     height: 100%;
-    min-height: 60px;
     border: 4px solid #BBB4AA;
 	border-bottom: 4px solid #493F39;
 	border-left: 4px solid #493F39;
 }
 .reset {
-	background-image: url("images/main-container.jpg");
+	background-image: url("../images/main-container.jpg");
     display: none;
     -webkit-box-pack: center;
     -webkit-box-align: center;
     color: whitesmoke;
     font-weight: 600;
-    font-size: 2.2em;
+    font-size: 2em;
     text-shadow: #241f1c -3px 4px 3px;
     width: 100%;
     height: 100%;
@@ -122,12 +124,13 @@ body {
 	border-left: 4px solid #493F39;
 }
 .num-pad-outer {
-    display: none;
-    height: 40vh;
+    height: 38vh;
     width: 90vw;
     overflow: auto;
     padding: 1%;
-    background-image: url("images/main-container.jpg");
+    margin-top: 1vh;
+    margin-bottom: 10vh;
+    background-image: url("../images/main-container.jpg");
     margin: auto;
 	border: 4px solid #493F39;
 	border-top: 4px solid #BBB4AA;
@@ -136,7 +139,7 @@ body {
 }
 .num-pad-inner {
     position: relative;
-    background-image: url("images/inner-container.jpg");
+    background-image: url("../images/inner-container.jpg");
     text-align: center;
     overflow: auto;
     display: flex nowrap;
@@ -153,18 +156,22 @@ body {
     -webkit-box-align: center;
     color: whitesmoke;
     font-weight: 600;
-    font-size: x-large;
+    font-size: 180%;
     text-shadow: #201c19 -3px 4px 3px;
     width: 33.3333%;
     height: 25%;
-    background-image: url("images/main-container.jpg");
+    background-image: url("../images/main-container.jpg");
     border: 4px solid #BBB4AA;
 	border-bottom: 4px solid #493F39;
 	border-left: 4px solid #493F39;
     touch-action: manipulation;
+    min-height: 45px;
 }
 .number-select-grid {
-    display: inline-block;
+    display: -webkit-inline-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    text-align: center;
     color: whitesmoke;
     font-weight: 600;
     text-shadow: #241f1c -3px 4px 3px;
@@ -180,24 +187,26 @@ body {
     text-shadow: #241f1c -3px 4px 3px;
 }
 .minutes {
-	padding-bottom: 10%;
-    font-size: 1.7em;
+	height: 33.333%;
+    padding: 5px;
+    font-size: 1.8em;
     font-weight: 600;
 }
 .clock {
     display: none;
-	font-size: 2.2em;
+    padding-top: 9px;
+    padding-bottom: 9px;
+	font-size: 2em;
 	font-weight: 600;
 	color: white;
 	text-shadow: #241f1c -3px 4px 3px;
 }
+/*remove number select grid that is used for lg screens*/
 #lg-screen-num-grid {
-    display: inline-block;
-    font-size: 2.2em;
-}
-/*remove number select grid that is used for sm screens*/
-#sm-screen-num-grid {
     display: none;
+    font-size: 1.8em;
+}
+#sm-screen-num-grid {
     justify-content: center;
     padding-bottom: 15px;
     padding-top: 3px;
@@ -265,24 +274,22 @@ body {
     display: -webkit-inline-box;
     -webkit-box-pack: center;
     -webkit-box-align: center;
-    padding-right: 8px;
     color: black;
     background-color: whitesmoke;
     text-align: right;
-    width: 105px;
-    height: 65px;
+    width: 60%;
+    height: 7.5vh;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 5.5vh;
     border: 4px solid #493F39;
 	border-bottom: 4px solid #BBB4AA;
 	border-left: 4px solid #BBB4AA;
 }
 .stats {
-	overflow: hidden;
 	display: none;
 	text-align: center;
 	position: relative;
-	padding-top: 24px;
+	padding-top: 10px;
 	padding-bottom: 4px;
 	color: white;
 	font-family: helvetica, arial, sans-serif;
@@ -291,13 +298,14 @@ body {
 	font-weight: bold;
 }
 .statsHead {
+    display: none;
 	font-family: helvetica, arial, sans-serif;
 	text-shadow: -6px 6px 3px black;
 	font-size: 28px;
 	font-weight: bold;
 	color: #59A6F2;
 	display: none;
-	padding-top: 22px;
+	padding-top: 5px;
 	text-align: center;
 	position: relative;
 }
