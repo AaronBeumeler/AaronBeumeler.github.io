@@ -138,6 +138,7 @@ body {
 	border-left: 4px solid #493F39;
 }
 .num-pad-outer {
+    max-width: 425px;
     height: 38vh;
     width: 90vw;
     overflow: auto;
