@@ -433,19 +433,6 @@ function showEnterButton() {
 	var x = document.getElementById("enterButton");
 	x.style.display = "-webkit-inline-box";
 }
-input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-     event.preventDefault();
-     document.getElementById("enter").click();
-     document.getElementById("guessBox").focus();
-    }
-});
-input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 32) {
-     event.preventDefault();
-     stopRoundMusic();
-    }
-});
 function inputClear() {
     document.getElementById("guessBox").innerHTML = "";
 }
@@ -495,6 +482,36 @@ function clearArrays() {
 	document.getElementById("wrongAnswer").innerHTML = wrongList;
 	document.getElementById("rightAnswer").innerHTML = rightList;
 }
+
+/* Event Listeners for Number Entry on Keyboard */
+input.addEventListener("keyup", function(event) {
+	if (event.keyCode === 13) {
+	 event.preventDefault();
+	 check();
+	 inputClear();
+	}
+  });
+input.addEventListener("keyup", function(event) {
+	if (event.keyCode === 32) {
+		event.preventDefault();
+		stopRoundMusic();
+	}
+	});
+input.addEventListener("keyup", function(event) {
+	if (event.keyCode === 49) {
+		event.preventDefault();
+		concat1();
+	}
+	});
+input.addEventListener("keyup", function(event) {
+	if (event.keyCode === 50) {
+		event.preventDefault();
+		concat2();
+	}
+	});
+
+
+
 
 /*All Javascript
 
