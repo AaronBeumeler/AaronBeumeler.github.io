@@ -1,11 +1,13 @@
-/*
 function layoutHandler() {
     var styleLink = document.getElementById("pagestyle");
     if (window.innerWidth < 700) {
         styleLink.setAttribute("href", "assets/css/m_style.css");
+    } /*else if (window.innerWidth < 1200) {
+        styleLink.setAttribute("href", "assets/style/medium.css");
+    } */else /*if (window.innerWidth >= 700)*/ {
+        styleLink.setAttribute("href", "assets/css/style.css");
     }
 }
-*/
 
 window.onresize = layoutHandler;
 layoutHandler();
@@ -280,7 +282,6 @@ function check() {
 			wrong += 1;
 			totalCount += 1;
 		}
-	createProb();
 	} else if (totalCount == 20) {
 		document.getElementById("clock").innerHTML = "End";
 		hideGameplayCluster();
@@ -294,6 +295,8 @@ function check() {
 		addRound();
 	}
 	inputClear();
+	bNum = Math.floor(Math.random() * 13);
+	document.getElementById("random").innerHTML = "x " + bNum;
 }
 function showStats() {
 	var x = document.getElementById("stats");
@@ -310,6 +313,11 @@ function hideStats() {
 	x.style.display = "none";
 	y.style.display = "none";
 }
+//////////////	USE THESE 3 LINES AT END OF ALL IF STATEMENTS IN CHECK()
+	/*inputClear();
+		bNum = Math.floor(Math.random() * 13);
+		document.getElementById("random").innerHTML = "x " + bNum;
+	*/
 ///////////////////////////////////////////////////////////////////////////
 	/*if (guess == null) {
 		wrong += 1;
@@ -361,6 +369,7 @@ function quickClear() {
 function clearResult() {
 	document.getElementById("result").innerHTML = "";
 }
+////////////////////////////////////////////////////////////////////
 function hideStartButton() {
 	var x = document.getElementById("start-button");
 	x.style.display = "none";
@@ -470,6 +479,7 @@ function hideTimeNum() {
 	x.style.display = "none";
 	y.style.display = "none";
 	z.style.display = "none";
+	
 	document.getElementById("guessBox").focus();
 }
 function hideReset() {
@@ -480,26 +490,27 @@ function hideCountTop() {
 	var x = document.getElementById("countTop");
 	x.style.display = "none";
 }
-function updateRight() {
-	rightList.unshift(numberInput + " x " + bNum + " = " + guess + "<br>");
-	document.getElementById("rightAnswer").innerHTML = confirmList.join(" ");
-}
 
-function updateWrong() {
-	wrongList.unshift(numberInput + " x " + bNum + " = " + guess + "<br>");
-	document.getElementById("wrongAnswer").innerHTML = wrongList.join(" ");
+
+
+/*
+function hideEnterButton() {
+	var x = document.getElementById("enterButton");
+	x.style.display = "none";
 }
-function clearArrays() {
-	wrongList.length = 0;
-	rightList.length = 0;
-	document.getElementById("wrongAnswer").innerHTML = wrongList;
-	document.getElementById("rightAnswer").innerHTML = rightList;
+function timeStop() {
+	var x = document.getElementById("clock");
+    x.innerHTML = "Game Over";
+    x.style.color = "rgb(226, 36, 36)";
 }
+function timeStop() {
+	document.getElementById("clock").innerHTML = "Game Over";
+}
+*/
+
 
 /*All Javascript
-
 //var combinedTime = 0;
-
 var aGem = document.getElementById("gem1");
 var bGem = document.getElementById("gem2");
 var cGem = document.getElementById("gem3");
@@ -520,12 +531,7 @@ var qGem = document.getElementById("gem17");
 var rGem = document.getElementById("gem18");
 var sGem = document.getElementById("gem19");
 var tGem = document.getElementById("gem20");
-
-
-
-
 //-------------------------------------------------------
-
 window.onload = function() {
 	jungleSound.load();
 	jungleSound.play();
@@ -534,7 +540,6 @@ window.onload = function() {
 		menuMusic.play();
 	}, 2200);
 }
-
 function playMenuMusic() {
 	document.getElementById("menuMusic").volume = 0.3;
 	menuMusic.currentTime = 0;
@@ -542,14 +547,12 @@ function playMenuMusic() {
 		menuMusic.play();
 	}, 2000);
 }
-
 function delayMenuMusic() {
 	menuMusic.currentTime = 0;
 	setTimeout(function() {
 		menuMusic.play();
 	}, 3000);
 }
-
 function playWinnerMusic() {
 	document.getElementById("winner").volume = 0.3;
 	setTimeout(function() {
@@ -557,17 +560,14 @@ function playWinnerMusic() {
 	}, 500);
 	winner.currentTime = 0;
 }
-
 function playBongoRoll() {
 	document.getElementById("bongoRoll").volume = 0.3;
 	bongoRoll.currentTime = 0;
 	bongoRoll.play();
 }
-
 function stopMenuMusic() {
 	menuMusic.pause();
 }
-
 function playRoundMusic() {	
 	document.getElementById("roundMusic").volume = 0.3;
 	setTimeout(function() {
@@ -575,120 +575,92 @@ function playRoundMusic() {
 		roundMusic.play();
 	}, 850);
 }
-
 function stopRoundMusic() {
 	roundMusic.pause();
 	roundMusic.currentTime = 0;
 }
-
 function playFastBongos() {
 	document.getElementById("fastBongos").volume = 0.3;
 	fastBongos.currentTime = 0;
 	fastBongos.play();
 }
-
 function playLowDrum() {
 	document.getElementById("lowDrum").volume = 0.3;
 	lowDrum.play();
 }
-
 function playChime() {
 	document.getElementById("chime").volume = 0.3;
 	chime.currentTime = 0;
 	chime.play();
 }
-
 function playTrumpet() {
 	document.getElementById("trumpet").volume = 0.3;
 	trumpet.currentTime = 0;
 	trumpet.play();
 }
-
 function playShake1() {
 	document.getElementById("shake1").volume = 0.3;
 	shake1.pause();
 	shake1.currentTime = 0;
 	shake1.play();
 }
-
 function playTubaFall() {
 	document.getElementById("tubaFall").volume = 0.3;
 	tubaFall.play();
 }
-
 function updateList() {
 	confirmList.unshift(numberInput + " x " + bNum + " = " + guess + "<br>");
 	document.getElementById("confirmMain").innerHTML = confirmList.join(" ");
 }
-
 function updateWrong() {
 	wrongList.unshift(numberInput + " x " + bNum + " = " + guess + "<br>");
 	document.getElementById("wrongAnswer").innerHTML = wrongList.join(" ");
 }
 	
 //start button functions
-
 function hideCountTop() {
 	var x = document.getElementById("countTop");
 	x.style.display = "none";
 }
-
 function hideReset() {
 	var x = document.getElementById("reset");
 	x.style.display = "none";
 } 
-
 function showReset() {
 	var x = document.getElementById("reset");
 	hideEnterButton();
 	hideStartButton();
 	x.style.display = "block";
 }
-
 function showAnswerMain() {
 	var x = document.getElementById("answerMain");
 	x.style.display = "block";
 }
-
 function hideAnswerMain() {
 	var x = document.getElementById("answerMain");
 	x.style.display = "none";
 }	
-
 function hideInstructions() {
 	var x = document.getElementById("instructions");
 	x.style.display = "none";
 }
-
 function showInstructions() {
 	var x = document.getElementById("instructions");
 	x.style.display = "block";
 }
-
 function showInstructions1() {
 	var x = document.getElementById("instructions1");
 	x.style.display = "block";
 }
-
 function hideInstructions1() {
 	var x = document.getElementById("instructions1");
 	x.style.display = "none";
 }
-
 function addRound() {
 	roundsPlayed += 1;
 }
-
-
-
-
 //end start button functions
-
-
 	
-
-
-
 	if (count >= 1) {
 		aGem.style.display = "block";
 		}
@@ -750,8 +722,6 @@ function addRound() {
 		tGem.style.display = "block";
 	}
     
-
-
 //Need to correct Answer Time equation.
 function showStats() {
 	var x = document.getElementById("stats");
@@ -759,35 +729,27 @@ function showStats() {
 			(startTime - finishTime) + " seconds" + "<br><br>" + "Missed:<br>" + wrong + "<br><br>" + "Total Gems:<br>" + gemTotal + "<br><br>" + "Rounds Played:<br>" + roundsPlayed;
 	x.style.display = "block";
 }
-
 function hideStats() {
 	var x = document.getElementById("stats");
 	document.getElementById("stats").innerHTML = "";
 	x.style.display = "none";
 }
-
-
-
 function showNum() {
 	var x = document.getElementById("number-select-grid");
 	x.style.display = "block";
 }
-
 function hideNum() {
 	var x = document.getElementById("number-select-grid");
 	x.style.display = "none";
 }
-
 function showStatsHead() {
 	var x = document.getElementById("statsHead");
 	x.style.display = "block";
 }
-
 function hideStatsHead() {
 	var x = document.getElementById("statsHead");
 	x.style.display = "none";
 }
-
 function resetGems() {
 	aGem.style.display = "none";
 	bGem.style.display = "none";
@@ -810,20 +772,8 @@ function resetGems() {
 	sGem.style.display = "none";
 	tGem.style.display = "none";
 }
-
-
 //COUNTDOWN
-
-
-
-
-
 /*
-
-
-
 //Multiple functions to change number as you hover on dropdown items.
 var slotVal;
-
-
 */
