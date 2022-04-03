@@ -6,31 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link id="pagestyle" href="style.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-<!--
-<div class="container-fluid mt-3">
-  <br>
-  <h1 >Jesse Beumeler</h1>
-</div>
--->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top shadow-bottom">
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark bg-gradient sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img class="avatar-pic" src="images/avatar_stun_sq.jpg"></img></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav text-center">
         <li class="nav-item">
-          <a class="nav-link" href="#">Cosmos</a>
+          <a class="nav-link" href="#cosmos">Cosmos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Surreal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nature</a>
+          <a class="nav-link" href="#nature">Nature</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Bookmarks</a>
@@ -40,58 +33,278 @@
   </div>
 </nav>
 
-<div class="cosmos">
-  <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
-    <div class="page-outer">
-      <a href="images/pdf/space_samurai.pdf" target="_blank">
-        <img class="lg-v-img show-on-scroll" src="images/space_samurai.jpg"></img>
-      </a>
-      <div class="img-title">
-        <span>Space Samurai</span>  
+<body class="bg-dark">
+<main class="container-fluid">
+  <div class="row">
+    <div id="cosmos"class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+      <img src="images/cosmos_background.jpg" class="mt-2 mb-2">
+      <p>
+        <button class="bt n btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">Cosmos</button>
+      </p>
+      <div class="collapse" id="collapse1">
+        <div class="card-body border-top">
+          The mysteries of the Cosmos are yet to be revealed...
+        </div>
       </div>
-      <a href="images/pdf/astronaut.pdf" target="_blank">
-        <img class="lg-h-img show-on-scroll" src="images/astronaut.jpg"></img>
-      </a>
-      <div class="img-title">
-        <span>Astronaut</span> 
-      </div>
-      <a href="images/pdf/man_pig.pdf" target="_blank">
-        <img class="lg-v-img show-on-scroll" src="images/man_pig.jpg"></img>
-      </a>
-      <div class="img-title">
-        <span>Man Pig</span>
-      </div>
-      <a href="images/pdf/bookmark1.pdf" target="_blank">
-        <img class="lg-bk-img show-on-scroll" src="images/bookmark_cupcake.jpg"></img>
-      </a>
-      <a href="images/pdf/bookmark1.pdf" target="_blank">
-        <img class="lg-bk-img show-on-scroll" src="images/bookmark_spacex.jpg"></img>
-      </a>
-      <a href="images/pdf/bookmark1.pdf" target="_blank">
-        <img class="lg-bk-img show-on-scroll" src="images/bookmark_ufo.jpg"></img>
-      </a>
-      <a href="images/pdf/bookmark1.pdf" target="_blank">
-        <img class="lg-bk-img show-on-scroll" src="images/bookmark_unicorn.jpg"></img>
-      </a>
-      <div class="img-title">
-        <span>Sci-Fantasy Bookmarks</span>
-      </div>
-      <a href="images/pdf/lizard_man.pdf" target="_blank">
-        <img class="lg-h-img show-on-scroll" src="images/lizard_man.jpg"></img>
-      </a>
-      <div class="img-title">
-        <span>Lizard Man</span>
-      </div>
-      <a href="images/pdf/apocalypse.pdf" target="_blank">
-        <img class="lg-v-img show-on-scroll" src="images/apocalypse.jpg"></img>
-      </a>
-      <div class="img-title">
-        <span>Apocalypshit</span>
-      </div>
+    </div>
 
+    <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+      <img src="images/astronaut.jpg" class="mt-2 mb-2">
+      <p>
+        <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
+          Astronaut
+        </button>
+      </p>
+      <div class="collapse" id="collapse2">
+        <div class="card-body border-top">
+          The secrets of the Astronaut remain secret...
+        </div>
+      </div>
+    </div>
+
+    <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+      <img src="images/planets.jpg" class="mt-2 mb-2">
+      <p>
+        <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseExample">
+          Planets
+        </button>
+      </p>
+      <div class="collapse" id="collapse3">
+        <div class="card-body border-top">
+          These planets have not yet been recorded in any log...
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+  
+    <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+      <img src="images/space_samurai.jpg" class="mt-2 mb-2">
+      <p>
+        <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseExample">
+          Space Samurai
+        </button>
+      </p>
+      <div class="collapse" id="collapse4">
+        <div class="card-body border-top">
+          <p>&nbsp;&nbsp;
+            The Space samurai was a Colonial Marine who was discharged at the end of the Colonial Wars on Mars. 
+            Now he is a warrior without a job. In Japanese, he is a ronin. A wandering person or a samurai without 
+            a master who decided to work for himself. He is a type of space pirate who works as an environmental 
+            services technician; part of a cleanup crew contracted by the National Space Federation to provide security 
+            around the new colony and terminate the remaining goblins on Mars. He has just one job to do; to cleanup 
+            and eliminate the remaining hybrid humans known as goblins.
+          </p>
+          <p>&nbsp;&nbsp;
+            Many of the remaining hybrid human laborers on Mars had become advanced enough to pilot spacecraft near 
+            Mars orbit and operate advanced weaponry acquired from the space Marines and security contractors during 
+            the Colonial Wars on Mars.
+          </p>
+          <p>&nbsp;&nbsp;
+            Nobody tells the ronin space pirate what to do. He enjoys killing, so when he is not engaged in short 
+            skirmishes with the goblins, he hunts the surrounding solar systems for treasure. He enjoys hunting alien 
+            creatures. He keeps Newly discovered alien species or dismembered parts from these monsters' corpses as prizes.
+          </p>
+          <p>&nbsp;&nbsp;
+            Unlike other warriors who prefer high-tech specialized weaponry, the ronin prefers the challenge and 
+            excitement of the fight using a simple samurai blade; a katana that has been passed down thousands of years 
+            from his great ancestors who used it in great samurai battles. He travels in a vintage, beat up ship called 
+            El Narval; An unknown monster that destroys, taking no prisoners like a bloodthirsty pirate ship. He will serve 
+            as a mercenary around the nearby solar systems or for whoever offers to pay the right price.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+      <img src="images/space_knight.jpg" class="mt-2 mb-2">
+      <p>
+        <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseExample">
+          Space Knight
+        </button>
+      </p>
+      <div class="collapse" id="collapse5">
+        <div class="card-body border-top mb-3">
+          Some placeholder Space Knight content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+    </div>
+
+  <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+    <img src="images/apocalypse.jpg" class="mt-2 mb-2">
+    <p>
+      <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapseExample">Apocalypshit</button>
+    </p>
+    <div class="collapse" id="collapse6">
+      <div class="card-body border-top">
+        <p>&nbsp;&nbsp;
+          In the near future Earth has become polluted and has trash orbiting around it. The International Space Federation 
+          has attempted to terraform mars and give it a breathable atmosphere. To do so, the New World Government had to 
+          create genetically modified humans that can survive on little to no oxygen. They were created as slaves to mine 
+          for valuable resources to help build a colony on Mars.
+        </p>
+        <p>&nbsp;&nbsp;
+          However, experiments to create new lifeforms on another planet backfired and the goblin-like human laborers revolted 
+          and began destroying the colony to gain their freedom. The International Space Federation deployed colonial armed 
+          marines and dropped bombs on the failed experiment so that they could restart after exterminating the entire hybrid 
+          “goblin” species.  
+        </p>  
+        <p>&nbsp;&nbsp;
+          The only animals and plants that exist on Mars as it is terraformed are genetically modified animals, plants and 
+          hybrid alien creatures that can survive in the low oxygen atmosphere. The Colonial Marines hunted goblins cave by 
+          cave until they had exterminated the race. The New World Government could then begin creating a new colony to finish 
+          terraforming Mars.
+        </p>  
+      </div>
     </div>
   </div>
+
+  </div>
+  <div class="row">
+
+  <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+    <img src="images/dune.jpg" class="mt-2 mb-2">
+    <p>
+      <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapseExample">
+        Dunes
+      </button>
+    </p>
+    <div class="collapse" id="collapse7">
+      <div class="card-body border-top mb-3">
+        Some placeholder "Dunes" content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+
+  <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+    <img src="images/man_pig.jpg" class="mt-2 mb-2">
+    <p>
+      <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapseExample">
+        Man-Pig
+      </button>
+    </p>
+    <div class="collapse" id="collapse8">
+      <div class="card-body border-top mb-3">
+        <p>&nbsp;&nbsp;
+          The New World Government has created hybrid race of people with genes from humans and animals. When the government 
+          discovers a couple of genetically modified humans have given birth outside of government-controlled laboratories, 
+          the authoritative government sends secret police to the house to terminate the disfigured animal human newborn child 
+          before the general public is aware of the natural born freak creation.
+        </p>
+        <p>&nbsp;&nbsp;
+          The same government has created a ring that orbits earth that is man-made of simple landscapes and plant life. It has 
+          a light atmosphere and they can send people there who did not follow the rules of the new government. The government 
+          sends prisoners to the ring, into exile where they die a slow death. The exiled which resort to killing each other for 
+          food, suffering in isolation with a beautiful view of earth as they die slowly. The New World Government raised human 
+          animal hybrid monsters in captivity, away from public view. They would then send them to the ring to attempt to survive 
+          along with the prisoners, providing them a form of entertainment akin to a gladiator spectacle.
+        </p>  
+        <p>&nbsp;&nbsp;
+          The protagonist is one of the last non-genetically modified natural born humans. He has a robotic prosthetic right arm. 
+          He has no weapons other than a knife due to the No Arms for Peace rule on earth. He comes from a generation of warriors 
+          dating back thousands of years. He fought as a colonial Marine on Mars during the Colonization Wars but got out once he 
+          realized he was just killing genetically modified human hybrids who were working as slaves in the new colony. He used to 
+          live on the furthest edges of modern society but he is aware of how twisted the New World is and voluntarily goes to the 
+          ring to hunt animal-human hybrid beasts.
+        </p>
+        <p>&nbsp;&nbsp;
+          Although the land is unnatural and has no resources, and is extremely hard to live on he, prefers it over the New World 
+          on Earth because it is real. He voluntarily goes to the ring of exile to entertain the global elites as a hunter, but to 
+          the surprise of the evil elite of the New World, the warrior prefers the freedom and realness of the ring over the New World. 
+          He refuses to return to Earth and instead stays in an attempt to colonize the ring.
+        </p>
+        <p>&nbsp;&nbsp;
+          He soon realizes that all the prisoners sent to the ring are just people Who had different ideas and different ideologies. 
+          They do not want to conform to the Communist One World government.  The exiled prisoners and the ex-Colonial Marine decide 
+          to work together to attempt colonizing the ring, and possibly taming the monsters sent from the New World laboratories. 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+    <img src="images/lizard_man.jpg" class="mt-2 mb-2">
+    <p>
+      <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapseExample">
+        Lizard Man
+      </button>
+    </p>
+    <div class="collapse" id="collapse9">
+      <div class="card-body border-top">
+        Lizard Man story coming soon...
+      </div>
+    </div>
+  </div>
+
+</div>     
+<div class="row">
+
+  <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+    <img src="images/robot.jpg" class="mt-2 mb-2">
+    <p>
+      <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapseExample">
+        Robot
+      </button>
+    </p>
+    <div class="collapse" id="collapse10">
+      <div class="card-body border-top">
+        There is a C3P0 Isaac Asimov robot story coming soon... 
+        <br>
+        Translation: Bleep bloop bleep
+      </div>
+    </div>
+  </div>
+
+  <div id="nature" class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+    <img src="images/sea_giants.jpg" class="mt-2 mb-2">
+    <p>
+      <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapseExample">
+        Sea Giants
+      </button>
+    </p>
+    <div class="collapse" id="collapse11">
+      <div class="card-body border-top">
+        Giants beneath the ocean's surface...
+      </div>
+    </div>
+  </div>
+
+  <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+    <img src="images/turtle.jpg" class="mt-2 mb-2">
+    <p>
+      <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapseExample">
+        Sea Turtle
+      </button>
+    </p>
+    <div class="collapse" id="collapse12">
+      <div class="card-body border-top">
+        Sea Turtle description coming...
+      </div>
+    </div>
+  </div>
+
 </div>
-<script type="text/javascript" src="script.js"></script>
+<div class="row">
+
+  <div class="card m-auto col-sm-12 col-md-6 col-lg-4 pt-2 my-2">
+    <img src="images/snowy_mtn_lake.jpg" class="mt-2 mb-2">
+    <p>
+      <button class="btn btn-primary btn-dark btn-outline-light w-100 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapseExample">
+        Snowy Mountain Lake
+      </button>
+    </p>
+    <div class="collapse" id="collapse13">
+      <div class="card-body border-top">
+        Snowy Mountain Lake description coming...
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="script/script.js"></script>
 </body>
 </html>

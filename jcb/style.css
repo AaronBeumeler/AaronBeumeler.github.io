@@ -1,58 +1,14 @@
-.cosmos {
-    background-image: url("images/cosmos_background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 .avatar-pic {
     width: 50px;
     border-radius: 50%;
     border: solid grey 1px;
 }
-
-.shadow-bottom {
-    box-shadow: black 0px 10px 12px;
-}
-
-
 body::-webkit-scrollbar {
     display: none;
-}
-
-
-.page-outer {
-    text-align: center;
-}
-
-.lg-v-img {
-    display: inline-block;
-    width: 25%;
-    margin: 20px;
-    box-shadow: black 4px 8px 12px;
-    border: whitesmoke solid 1px;
-    border-radius: 4px;
-}
-
-.lg-h-img {
-    display: inline-block;
-    width: 35%;
-    margin: 20px;
-    box-shadow: black 4px 8px 12px;
-    border: whitesmoke solid 1px;
-    border-radius: 4px;
-}
-
-.lg-bk-img {
-    display: inline-block;
-    width: 8%;
-    margin: 35px;
-    box-shadow: black 4px 8px 12px;
-    border: whitesmoke solid 1px;
-    border-radius: 4px;
-}
-
-.img-title {
-    display: none;
-}
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
