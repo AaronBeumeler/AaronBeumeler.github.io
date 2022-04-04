@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #FFFFFF;
+  background: linear-gradient(90deg, rgba(240,252,118,1) 0%, rgba(103,174,132,1) 100%);
   border-radius: 1px;
   opacity: 1;
   left: 0;
@@ -75,5 +75,4 @@ body::-webkit-scrollbar {
   transform: rotate(0deg);
 }
 .navbar-toggler.collapsed .toggler-icon {
-  background: linear-gradient(90deg, rgba(240,252,118,1) 0%, rgba(138,107,163,1) 100%);
-}
+  background: linear-gradient(90deg, rgba(240,252,118,1) 0%, rgba(103,174,132,1) 100%);
