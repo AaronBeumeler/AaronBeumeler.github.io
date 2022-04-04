@@ -1,8 +1,7 @@
 .avatar-pic {
-    width: 75px;
+    width: 50px;
     border-radius: 50%;
     border: solid grey 1px;
-    margin-bottom: -40px;
 }
 body::-webkit-scrollbar {
     display: none;
