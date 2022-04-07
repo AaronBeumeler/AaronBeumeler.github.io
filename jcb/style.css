@@ -15,6 +15,10 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
+.marker-font {
+  font-family: 'Permanent Marker', cursive;
+}
+
 .navbar-toggler {
   width: 20px;
   height: 20px;
