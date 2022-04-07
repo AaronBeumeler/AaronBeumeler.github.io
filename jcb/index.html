@@ -10,7 +10,7 @@
   <link id="pagestyle" href="style.css" rel="stylesheet">
 </head>
 
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark bg-gradient sticky-top mb-1">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark bg-gradient sticky-top mb-1 border-bottom-black">
   <div class="container-fluid">
     <a class="navbar-brand ms-sm-5" href="#"><img class="avatar-pic ms-2" src="images/avatar_stun_sq.jpg"></img></a>
     <button class="navbar-toggler collapsed d-flex d-sm-none flex-column justify-content-around" type="button"
@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse pb-2" id="collapsibleNavbar">
       <ul class="navbar-nav text-center">
         <li class="nav-item border-bottom border-secondary border-2">
-          <a class="nav-link text-light" onclick="openTab(event, 'cosmos_section')" id="defaultOpen">Cosmos</a>
+          <a class="nav-link text-light" onclick="openTab(event, 'cosmos_section')" id="defaultOpen">Science Fiction</a>
         </li>
         <li class="nav-item border-bottom border-secondary border-2">
           <a class="nav-link text-light" onclick="openTab(event, 'nature_section')">Nature</a>
@@ -42,6 +42,7 @@
     <div id="cosmos_section" class="tabcontent">
       <div class="row">
       <div class="m-auto col-sm-auto col-md-6 col-lg-4 pb-2">
+        <span onclick="openNav()">open</span>
         <div class="card">
           <img src="images/cosmos_background.jpg" class="img-fluid rounded">
           <!--      <p>
