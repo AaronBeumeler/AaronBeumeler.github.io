@@ -32,13 +32,13 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav text-center">
         <li class="nav-item">
-          <a class="nav-link text-light" onclick="openTab(event, 'cosmos_section')" id="defaultOpen">Science Fiction</a>
+          <a class="nav-link text-light defaultOpen" onclick="openTab(event, 'cosmos_section')" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Science Fiction</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" onclick="openTab(event, 'nature_section')">Nature</a>
+          <a class="nav-link text-light" onclick="openTab(event, 'nature_section')" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Nature</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" onclick="openTab(event, 'bookmark_section')">Bookmarks</a>
+          <a class="nav-link text-light" onclick="openTab(event, 'bookmark_section')" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Bookmarks</a>
         </li>
       </ul>
     </div>
@@ -52,7 +52,6 @@
     <div id="cosmos_section" class="tabcontent">
       <div class="row">
       <div class="m-auto col-sm-auto col-md-6 col-lg-4 pb-2">
-        <span onclick="openNav()"></span>
         <div class="card">
           <img src="images/cosmos_background.jpg" class="img-fluid rounded">
           <!--      <p>

@@ -1,4 +1,4 @@
-document.getElementById("defaultOpen").click();
+document.getElementByClass("defaultOpen").click();
 
 function openTab(evt, gallary_name) {
     var i, tabcontent, tablinks;
