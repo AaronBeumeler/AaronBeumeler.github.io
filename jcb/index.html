@@ -20,7 +20,7 @@
   </script>
 </head>
 
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark bg-gradient sticky-top mb-4 border-bottom-black">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark bg-gradient sticky-top mb-1 border-bottom-black">
   <div class="container-fluid">
     <a class="navbar-brand ms-sm-5" href="#"><img class="avatar-pic ms-2" src="images/avatar_stun_sq.jpg"></img></a>
     <button class="navbar-toggler collapsed d-flex d-sm-none flex-column justify-content-around" type="button"
@@ -29,29 +29,30 @@
       <span class="toggler-icon middle-bar"></span>
       <span class="toggler-icon bottom-bar"></span>
     </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <div class="collapse navbar-collapse pb-2" id="collapsibleNavbar">
       <ul class="navbar-nav text-center">
-        <li class="nav-item">
-          <a class="nav-link text-light defaultOpen" onclick="openTab(event, 'cosmos_section')" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Science Fiction</a>
+        <li class="nav-item border-bottom border-secondary border-2">
+          <a class="nav-link text-light" onclick="openTab(event, 'cosmos_section')" id="defaultOpen">Science Fiction</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" onclick="openTab(event, 'nature_section')" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Nature</a>
+        <li class="nav-item border-bottom border-secondary border-2">
+          <a class="nav-link text-light" onclick="openTab(event, 'nature_section')">Nature</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" onclick="openTab(event, 'bookmark_section')" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">Bookmarks</a>
+        <li class="nav-item border-bottom border-secondary border-2">
+          <a class="nav-link text-light" onclick="openTab(event, 'bookmark_section')">Bookmarks</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<body id="body">
+<body id="body" class="bg-dark" onload="expand">
   <main class="container pb-5">
 
     <!-- Start Cosmos Section -->
     <div id="cosmos_section" class="tabcontent">
       <div class="row">
       <div class="m-auto col-sm-auto col-md-6 col-lg-4 pb-2">
+        <span onclick="openNav()">open</span>
         <div class="card">
           <img src="images/cosmos_background.jpg" class="img-fluid rounded">
           <!--      <p>
