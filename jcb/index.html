@@ -20,7 +20,7 @@
   </script>
 </head>
 
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark bg-gradient sticky-top mb-4 border-bottom-black">
+<nav class="shadow navbar navbar-expand-sm navbar-dark bg-dark bg-gradient sticky-top mb-4 border-bottom-black">
   <div class="container-fluid">
     <a class="navbar-brand ms-sm-5" href="#"><img class="avatar-pic ms-2" src="images/avatar_stun_sq.jpg" alt="Bio picture"></img></a>
     <button class="navbar-toggler collapsed d-flex d-sm-none flex-column justify-content-around" type="button"
@@ -32,7 +32,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <ul class="navbar-nav text-center">
         <li class="nav-item">
-          <a class="nav-link text-light defaultOpen fw-bold" onclick="openTab(event, 'bio_section')">Artist Bio</a>
+          <a class="nav-link text-light fw-bold" onclick="openTab(event, 'bio_section')">Artist Bio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light defaultOpen" onclick="openTab(event, 'cosmos_section')">Science Fiction</a>
@@ -396,6 +396,15 @@
         </div>
         <h5 class="text-light ps-2 pt-1 marker-font">Snowy Mountain Lake</h5>
       </div>
+
+      <div class="m-auto col-sm-12 col-md-6 col-lg-4 pb-2">
+        <div class="card">
+          <img src="images/airstream.jpg" class="img-fluid rounded">
+
+        </div>
+        <h5 class="text-light ps-2 pt-1 marker-font">Airstream</h5>
+      </div>
+
     </div>
   </div>
     <!-- End Nature Section -->
@@ -537,7 +546,7 @@
       <div class="row">
         <div class="col">
           <div class="card text-dark mb-4">
-            <div class="m-4 m-md-5">
+            <div class="m-4 m-md-5 row-12">
               <p>&nbsp;&nbsp;&nbsp; Hey, my name is Jesse! Maybe you know me... I live in downtown Boise and 
                 I drive a super sexy black power wheelchair. In high school, I won the Rocky 
                 Mountain Bike Series Championship. I had continued riding ever since. 
@@ -554,8 +563,9 @@
               <p>&nbsp;&nbsp;&nbsp; I love doing art because it is therapeutic and creative. I hope you enjoy
                 these handmade pieces of art!
               </p>
+              <p class="text-end"><img src="images/jb.png" class="mx-4 mx-lg-5" id="sign"></p>
             </div>
-            <img src="images/biking.jpg" class="img-fluid rounded-bottom ms-0 mb-0" alt="Bike riding painting">
+            <img src="images/biking.jpg" class="img-fluid rounded-bottom ms-0 mb-0 mt-0" alt="Bike riding painting">
           </div>
         </div>
       </div>
