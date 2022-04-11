@@ -13,6 +13,8 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  background: radial-gradient(circle, rgba(142,157,166,1) 0%, rgba(77,77,77,1) 100%);
+  background-attachment: fixed;
 }
 
 .marker-font {
