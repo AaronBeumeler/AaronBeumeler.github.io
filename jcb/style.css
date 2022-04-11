@@ -6,6 +6,10 @@
     margin-bottom: -60px;
 }
 
+.container {
+  max-width: 960px;
+}
+
 #sign {
   max-width: 115px;
 }
