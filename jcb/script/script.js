@@ -2,7 +2,6 @@ window.onload = function () {
     document.getElementById("bio_section").style.display = "none";
     document.getElementById("nature_section").style.display = "none";
     document.getElementById("bookmark_section").style.display = "none";
-    document.getElementById("cosmos_section").style.display = "block";
 };
 
 function openTab(evt, gallary_name) {
