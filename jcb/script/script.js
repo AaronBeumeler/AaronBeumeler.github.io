@@ -2,7 +2,7 @@ window.onload = function () {
     document.getElementById("bio_section").style.display = "none";
     document.getElementById("nature_section").style.display = "none";
     document.getElementById("bookmark_section").style.display = "none";
-};
+}
 
 function openTab(evt, gallary_name) {
     var i, tabcontent, tablinks;

@@ -10,6 +10,10 @@
   max-width: 960px;
 }
 
+.author-note {
+  max-width: 650px;
+}
+
 #sign {
   max-width: 115px;
 }
