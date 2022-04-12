@@ -26,6 +26,10 @@ body {
   background-attachment: fixed;
 }
 
+.bookmark {
+  max-height: 700px;
+}
+
 .marker-font {
   font-family: "Permanent Marker", cursive;
 }
