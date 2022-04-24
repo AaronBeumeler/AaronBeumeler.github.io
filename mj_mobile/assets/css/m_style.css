@@ -127,9 +127,8 @@ body {
   height: 38vh;
   width: 90vw;
   overflow: auto;
-  padding: 1%;
   margin-top: 1vh;
-  margin-bottom: 10vh;
+  margin-bottom: 9vh;
   background-image: url("../images/main-container.jpg");
   margin: auto;
   border: 4px solid #493f39;
@@ -138,7 +137,6 @@ body {
   box-shadow: -4px 4px 12px black;
 }
 .num-pad-inner {
-  position: relative;
   background-image: url("../images/inner-container.jpg");
   text-align: center;
   overflow: auto;
@@ -159,14 +157,14 @@ body {
   font-weight: 600;
   font-size: 180%;
   text-shadow: #201c19 -3px 4px 3px;
-  width: 33.3333%;
+  width: 32%;
   height: 25%;
   background-image: url("../images/main-container.jpg");
   border: 4px solid #bbb4aa;
   border-bottom: 4px solid #493f39;
   border-left: 4px solid #493f39;
   touch-action: manipulation;
-  min-height: 45px;
+  min-height: 25%;
 }
 .number-select-grid {
   display: -webkit-inline-box;
