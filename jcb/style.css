@@ -11,7 +11,7 @@
 }
 
 #sign {
-  max-width: 115px;
+  max-width: 125px;
 }
 
 body::-webkit-scrollbar {
@@ -28,6 +28,7 @@ body {
 
 .marker-font {
   font-family: "Permanent Marker", cursive;
+  color: whitesmoke;
 }
 
 .navbar-toggler {
