@@ -31,6 +31,12 @@ body {
   color: whitesmoke;
 }
 
+.marker-font-sm {
+  font-family: "Permanent Marker", cursive;
+  color: whitesmoke;
+  font-size: medium;
+}
+
 .navbar-toggler {
   width: 20px;
   height: 20px;
