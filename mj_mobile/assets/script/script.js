@@ -2,9 +2,7 @@ function layoutHandler() {
     var styleLink = document.getElementById("pagestyle");
     if (window.innerWidth < 700) {
         styleLink.setAttribute("href", "assets/css/m_style.css");
-    } /*else if (window.innerWidth < 1200) {
-        styleLink.setAttribute("href", "assets/style/medium.css");
-    } */else /*if (window.innerWidth >= 700)*/ {
+    } else {
         styleLink.setAttribute("href", "assets/css/style.css");
     }
 }
@@ -277,6 +275,7 @@ function check() {
 		if (guess == correct) {
 			totalCount += 1;
 			count += 1;
+			gemTotal += 1;
 			document.getElementById("count").innerHTML = count;	
 		} else if ((guess != correct) || (guess == null)) {
 			wrong += 1;
