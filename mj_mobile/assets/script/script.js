@@ -282,7 +282,7 @@ function check() {
 			totalCount += 1;
 		}
 	createProb();
-	} else if (totalCount == 20) {
+	} else {
 		document.getElementById("clock").innerHTML = "End";
 		hideGameplayCluster();
 		finishTime = timeLeft;
@@ -296,6 +296,7 @@ function check() {
 	}
 	inputClear();
 }
+
 function showStats() {
 	var x = document.getElementById("stats");
 	var y = document.getElementById("statsHead");
