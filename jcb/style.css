@@ -109,3 +109,9 @@ body {
 .md-icon {
   font-size: 1.4em;
 }
+a.pointer {
+  cursor: pointer;
+}
+.point {
+  cursor: pointer;
+}
