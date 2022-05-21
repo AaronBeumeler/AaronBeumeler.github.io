@@ -103,3 +103,6 @@ body {
     rgba(103, 174, 132, 1) 100%
   );
 }
+.lg-icon {
+  font-size: 2em;
+}
