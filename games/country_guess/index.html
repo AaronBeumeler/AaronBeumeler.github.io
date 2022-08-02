@@ -15,8 +15,8 @@
             margin: auto;
             height: 80%;
             padding: 4%;
-            background: rgb(34, 34, 34);
-            background: linear-gradient(15deg, rgba(34, 34, 34, 1) 0%, rgba(56, 42, 144, 1) 100%);
+            background: rgb(48,31,184);
+background: linear-gradient(15deg, rgba(48,31,184,1) 0%, rgba(148,201,255,1) 29%, rgba(64,95,198,1) 58%);
         }
 
         .box {
@@ -33,39 +33,51 @@
         #message {
             color: #fff;
             font-size: large;
-            padding-top: 15px;
+            padding-top: 1%;
             text-align: center;
         }
 
         #flag {
             border: 1px solid black;
-            height: 100px;
+            height: 50%;
+            margin: auto;
         }
 
         button {
             font-size: large;
-            padding: 5px;
+            padding: 1%;
         }
 
         input {
             font-size: large;
-            padding: 5px;
+            padding: 1%;
+        }
+
+        #inputSection {
+            text-align: center;
+            margin-top: 1%;
         }
     </style>
 </head>
 
 <body>
-    <h2>Country Scramble Game</h2>
+    <h2>Guess the Country</h2>
 
     <div class="mainContainer">
 
-        <input type="button" id="myButton" value="New Country" onclick="clearFlag()">
-        <input type="text" id="guess">
-        <input type="button" id="myGuess" value="Guess" onclick="guessWord()">
         <div id="output1" class="box"></div>
         <div id="output2" class="box"></div>
         <br><br>
         <img id="flag" src="https://via.placeholder.com/250x150/364d86/ffffff/?text=Hint" onclick="showFlag()">
+        <div id="addInfo">
+
+        </div>
+        <br>
+        <div id="inputSection">
+            <input type="button" id="myButton" value="New Country" onclick="clearFlag()">
+            <input type="text" id="guess">
+            <input type="button" id="myGuess" value="Guess" onclick="guessWord()">
+        </div>
         <div id="message" class="message"></div>
 
     </div>
@@ -82,6 +94,9 @@
         var output1 = document.getElementById('output1');
         var output2 = document.getElementById('output2');
         var message = document.getElementById('message');
+        var flagOutput = document.getElementById('flag');
+        var addInfo = document.getElementById('addInfo');
+
 
         function init() {
             document.getElementById('myButton').addEventListener('click', myLoader, false);
@@ -130,12 +145,16 @@
         }
 
         function showFlag() {
-            flagOutput = document.getElementById('flag');
-            flagOutput.src = pick.flag;
+            if (pick == ''){
+                flagOutput.src = 'https://via.placeholder.com/250x150/364d86/ffffff/?text=Hint';
+            } else {
+                flagOutput.src = pick.flag;
+            }
+            
         }
 
         function clearFlag() {
-            flagOutput.src = 'https://via.placeholder.com/250x150/364d86/ffffff/?text=Hint'
+            flagOutput.src = 'https://via.placeholder.com/250x150/364d86/ffffff/?text=Hint';
         }
 
     </script>
