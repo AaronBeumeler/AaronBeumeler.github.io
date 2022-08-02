@@ -13,6 +13,7 @@
         .mainContainer {
             border: 1px solid black;
             margin: auto;
+            height: 80%;
             padding: 4%;
             background: rgb(34, 34, 34);
             background: linear-gradient(15deg, rgba(34, 34, 34, 1) 0%, rgba(56, 42, 144, 1) 100%);
@@ -40,6 +41,16 @@
             border: 1px solid black;
             height: 100px;
         }
+
+        button {
+            font-size: large;
+            padding: 5px;
+        }
+
+        input {
+            font-size: large;
+            padding: 5px;
+        }
     </style>
 </head>
 
@@ -48,13 +59,13 @@
 
     <div class="mainContainer">
 
-        <input type="button" id="myButton" value="New Country">
+        <input type="button" id="myButton" value="New Country" onclick="clearFlag()">
         <input type="text" id="guess">
         <input type="button" id="myGuess" value="Guess" onclick="guessWord()">
         <div id="output1" class="box"></div>
         <div id="output2" class="box"></div>
         <br><br>
-        <img id="flag" src="https://via.placeholder.com/250x150/364d86/364d86">
+        <img id="flag" src="https://via.placeholder.com/250x150/364d86/ffffff/?text=Hint" onclick="showFlag()">
         <div id="message" class="message"></div>
 
     </div>
@@ -89,8 +100,6 @@
             var myObj = JSON.parse(this.responseText);
             pick = myObj[Math.floor(Math.random() * myObj.length)];
             holder = pick.name.toLowerCase();
-            flagOutput = document.getElementById('flag');
-            flagOutput.src = pick.flag;
             var ww = '';
             for (var x = 0; x < pick.name.length; x++) {
                 ww += '-';
@@ -101,7 +110,7 @@
 
         function guessWord() {
             var guess = document.getElementById('guess').value;
-            guess.toLowerCase();
+            guess = guess.toLowerCase();
             if (guess == holder) {
                 output2.innerHTML = guess;
                 message.innerHTML = 'Correct! The country is ' + '<b>' + pick.name + '</b>';
@@ -118,6 +127,15 @@
                 response += w.splice(Math.floor(Math.random() * w.length), 1);
             }
             return response;
+        }
+
+        function showFlag() {
+            flagOutput = document.getElementById('flag');
+            flagOutput.src = pick.flag;
+        }
+
+        function clearFlag() {
+            flagOutput.src = 'https://via.placeholder.com/250x150/364d86/ffffff/?text=Hint'
         }
 
     </script>
