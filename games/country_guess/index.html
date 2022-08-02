@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>Connect to API Endpoint Return Data</title>
+    <style>
+        body {
+            margin: 2%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(80, 80, 80);
+            color: #fff;
+        }
+
+        .mainContainer {
+            border: 1px solid black;
+            margin: auto;
+            padding: 4%;
+            background: rgb(34, 34, 34);
+            background: linear-gradient(15deg, rgba(34, 34, 34, 1) 0%, rgba(56, 42, 144, 1) 100%);
+        }
+
+        .box {
+            font-size: 1.3em;
+            background-color: #fff;
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 10px;
+            height: 30px;
+            text-align: center;
+            color: #222;
+        }
+
+        #message {
+            color: #fff;
+            font-size: large;
+            padding-top: 15px;
+            text-align: center;
+        }
+
+        #flag {
+            border: 1px solid black;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Country Scramble Game</h2>
+
+    <div class="mainContainer">
+
+        <input type="button" id="myButton" value="New Country">
+        <input type="text" id="guess">
+        <input type="button" id="myGuess" value="Guess" onclick="guessWord()">
+        <div id="output1" class="box"></div>
+        <div id="output2" class="box"></div>
+        <br><br>
+        <img id="flag" src="https://via.placeholder.com/250x150/364d86/364d86">
+        <div id="message" class="message"></div>
+
+    </div>
+
+    <script>
+
+
+
+        window.onload = init;
+        // https://restcountries.com/v2/all
+
+        var pick = '';
+        var holder = '';
+        var output1 = document.getElementById('output1');
+        var output2 = document.getElementById('output2');
+        var message = document.getElementById('message');
+
+        function init() {
+            document.getElementById('myButton').addEventListener('click', myLoader, false);
+        }
+
+        function myLoader() {
+            var xHR = new XMLHttpRequest();
+            xHR.onload = rOutput;
+            xHR.open('get', 'https://restcountries.com/v2/all', true);
+            xHR.send();
+            guess.value = '';
+            message.innerHTML = '';
+        }
+
+        function rOutput() {
+            var myObj = JSON.parse(this.responseText);
+            pick = myObj[Math.floor(Math.random() * myObj.length)];
+            holder = pick.name.toLowerCase();
+            flagOutput = document.getElementById('flag');
+            flagOutput.src = pick.flag;
+            var ww = '';
+            for (var x = 0; x < pick.name.length; x++) {
+                ww += '-';
+            }
+            output1.innerHTML = shuffleWord(pick.name).toLowerCase();
+            output2.innerHTML = ww;
+        }
+
+        function guessWord() {
+            var guess = document.getElementById('guess').value;
+            guess.toLowerCase();
+            if (guess == holder) {
+                output2.innerHTML = guess;
+                message.innerHTML = 'Correct! The country is ' + '<b>' + pick.name + '</b>';
+            } else {
+                output2.innerHTML = guess;
+                message.innerHTML = 'Incorrect. The country is ' + '<b>' + pick.name + '</b>';
+            }
+        }
+
+        function shuffleWord(w) {
+            var response = '';
+            w = w.split('');
+            while (w.length > 0) {
+                response += w.splice(Math.floor(Math.random() * w.length), 1);
+            }
+            return response;
+        }
+
+    </script>
+</body>
+
+</html>
