@@ -4,7 +4,7 @@
     <title>Connect to API Endpoint Return Data</title>
     <style>
         body {
-            margin: 2%;
+            padding: 2%;
             font-family: Arial, Helvetica, sans-serif;
             background: rgb(255, 255, 255);
             background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(172, 172, 172, 1) 100%);
@@ -13,21 +13,37 @@
         .mainContainer {
             border: 1px solid black;
             margin: auto;
-            height: 80%;
+            height: 90%;
             padding: 4%;
-            background: rgb(48,31,184);
-background: linear-gradient(15deg, rgba(48,31,184,1) 0%, rgba(148,201,255,1) 29%, rgba(64,95,198,1) 58%);
+            min-height: 500px;
+            background: rgb(48, 31, 184);
+            background: linear-gradient(15deg, rgba(48, 31, 184, 1) 0%, rgba(148, 201, 255, 1) 29%, rgba(64, 95, 198, 1) 58%);
         }
 
         .box {
-            font-size: 1.3em;
-            background-color: #fff;
+            font-size: 1.5em;
+            background-color: rgb(35, 48, 105);
             border: 1px solid black;
-            padding: 10px;
-            margin-top: 10px;
-            height: 30px;
+            color: #fff;
+            padding: 2%;
+            margin-top: 2%;
+            height: 4%;
+            width: auto;
             text-align: center;
-            color: #222;
+        }
+
+        #flag {
+            border: 1px solid black;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+
+        input {
+            padding: 2%;
+            font-size: 1.5em;
+            text-align: center;
         }
 
         #message {
@@ -37,25 +53,9 @@ background: linear-gradient(15deg, rgba(48,31,184,1) 0%, rgba(148,201,255,1) 29%
             text-align: center;
         }
 
-        #flag {
-            border: 1px solid black;
-            height: 50%;
-            margin: auto;
-        }
-
-        button {
-            font-size: large;
-            padding: 1%;
-        }
-
-        input {
-            font-size: large;
-            padding: 1%;
-        }
-
         #inputSection {
             text-align: center;
-            margin-top: 1%;
+            width: 90%;
         }
     </style>
 </head>
@@ -66,15 +66,14 @@ background: linear-gradient(15deg, rgba(48,31,184,1) 0%, rgba(148,201,255,1) 29%
     <div class="mainContainer">
 
         <div id="output1" class="box"></div>
-        <div id="output2" class="box"></div>
         <br><br>
-        <img id="flag" src="https://via.placeholder.com/250x150/364d86/ffffff/?text=Hint" onclick="showFlag()">
+        <img id="flag" src="https://via.placeholder.com/500x300/364d86/364d86/">
         <div id="addInfo">
 
         </div>
         <br>
         <div id="inputSection">
-            <input type="button" id="myButton" value="New Country" onclick="clearFlag()">
+            <input type="button" id="myButton" value="New Country">
             <input type="text" id="guess">
             <input type="button" id="myGuess" value="Guess" onclick="guessWord()">
         </div>
@@ -92,7 +91,6 @@ background: linear-gradient(15deg, rgba(48,31,184,1) 0%, rgba(148,201,255,1) 29%
         var pick = '';
         var holder = '';
         var output1 = document.getElementById('output1');
-        var output2 = document.getElementById('output2');
         var message = document.getElementById('message');
         var flagOutput = document.getElementById('flag');
         var addInfo = document.getElementById('addInfo');
@@ -115,22 +113,16 @@ background: linear-gradient(15deg, rgba(48,31,184,1) 0%, rgba(148,201,255,1) 29%
             var myObj = JSON.parse(this.responseText);
             pick = myObj[Math.floor(Math.random() * myObj.length)];
             holder = pick.name.toLowerCase();
-            var ww = '';
-            for (var x = 0; x < pick.name.length; x++) {
-                ww += '-';
-            }
             output1.innerHTML = shuffleWord(pick.name).toLowerCase();
-            output2.innerHTML = ww;
+            flagOutput.src = pick.flag;
         }
 
         function guessWord() {
             var guess = document.getElementById('guess').value;
             guess = guess.toLowerCase();
             if (guess == holder) {
-                output2.innerHTML = guess;
                 message.innerHTML = 'Correct! The country is ' + '<b>' + pick.name + '</b>';
             } else {
-                output2.innerHTML = guess;
                 message.innerHTML = 'Incorrect. The country is ' + '<b>' + pick.name + '</b>';
             }
         }
@@ -144,18 +136,6 @@ background: linear-gradient(15deg, rgba(48,31,184,1) 0%, rgba(148,201,255,1) 29%
             return response;
         }
 
-        function showFlag() {
-            if (pick == ''){
-                flagOutput.src = 'https://via.placeholder.com/250x150/364d86/ffffff/?text=Hint';
-            } else {
-                flagOutput.src = pick.flag;
-            }
-            
-        }
-
-        function clearFlag() {
-            flagOutput.src = 'https://via.placeholder.com/250x150/364d86/ffffff/?text=Hint';
-        }
 
     </script>
 </body>
