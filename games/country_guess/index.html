@@ -1,13 +1,13 @@
 <html>
 
 <head>
-    <title>Connect to API Endpoint Return Data</title>
+    <title>Flag Game</title>
     <style>
         body {
             padding: 2%;
             font-family: Arial, Helvetica, sans-serif;
-            background: rgb(255, 255, 255);
-            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(172, 172, 172, 1) 100%);
+            background: rgb(172, 172, 172);
+            background: radial-gradient(circle, rgba(172, 172, 172, 1) 0%, rgba(73, 73, 73, 1) 100%);
         }
 
         .mainContainer {
@@ -16,12 +16,12 @@
             height: 90%;
             padding: 4%;
             min-height: 500px;
-            background: rgb(9,8,80);
-background: linear-gradient(15deg, rgba(9,8,80,1) 7%, rgba(96,130,164,1) 29%, rgba(45,65,133,1) 58%);
+            background: rgb(9, 8, 80);
+            background: linear-gradient(15deg, rgba(9, 8, 80, 1) 7%, rgba(96, 130, 164, 1) 29%, rgba(45, 65, 133, 1) 58%);
         }
 
         .box {
-            font-size: 1.6em;
+            font-size: 1.8em;
             background-color: rgb(35, 48, 105);
             border: 1px solid black;
             color: #fff;
@@ -29,7 +29,7 @@ background: linear-gradient(15deg, rgba(9,8,80,1) 7%, rgba(96,130,164,1) 29%, rg
             margin: auto;
             margin-top: 2%;
             height: 5%;
-            width: 60%;
+            width: 70%;
             text-align: center;
         }
 
@@ -57,20 +57,27 @@ background: linear-gradient(15deg, rgba(9,8,80,1) 7%, rgba(96,130,164,1) 29%, rg
             text-align: center;
             width: 100%;
         }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        #factSection {
+            color: #fff;
+            font-size: large;
+        }
     </style>
 </head>
 
 <body>
-    <h2>Guess the Country</h2>
+    <h1>Flag Game</h1>
 
     <div class="mainContainer">
 
         <div id="output1" class="box"></div>
         <br><br>
         <img id="flag" src="https://via.placeholder.com/500x300/364d86/364d86/">
-        <div id="addInfo">
-
-        </div>
         <br>
         <div id="inputSection">
             <input type="button" id="myButton" value="New Country">
@@ -80,6 +87,9 @@ background: linear-gradient(15deg, rgba(9,8,80,1) 7%, rgba(96,130,164,1) 29%, rg
         </div>
         <br>
         <div id="message" class="message"></div>
+        <br><br>
+        <div id="factSection">
+        </div>
 
     </div>
 
@@ -95,7 +105,8 @@ background: linear-gradient(15deg, rgba(9,8,80,1) 7%, rgba(96,130,164,1) 29%, rg
         var output1 = document.getElementById('output1');
         var message = document.getElementById('message');
         var flagOutput = document.getElementById('flag');
-        var addInfo = document.getElementById('addInfo');
+        var factSection = document.getElementById('factSection');
+
 
 
         function init() {
@@ -117,6 +128,9 @@ background: linear-gradient(15deg, rgba(9,8,80,1) 7%, rgba(96,130,164,1) 29%, rg
             holder = pick.name.toLowerCase();
             output1.innerHTML = shuffleWord(pick.name).toLowerCase();
             flagOutput.src = pick.flag;
+            factSection.innerHTML = 'Capital: ' + pick.capital + '<br>'
+                + 'Currency: ' + pick.currencies[0].name + ' ' + pick.currencies[0].symbol + '<br>'
+                + 'Language: ' + pick.languages[0].name;
         }
 
         function guessWord() {
