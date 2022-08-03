@@ -5,6 +5,10 @@ window.onload = function () {
     document.getElementById("bookmark_section").style.display = "none";
 }
 
+function toContact() {
+    window.scrollTo(0,2000);
+}
+
 function openTab(evt, gallary_name) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
