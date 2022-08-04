@@ -6,8 +6,8 @@
         body {
             padding: 2%;
             font-family: Arial, Helvetica, sans-serif;
-            background: rgb(172, 172, 172);
-            background: radial-gradient(circle, rgba(172, 172, 172, 1) 0%, rgba(73, 73, 73, 1) 100%);
+            background: rgb(136, 136, 136);
+            background: linear-gradient(180deg, rgba(136, 136, 136, 1) 0%, rgba(73, 73, 73, 1) 52%);
         }
 
         .mainContainer {
@@ -66,6 +66,7 @@
         #factSection {
             color: #fff;
             font-size: large;
+            margin-left: 50px;
         }
     </style>
 </head>
@@ -129,7 +130,8 @@
             output1.innerHTML = shuffleWord(pick.name).toLowerCase();
             flagOutput.src = pick.flag;
             factSection.innerHTML = 'Capital: ' + pick.capital + '<br>'
-                + 'Currency: ' + pick.currencies[0].name + ' ' + pick.currencies[0].symbol + '<br>'
+                + 'Currency: ' + pick.currencies[0].name + '<br>'
+                + 'Currency Symbol: ' + pick.currencies[0].symbol + '<br>'
                 + 'Language: ' + pick.languages[0].name;
         }
 
