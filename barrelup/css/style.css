@@ -84,6 +84,48 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+header {
+  height: 180vh;
+  min-height: 400px;
+  background-size: cover;
+  background-image: url(../img/batter_hero_m_find.jpg);
+}
+
+.oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.gold {
+  color:rgb(216, 184, 20);
+}
+
+.light-font {
+  color: #fff;
+}
+
+.hidden-spacer {
+  height: 85px;
+  background-color: rgb(29, 29, 29);
+}
+
+#logo-img {
+  height: 65px;
+  padding-bottom: 4px;
+}
+
+#hero-img {
+  width: 100%;
+}
+
+.dark-bg {
+  background-color: rgb(29, 29, 29);
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -172,9 +214,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -185,6 +227,7 @@ textarea {
    ========================================================================== */
 
 @media print {
+
   *,
   *::before,
   *::after {
@@ -201,11 +244,11 @@ textarea {
   }
 
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: " ("attr(href) ")";
   }
 
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: " ("attr(title) ")";
   }
 
   /*
@@ -244,4 +287,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
