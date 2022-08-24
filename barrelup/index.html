@@ -7,11 +7,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
@@ -21,15 +16,129 @@
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.8.min.js"></script>
-  <script src="js/app.js"></script>
+  <nav class="navbar navbar-expand-sm fixed-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img id="logo-img" src="img/logo_fyb_300px.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link px-4 oswald" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-4 oswald" href="#video">Video</a>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4 oswald" href="#">Shop</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://www.instagram.com/barrelup_/"><i id="insta" class="fa fa-instagram fa-lg px-4" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="sticky-top hidden-spacer"></div>
+<img id="hero-img" src="img/batter_hero_m_find.jpg">
+<div class="container py-5">
+    <div class="row">
+        <div class="col-6 px-4 my-auto">
+            <h3 class="oswald">This is Barrel Up</h3>
+            <p>Train to demolish pitchers when you step up to the plate. Barrel up keeps the Barrel
+                of your bat in the correct vertical position while reducing unnecessary movement.
+              Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. 
+            </p>
+            <p>Barrel up keeps the Barrel
+                of your bat in the correct vertical position while reducing unnecessary movement.
+              Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch.  
+            </p>
+        </div>
 
+        <div class="col-6 px-4 my-auto">
+          <img id="product-img" class="img-fluid bg-dark" src="img/placeholder_prod_pic.jpg">
+        </div>
+
+    </div>
+    <!--/row-->
+</div>
+
+<div class="py-5 row mx-auto dark-bg">
+
+  <div class="col-12 col-sm-11 col-md-7 mx-auto my-auto embed-responsive embed-responsive-16by9">
+  <iframe id="video" class="px-4" src="https://player.vimeo.com/video/738353231?h=21be6d0385" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+</div>
+<div class="col-12 col-sm-11 col-md-4 mx-auto my-auto light-font">
+    <h3 class="oswald pt-3 pt-md-0 gold">Improve Your Swing</h3>
+    <p>Barrel up keeps the Barrel
+        of your bat in the correct vertical position while reducing unnecessary movement.
+        Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's 
+        code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR 
+        narwhal sustainable mixtape swag wolf squid tote bag.
+        </p>
+</div>
+
+</div>
+
+<div class="py-5 px-3 row mx-auto">
+    <div id="smart-button-container">
+        <div style="text-align: center;">
+          <div id="paypal-button-container"></div>
+        </div>
+      </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        paypal.Buttons({
+          style: {
+            shape: 'rect',
+            color: 'gold',
+            layout: 'horizontal',
+            label: 'buynow',
+            
+          },
+  
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{"description":"Barrel Up","amount":{"currency_code":"USD","value":314,"breakdown":{"item_total":{"currency_code":"USD","value":299},"shipping":{"currency_code":"USD","value":15},"tax_total":{"currency_code":"USD","value":0}}}}]
+            });
+          },
+  
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+              
+              // Full available details
+              console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+  
+              // Show a success message within this page, e.g.
+              const element = document.getElementById('paypal-button-container');
+              element.innerHTML = '';
+              element.innerHTML = '<h3>Thank you for your payment!</h3>';
+  
+              // Or go to another URL:  actions.redirect('thank_you.html');
+              
+            });
+          },
+  
+          onError: function(err) {
+            console.log(err);
+          }
+        }).render('#paypal-button-container');
+      }
+      initPayPalButton();
+    </script>
+</div>
+<!--container-->
 </body>
 
 </html>
