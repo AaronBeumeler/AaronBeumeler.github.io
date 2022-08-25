@@ -84,9 +84,17 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-   ::-webkit-scrollbar {
-    width: 0px;
-  }
+  ::-webkit-scrollbar {
+  width: 0px;
+}
+
+.nav-link:hover {
+  color:rgb(232, 198, 6);
+}
+
+.nav-link {
+  color:rgb(216, 216, 216);
+}
 
 header {
   height: 180vh;
@@ -100,7 +108,11 @@ header {
 }
 
 .gold {
-  color:rgb(216, 184, 20);
+  color:rgb(232, 198, 6);
+}
+
+.drop-bg {
+  background-color: rgb(29, 29, 29);
 }
 
 .light-font {
